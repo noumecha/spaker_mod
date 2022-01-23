@@ -1,0 +1,1 @@
+import "../../scss/pages/spaker_mod_home_page.scss";

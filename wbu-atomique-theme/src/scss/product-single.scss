@@ -1,0 +1,21 @@
+//$h1-font-size        : 1.5rem;
+// @use "variable" as vars;
+// @use "../../ato_design/atome/typography/h1.scss" with ($h1-font-size: vars.$h1-font-size,);
+/*
+@use "../../ato_design/bootstrap-grid";
+@use "../../ato_design/bootstrap-flex.scss";
+@use "../../ato_design/bootstrap-form.scss";
+@use "../../ato_design/organismes/owls/owl-default"; //@use "components/product-metas";
+/**/
+@use "./variable"; // add bootstrap for test;
+@use "@stephane888/wbu-atomique/scss/bootstrap-all";
+@use "@stephane888/wbu-atomique/scss/templates/products/product-model-pallas";
+@use "@stephane888/wbu-atomique/scss/templates/products/product-all-description.scss";
+
+.owl-stage-outer {
+  border: 1px solid #eee;
+
+  .owl-item {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,48 @@
+#drupal-off-canvas {
+  color: #ddd;
+  background: #f7f8f9;
+}
+#drupal-off-canvas *, #drupal-off-canvas *:not(div){
+	color: #314b5a !important;
+}
+
+
+//// listes de layout.
+.layout-selection {
+  background: #575858 !important;
+  .list-group-item {
+    position: relative !important;
+
+    &::before {
+      content: "" !important;
+      position: absolute !important;
+      top: 0 !important;
+      left: -20px !important;
+      bottom: 0 !important;
+      right: auto !important;
+      width: 0 !important;
+      background: #89caeb !important;
+      display: block !important;
+    }
+    &:hover {
+      background: rgba(137, 202, 235, 0.14) !important;
+      &::before {
+        width: 3px !important;
+      }
+    }
+    a {
+      text-decoration: none !important;
+    }
+    img {
+      max-width: 100% !important;
+      max-height: 160px !important;
+    }
+  }
+}
+.ui-dialog-content {
+  input {
+    background: #fff !important;
+    border: 1px solid #d1d1d1 !important;
+    border-radius: 3px !important;
+  }
+}

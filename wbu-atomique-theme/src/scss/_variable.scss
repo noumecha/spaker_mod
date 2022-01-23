@@ -1,0 +1,13 @@
+@use "@stephane888/wbu-atomique/scss/wbu-ressources.scss" as *;
+$wbu-title-font-weight: 700;
+$wbu-h1-font-size: 3.4rem;
+$wbu-h3-font-size: 1.9rem;
+/* space */
+// definit les marges et padding.
+/* color */
+$wbu-color-primary: #fc5e28; //#fc5e28
+$wbu-color-gris: #dee2e6;
+/* typography */
+//$p-font-size      : inherit;
+//$wbu-default-font-size: 0.9rem;
+$wbu-title-color: lighten($wbu-color-text, 15);

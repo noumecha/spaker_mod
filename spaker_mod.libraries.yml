@@ -1,0 +1,165 @@
+# Custom module library for general purposes.
+spaker_mod:
+  js:
+    js/spaker-mod.js: {}
+  css:
+    component:
+      css/spaker-mod.css: {}
+  dependencies:
+    - core/drupalSettings
+    - spaker_mod/jquery-labelauty
+
+# Third-party library (self hosted).
+jquery-labelauty:
+  remote: https://github.com/fntneves/jquery-labelauty
+  version: 1.1.0
+  license:
+    name: MIT
+    url: https://github.com/fntneves/jquery-labelauty/blob/v1.1.0/LICENSE
+    gpl-compatible: true
+  js:
+    /libraries/jquery-labelauty/source/jquery-labelauty.js: {}
+  css:
+    component:
+      /libraries/jquery-labelauty/source/jquery-labelauty.css: {}
+  dependencies:
+    - core/jquery
+
+# Third-party library (CDN).
+vuejs:
+  remote: https://vuejs.org
+  version: 2.0.5
+  license:
+    name: MIT
+    url: https://github.com/vuejs/vue/blob/dev/LICENSE
+    gpl-compatible: true
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js: {type: external, minified: true}
+
+# home page library : 
+spaker_mod_home_page:
+  js:
+    layouts/js/spaker_mod_home_page.js: {}
+  css:
+    theme:
+      layouts/css/spaker_mod_home_page.css: {}
+
+# header library : 
+vesperr_header:
+  js:
+    layouts/js/vesperr_header_tmc.js: {}
+  css:
+    theme: 
+      layouts/css/vesperr_header_tmc.css: {}
+
+# hero library : 
+vesperr_hero:
+  js:
+    layouts/js/vesperr_hero_tmc.js: {}
+  css:
+    theme:
+      layouts/css/vesperr_hero_tmc.css: {}
+
+# client library : 
+vesperr_client:
+  js:
+    layouts/js/vesperr_client_tmc.js: {}
+  css:
+    theme:
+      layouts/css/vesperr_client_tmc.css: {}
+
+# about library : 
+vesperr_about:
+  js:
+    layouts/js/vesperr_about_tmc.js: {}
+  css:
+    theme:
+      layouts/css/vesperr_about_tmc.css: {}
+
+# count library : 
+vesperr_count:
+  js:
+    layouts/js/vesperr_count_tmc.js: {}
+  css:
+    theme:
+      layouts/css/vesperr_count_tmc.css: {}
+
+# service library : 
+vesperr_service:
+  js:
+    layouts/js/vesperr_service_tmc.js: {}
+  css:
+    theme:
+      layouts/css/vesperr_service_tmc.css: {}
+
+# more service library : 
+vesperr_more_service:
+  js:
+    layouts/js/vesperr_more_service_tmc.js: {}
+  css:
+    theme:
+      layouts/css/vesperr_more_service_tmc.css: {}
+
+# feature library : 
+vesperr_feature:
+  js:
+    layouts/js/vesperr_feature_tmc.js: {}
+  css:
+    theme:
+      layouts/css/vesperr_feature_tmc.css: {}
+
+# testimonial library : 
+vesperr_testimonial:
+  js:
+    layouts/js/vesperr_testimonial_tmc.js: {}
+  css:
+    theme:
+      layouts/css/vesperr_testimonial_tmc.css: {}
+
+# portfolio library : 
+vesperr_portfolio:
+  js:
+    layouts/js/vesperr_portfolio_tmc.js: {}
+  css:
+    theme:
+      layouts/css/vesperr_portfolio_tmc.css: {}
+
+# team library : 
+vesperr_team:
+  js:
+    layouts/js/vesperr_team_tmc.js: {}
+  css:
+    theme:
+      layouts/css/vesperr_team_tmc.css: {}
+
+# price library :
+vesperr_price:
+  js:
+    layouts/js/vesperr_price_tmc.js: {}
+  css:
+    theme:
+      layouts/css/vesperr_price_tmc.css: {}
+
+# faq library
+vesperr_faq:
+  js:
+    layouts/js/vesperr_faq_tmc.js: {}
+  css:
+    theme:
+      layouts/css/vesperr_faq_tmc.css: {}
+
+# contact librarys
+vesperr_contact:
+  js:
+    layouts/js/vesperr_contact_tmc.js: {}
+  css:
+    theme:
+      layouts/css/vesperr_contact_tmc.css: {}
+
+# footer library
+vesperr_footer:
+  js:
+    layouts/js/vesperr_footer_tmc.js: {}
+  css:
+    theme:
+      layouts/css/vesperr_footer_tmc.css: {}
