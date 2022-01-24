@@ -163,3 +163,11 @@ vesperr_footer:
   css:
     theme:
       layouts/css/vesperr_footer_tmc.css: {}
+
+# team section by tmc : 
+team_section:
+  js:
+    layouts/js/team_section_tmc.js: {}
+  css:
+    theme:
+      layouts/css/team_section_tmc.css: {}

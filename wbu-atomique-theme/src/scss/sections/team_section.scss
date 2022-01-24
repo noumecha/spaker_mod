@@ -1,0 +1,57 @@
+@use "@stephane888/wbu-atomique/scss/wbu-ressources-clean.scss" as *;
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+.hero-section {
+    padding: 150px 90px;
+    background: rgb(15, 10, 10);
+    @include media-max(SM) {
+      padding: 100px 60px;
+    }
+    @include media-max(XX) {
+      padding: 80px 20px;
+    }
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: start;
+      min-height: 227px;
+      @include media-max(SM) {
+        min-height: 260px;
+      }
+      &__title {
+        font-size: $wbu-default-font-size * 3.5;
+        color: #ffffff;
+        text-transform: uppercase;
+        font-weight: bold;
+        @include media-max(SM) {
+          font-size: $wbu-default-font-size * 2;
+        }
+        span {
+          color: #c69c6d;
+        }
+      }
+      &__desc {
+        font-size: 16px;
+        color: white;
+        margin-bottom: 5px;
+        max-width: 650px;
+        @include media-max(SM) {
+          font-size: $wbu-default-font-size;
+          max-width: 800px;
+        }
+      }
+    }
+    .al-line-title {
+      margin-left: 0;
+      display: block;
+      height: 2px;
+      width: 60px;
+      background-color: #c69c6d;
+      margin-top: 19px;
+      margin-bottom: 18px;
+    }
+  }
+  
