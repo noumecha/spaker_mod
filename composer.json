@@ -9,9 +9,6 @@
             "name": "tmc",
             "email": "noumechaivan@gmail.com"
         }
-    ],
-	"require": {
-    	"stephane888/formatage_models": "^dev-2x | dev-3x "
-	}
+    ]
 
 }
