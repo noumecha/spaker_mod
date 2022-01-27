@@ -5,7 +5,7 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const entry = require("./entry.js");
 const mergeEntry = {
-  formatage_models_admin: "./src/js/formatage-models-admin.js",
+  //formatage_models_admin: "./src/js/formatage-models-admin.js",
   ...entry,
 };
 

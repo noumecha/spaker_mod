@@ -13,6 +13,7 @@
   "author": "gugledas",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.16.12",
     "@fortawesome/fontawesome-free": "^5.15.3",
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
@@ -46,11 +47,10 @@
   ],
   "dependencies": {
     "@babel/preset-env": "^7.15.6",
-    "@stephane888/wbu-atomique": "file:../../../../../../../wbu-atomique",
+    "@stephane888/wbu-atomique": "file:../../../../../../../AppVuejs/wbu-atomique",
     "bootstrap": "^4.6.0",
     "image-webpack-loader": "^7.0.1",
     "imagemin": "^7.0.1",
-    "swiper": "^7.0.8",
-    "wbu-atomique": "^1.0.3"
+    "swiper": "^7.0.8"
   }
 }
