@@ -187,3 +187,11 @@ list_section_rcweb:
   css:
     theme:
       layouts/css/list_section_rcweb_tmc.css: {}
+
+# price section rcweb by tmc:
+price_section_rcweb:
+  js:
+    layouts/js/price_section _rcweb_tmc.js: {}
+  css:
+    theme:
+      layouts/css/price_section_rcweb_tmc.css: {}

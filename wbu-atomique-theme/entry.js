@@ -41,6 +41,8 @@ module.exports = {
     "./src/js/sections/contact_section_rcweb.js",
   "list_section_rcweb_tmc":
     "./src/js/sections/list_section_rcweb.js",
+  "price_section_rcweb_tmc":
+    "./src/js/sections/price_section_rcweb.js",
 };
 
 // export default {
