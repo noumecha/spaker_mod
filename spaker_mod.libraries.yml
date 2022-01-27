@@ -171,3 +171,19 @@ team_section:
   css:
     theme:
       layouts/css/team_section_tmc.css: {}
+
+# contact section rcweb by tmc : 
+contact_section_rcweb:
+  js:
+    layouts/js/contact_section_rcweb_tmc.js: {}
+  css:
+    theme:
+      layouts/css/contact_section_rcweb_tmc.css: {}
+
+# list section rcweb by tmc : 
+list_section_rcweb:
+  js:
+    layouts/js/list_section_rcweb_tmc.js: {}
+  css:
+    theme:
+      layouts/css/list_section_rcweb_tmc.css: {}

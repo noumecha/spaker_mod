@@ -1,1 +1,8 @@
-.home-page--title{background-color:#000;color:#fff;padding:20px;text-align:center}
+.home-page--title {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9sYXlvdXRzL2Nzcy9zcGFrZXJfbW9kX2hvbWVfcGFnZS5jc3MiLCJtYXBwaW5ncyI6IkFBQUE7RUFFSTtFQUNBO0VBQ0E7RUFDQTtBQUFKLEMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9zdGFuLWNvbXBpbGVyLy4vc3Bha2VyX21vZF9ob21lX3BhZ2Uuc2NzcyJdLCJzb3VyY2VzQ29udGVudCI6WyIuaG9tZS1wYWdlLS10aXRsZSB7XG5cbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiBibGFjaztcbiAgICBjb2xvcjogd2hpdGU7XG4gICAgcGFkZGluZzogMjBweDtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG5cbn0iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=*/

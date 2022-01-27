@@ -37,6 +37,10 @@ module.exports = {
     "./src/js/sections/footers/vesperr_footer.js",
   "team_section_tmc":
     "./src/js/sections/team_section.js",
+  "contact_section_rcweb_tmc":
+    "./src/js/sections/contact_section_rcweb.js",
+  "list_section_rcweb_tmc":
+    "./src/js/sections/list_section_rcweb.js",
 };
 
 // export default {
