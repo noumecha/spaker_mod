@@ -1,0 +1,14 @@
+myfirst.form:
+  path: '/first-form'
+  defaults:
+    _title: 'First Form'
+    _form: '\Drupal\spaker_mod\Form\MyFirstForm'
+  requirements:
+    _permission: 'access content'
+spaker_mod.admin_settings:
+  path: '/admin/config/spaker_mod'
+  defaults:
+    _form: '\Drupal\spaker_mod\Form\SpakerModConfigurationForm'
+    _title: 'spaker_mod config screen'
+  requirements:
+    _permission: 'administer site configuration'

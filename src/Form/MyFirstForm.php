@@ -25,15 +25,15 @@ class MyFirstForm extends FormBase
     public function buildForm(array $form, FormStateInterface $form_state)
     {
         $form['nom'] = [
-            '#type' => 'name',
+            '#type' => 'textfield',
             '#title' => $this->t('Votre nom s il vous plait'),
         ];
         $form['prenom'] = [
-            '#type' => 'surname',
+            '#type' => 'textfield',
             '#title' => $this->t('Votre prenom ici'),
         ];
         $form['age'] = [
-            '#type' => 'age',
+            '#type' => 'textfield',
             '#title' => $this->t('Votre age ici'),
         ];
         $form['actions']['#type'] = 'actions';
@@ -45,7 +45,7 @@ class MyFirstForm extends FormBase
 
         return $form;
     }
-    
+
     /**
      * {@inheritdoc}
      */
@@ -63,7 +63,7 @@ class MyFirstForm extends FormBase
 
     public function submitForm(array &$form, FormStateInterface $form_state)
     {
-        $this->messenger()->addStatus($this->t('Votre age est @age', ['@age' => $form_state->getValue('age')]));
+        $this->messenger()->addStatus($this->t('Votre nom est : @name @prenom age et vous avez @age ans', ['@age' => $form_state->getValue('age'), '@name'=>$form_state->getValue('nom'), '@prenom'=>$form_state->getValue('prenom')]));
     }
 
 }
