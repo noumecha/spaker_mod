@@ -203,3 +203,11 @@ agence_constant_services:
   css:
     theme:
       layouts/css/agence_constant_services_tmc.css: {}
+
+# agence constant services section: 
+agence_constant_footer:
+  js:
+    layouts/js/agence_constant_footer_tmc.js: {}
+  css:
+    theme:
+      layouts/css/agence_constant_footer_tmc.css: {}
