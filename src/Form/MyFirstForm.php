@@ -26,15 +26,19 @@ class MyFirstForm extends FormBase
     {
         $form['nom'] = [
             '#type' => 'textfield',
-            '#title' => $this->t('Votre nom s il vous plait'),
+            '#title' => $this->t('Votre nom s il vous plait : '),
         ];
         $form['prenom'] = [
             '#type' => 'textfield',
-            '#title' => $this->t('Votre prenom ici'),
+            '#title' => $this->t('Votre prenom ici : '),
+        ];
+        $form['phone_number'] = [
+            '#type' => 'tel',
+            '#title' => $this->t('Votre numero de telephone ici : '),
         ];
         $form['age'] = [
-            '#type' => 'textfield',
-            '#title' => $this->t('Votre age ici'),
+            '#type' => 'number',
+            '#title' => $this->t('Votre age ici : '),
         ];
         $form['actions']['#type'] = 'actions';
         $form['actions']['submit'] = [
@@ -51,10 +55,18 @@ class MyFirstForm extends FormBase
      */
     public function validateForm(array &$form, FormStateInterface $form_state)
     {
-        if(strlen($form_state->getValue('age')) < 0) 
-        {
-            $form_state->setErrorByName('age',$this->t('Votre age est inférieure à la normale veuillez corriger.'));
+        if ($form_state->getValue('age') < 1)
+
+        { 
+            $form_state->setErrorByName('age', $this->t('Votre age est inférieure à la normale veuillez corriger.'));
         }
+
+        if (strlen($form_state->getValue('phone_number')) > 3)
+
+        {
+            $form_state->setErrorByName('phone_number', $this->t('Le numero de telephone est trop court. veuillez le changer en entrant un complet.'));
+        }
+
     }
 
     /**

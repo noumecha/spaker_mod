@@ -195,3 +195,11 @@ price_section_rcweb:
   css:
     theme:
       layouts/css/price_section_rcweb_tmc.css: {}
+
+# agence constant services section: 
+agence_constant_services:
+  js:
+    layouts/js/agence_constant_services_tmc.js: {}
+  css:
+    theme:
+      layouts/css/agence_constant_services_tmc.css: {}

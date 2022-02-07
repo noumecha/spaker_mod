@@ -6,8 +6,10 @@ use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * formulaire puor la configuration de mon module 
- */
+ * Formulaire pour la configuration de mon module 
+ * 
+*/
+
 class SpakerModConfigurationForm extends ConfigFormBase
 {
     /**
@@ -37,7 +39,7 @@ class SpakerModConfigurationForm extends ConfigFormBase
         $form['configuration de base'] = [
             '#type' => 'textfield',
             '#title' => $this->t('configuration de base'),
-            '#default_value' => $config->get('variable_name'),
+            '#default_value' => $config->get('name'),
         ];
 
         return parent::buildForm($form, $form_state);
@@ -47,7 +49,7 @@ class SpakerModConfigurationForm extends ConfigFormBase
      */
     public function submitForm(array &$form, FormStateInterface $form_state)
     {
-        $this->config('spaker_mod.setting')->set('variable_name', $form_state->getValue('config de base spaker_mod'))->save();
+        $this->config('spaker_mod.setting')->set('name', $form_state->getValue('config de base spaker_mod'))->save();
         parent::submitForm($form, $form_state);
     }
 }

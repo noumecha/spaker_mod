@@ -43,6 +43,8 @@ module.exports = {
     "./src/js/sections/list_section_rcweb.js",
   "price_section_rcweb_tmc":
     "./src/js/sections/price_section_rcweb.js",
+  "agence_constant_services_tmc":
+    "./src/js/sections/agence_constant_services.js",
 };
 
 // export default {
