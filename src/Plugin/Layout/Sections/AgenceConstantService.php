@@ -17,8 +17,11 @@ use Drupal\formatage_models\Plugin\Layout\FormatageModels;
  *  library = "spaker_mod/agence_constant_services",
  *  default_region = "title",
  *  regions = {
- *     "contenu" = {
- *       "label" = @Translation("contenu"),
+ *     "image" = {
+ *       "label" = @Translation("image"),
+ *      },
+ *     "services" = {
+ *       "label" = @Translation("services"),
  *     },
  *  }
  * )
@@ -56,20 +59,24 @@ class AgenceConstantService extends FormatageModels
                     'loader' => 'static'
                 ],
                 'fields' => [
-                    'contenu' => [
+                    'image' => [
                         'text_html' => [
-                            'label' => 'contenu',
+                            'label' => 'image',
+                            'value' => "
+                            
+                                <div class='ac-column-image'>
+
+                                </div>
+
+                            "
+                        ]
+                    ],
+                    'services' => [
+                        'text_html' => [
+                            'label' => 'services',
                             'value' => "
 
 <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' crossorigin='anonymous'>
-
-<section class='ac-nos-services'>
-
-    <div class='container-flex ac-container'>
-
-        <div class='ac-column-image'>
-
-        </div>
 
         <div class='ac-nos-services--content'>
 
@@ -328,9 +335,6 @@ class AgenceConstantService extends FormatageModels
 
         </div>
 
-    </div>
-
-</section>
                             "
                         ]
                     ],
