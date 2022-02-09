@@ -1,0 +1,21 @@
+{{ attach_library('spaker_mod/agence_constant_services') }}
+
+<section {{ attributes.addClass('ac-nos-services') }}>
+
+    <div class="container-flex" {{ region_attributes.addClass('ac-container') }}>
+
+        <div {{ region_attributes.addClass('ac-column-image') }}>
+
+            {{ content.image }}
+
+        </div>
+
+        <div {{ region_attributes.addClass('ac-nos-services--content') }}>
+        
+            {{ content.services }}
+
+        </div>
+
+    </div>
+
+</section>

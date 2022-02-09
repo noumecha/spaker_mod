@@ -1,0 +1,126 @@
+
+$border_color:green;
+$ft_family : 'Open sans' , Sans-Serif;
+$ft_weight : 400;
+$ft_size : 14px;
+$border_form_color:#08daff;
+
+
+.the_region {
+
+  display: block;
+  width: 100%;
+  height: auto;
+  border : 1px solid $border_color;
+  ::after{
+    display: table;
+    clear: both;
+    content: '';
+  }
+
+  .main-region {
+
+    $bg_color:#0c193a;
+    $txt_color: white;
+
+    margin-left: 57.750px;
+    margin-right: 57.750px;
+    margin-bottom: 21px;
+    display: block;
+    border: 1px solid $border_color;
+    height: auto;
+    background-color: $bg_color;
+    color:$txt_color;
+
+    .main-region-in {
+
+      padding: 80px 20px;
+      display: block;
+      font-size: $ft_size;
+      text-align:center;
+      overflow-wrap: break-word;
+      font-family: $ft_family;
+      border: 1px solid $border_color;
+
+      .main-region-in-in {
+
+        align-items: center;
+        margin-left: -100px;
+        border: 1px solid $border_color;
+
+        .main-region-in-in-column {
+
+          padding-left: 100px;
+          width:33.33%;
+          display: block;
+          border: 1px solid $border_color;
+
+          .in{
+
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            padding:40px;
+            border:1px solid white;
+
+            h2 {
+
+              padding-left: 20px;
+              margin-bottom: 60px;
+              border-left-style: solid;
+              border-left-width: 4px;
+              border-color: $border_form_color;
+              display: inline-block;
+              color: $txt_color;
+              font-size: $ft_size;
+              font-weight: $ft_weight + 300;
+              margin-block-start: 0.83em;
+              margin-block-end: 0.83em;
+              margin-inline-start: 0px;
+              margin-inline-end: 0px;
+              border:1px solid $border-color;
+
+            }
+
+            p {
+
+              margin-bottom: 21px;
+              display: block;
+              margin-block-start: 1em;
+              margin-block-end: 1em;
+              margin-inline-start: 0px;
+              margin-inline-end: 0px;
+              text-align:justify;
+
+              .gb-icon {
+
+                color: $border_form_color;
+                padding-right: 1em;
+                display: inline-flex;
+                line-height: 0;
+
+              }
+
+              .p_span {
+
+                display: inline-flex;
+
+              }
+
+            }
+
+          }
+        }
+
+      }
+
+    }
+
+  }
+
+  .map-region {
+    display: block;
+    border: 1px solid $border_color;
+  }
+
+}

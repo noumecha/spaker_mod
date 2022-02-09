@@ -1,0 +1,92 @@
+@use "@stephane888/wbu-atomique/scss/wbu-ressources.scss" as *;
+@use "../_variable" as *;
+
+$transition: 0.4s;
+$delay: 1.2s;
+$d_sub_title: $delay + $transition + 0.2;
+$d_title: $d_sub_title + 0.2;
+$d_description: $d_title + 0.2;
+
+.swiper-unique {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  .swiper-slide {
+    overflow: hidden;
+    .swiper-image {
+      .cover-text {
+        transition: all $transition cubic-bezier(0.215, 0.61, 0.355, 1) $delay;
+        transform: translate3d(100%, 0, 0);
+        .title {
+          transition: all #{$transition * 2} cubic-bezier(0.215, 0.61, 0.355, 1)
+            #{$d_title};
+          transform: translate3d(0, -30px, 0);
+          opacity: 0;
+        }
+        .description {
+          transition: all #{$transition * 2} cubic-bezier(0.215, 0.61, 0.355, 1)
+            #{$d_description};
+          transform: translate3d(0, -60px, 0);
+          opacity: 0;
+        }
+      }
+    }
+    &.swiper-slide-active {
+      .swiper-image {
+        .cover-text {
+          transform: translate3d(0, 0, 0);
+
+          .title,
+          .description {
+            transform: translate3d(0, 0, 0);
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .cover-img {
+    img {
+      border-radius: 50%;
+      width: 90px;
+      height: 90px;
+    }
+    padding-bottom: $wbu-margin;
+  }
+
+  .cover-text {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0);
+    color: #fff;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.7;
+    padding: $wbu-margin;
+
+    .description {
+      margin-bottom: $wbu-margin;
+      font-size: $wbu-default-font-size * 1.5;
+    }
+    .title {
+      margin-bottom: $wbu-margin;
+    }
+  }
+  .swiper-pagination {
+    max-width: 100%;
+    .swiper-pagination-bullet {
+      border-radius: 0;
+      width: 20px;
+      height: 3px;
+      padding: 0;
+      background-color: #fff;
+      &.swiper-pagination-bullet-active {
+        background-color: $wbu-color-primary;
+      }
+    }
+  }
+}
