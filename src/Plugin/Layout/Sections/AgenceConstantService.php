@@ -75,9 +75,6 @@ class AgenceConstantService extends FormatageModels
                         'text_html' => [
                             'label' => 'services',
                             'value' => "
-
-<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' crossorigin='anonymous'>
-
         <div class='ac-nos-services--content'>
 
             <div class='ac-left-header'>
