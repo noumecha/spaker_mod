@@ -4,6 +4,7 @@ namespace Drupal\spaker_mod\Plugin\Layout\Footer;
 
 use Drupal\formatage_models\FormatageModelsThemes;
 use Drupal\formatage_models\Plugin\Layout\FormatageModels;
+use Drupal\bootstrap_styles\StylesGroup\StylesGroupManager;
 /**
  * A Header Layout for vesperr theme : By TMC 
  * 
@@ -31,12 +32,11 @@ use Drupal\formatage_models\Plugin\Layout\FormatageModels;
 class VesperrFooterSection extends FormatageModels
 {
 
-    /**
+   /**
      * 
      * {@inheritdoc}
      * @see \Drupal\formatage_models\Plugin\Layout\FormatageModels:build()
      */
-
     public function build(array $regions) 
     {
 
