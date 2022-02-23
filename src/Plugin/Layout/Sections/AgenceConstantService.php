@@ -32,6 +32,17 @@ class AgenceConstantService extends FormatageModels
 {
 
     /**
+     *
+     * {@inheritdoc}
+     * @see \Drupal\formatage_models\Plugin\Layout\FormatageModels::__construct()
+     */
+    public function __construct(array $configuration, $plugin_id, $plugin_definition) {
+        // TODO Auto-generated method stub
+        parent::__construct($configuration, $plugin_id, $plugin_definition);
+        $this->pluginDefinition->set('icon', drupal_get_path('module', 'spaker_mod') . "/icons/agence_constant_service_map.jpg");
+    }
+
+    /**
      * 
      * {@inheritdoc}
      * @see \Drupal\formatage_models\Plugin\Layout\FormatageModels:build()
@@ -75,12 +86,9 @@ class AgenceConstantService extends FormatageModels
                         'text_html' => [
                             'label' => 'services',
                             'value' => "
-<<<<<<< HEAD
 
 <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' crossorigin='anonymous'>
 
-=======
->>>>>>> e6a5094bb1893c445cf45ab02edd681c44aca537
         <div class='ac-nos-services--content'>
 
             <div class='ac-left-header'>

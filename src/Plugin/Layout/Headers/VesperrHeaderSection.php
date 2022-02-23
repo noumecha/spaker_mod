@@ -4,6 +4,8 @@ namespace Drupal\spaker_mod\Plugin\Layout\Headers;
 
 use Drupal\formatage_models\FormatageModelsThemes;
 use Drupal\formatage_models\Plugin\Layout\FormatageModels;
+use Drupal\bootstrap_styles\StylesGroup\StylesGroupManager;
+
 /**
  * A Header Layout for vesperr theme : By TMC 
  * 
@@ -30,6 +32,18 @@ use Drupal\formatage_models\Plugin\Layout\FormatageModels;
  */
 class VesperrHeaderSection extends FormatageModels
 {
+
+  
+    /**
+     *
+     * {@inheritdoc}
+     * @see \Drupal\formatage_models\Plugin\Layout\FormatageModels::__construct()
+     */
+    public function __construct(array $configuration, $plugin_id, $plugin_definition) {
+        // TODO Auto-generated method stub
+        parent::__construct($configuration, $plugin_id, $plugin_definition);
+        $this->pluginDefinition->set('icon', drupal_get_path('module', 'spaker_mod') . "/icons/Vessper_header_map.jpg");
+    }
 
     /**
      * 

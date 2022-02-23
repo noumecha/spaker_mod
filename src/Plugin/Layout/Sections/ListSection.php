@@ -41,6 +41,17 @@ class ListSection extends FormatageModels
 {
 
     /**
+     *
+     * {@inheritdoc}
+     * @see \Drupal\formatage_models\Plugin\Layout\FormatageModels::__construct()
+     */
+    public function __construct(array $configuration, $plugin_id, $plugin_definition) {
+        // TODO Auto-generated method stub
+        parent::__construct($configuration, $plugin_id, $plugin_definition);
+        $this->pluginDefinition->set('icon', drupal_get_path('module', 'spaker_mod') . "/icons/rc-web_list_map.jpg");
+    }
+    
+    /**
      * 
      * {@inheritdoc}
      * @see \Drupal\formatage_models\Plugin\Layout\FormatageModels:build()
