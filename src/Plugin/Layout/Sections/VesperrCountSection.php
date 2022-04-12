@@ -17,11 +17,17 @@ use Drupal\formatage_models\Plugin\Layout\FormatageModels;
  *  library = "spaker_mod/vesperr_count",
  *  default_region = "main",
  *  regions = {
- *     "logo" = {
- *       "label" = @Translation("logo"),
+ *     "text_one" = {
+ *       "label" = @Translation("text_one"),
  *     },
- *     "link" = {
- *       "label" = @Translation("link"),
+ *     "text_two" = {
+ *       "label" = @Translation("text_two"),
+ *     },
+ *     "text_three" = {
+ *       "label" = @Translation("text_three"),
+ *     },
+ *     "text_four" = {
+ *       "label" = @Translation("text_four"),
  *     },
  *  }
  * )
@@ -70,16 +76,28 @@ class VesperrCountSection extends FormatageModels
                     'loader' => 'static'
                 ],
                 'fields' => [
-                    'link' => [
+                    'text_one' => [
                         'text_html' => [
-                            'label' => 'lien',
-                            'value' => 'Home'
+                            'label' => 'paragraphe 1',
+                            'value' => '<strong>Happy Clients</strong> consequuntur voluptas nostrum aliquid ipsam architecto ut.'
                         ]
                     ],
-                    'logo' => [
+                    'text_two' => [
                         'text_html' => [
-                            'label' => 'logo',
-                            'value' => 'Wb Universe'
+                            'label' => 'paragraphe 2',
+                            'value' => '<strong>Projects</strong> adipisci atque cum quia aspernatur totam laudantium et quia dere tan'
+                        ]
+                    ],
+                    'text_three' => [
+                        'text_html' => [
+                            'label' => 'paragraphe 3',
+                            'value' => '<strong>Years of experience</strong> aut commodi quaerat modi aliquam nam ducimus aut voluptate non vel'
+                        ]
+                    ],
+                    'text_four' => [
+                        'text_html' => [
+                            'label' => 'paragraphe 4',
+                            'value' => '<strong>Awards</strong> rerum asperiores dolor alias quo reprehenderit eum et nemo pad der'
                         ]
                     ],
                 ]
