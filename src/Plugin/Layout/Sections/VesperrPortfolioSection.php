@@ -17,11 +17,77 @@ use Drupal\formatage_models\Plugin\Layout\FormatageModels;
  *  library = "spaker_mod/vesperr_portfolio",
  *  default_region = "main",
  *  regions = {
- *     "logo" = {
- *       "label" = @Translation("logo"),
+ *     "title" = {
+ *       "label" = @Translation("title"),
  *     },
- *     "link" = {
- *       "label" = @Translation("link"),
+ *     "text" = {
+ *       "label" = @Translation("text"),
+ *     },
+ *     "list_one" = {
+ *       "label" = @Translation("list_one"),
+ *     },
+ *     "list_two" = {
+ *       "label" = @Translation("list_two"),
+ *     },
+ *     "list_three" = {
+ *       "label" = @Translation("list_three"),
+ *     },
+ *     "list_four" = {
+ *       "label" = @Translation("list_four"),
+ *     },
+ *     "title_one" = {
+ *       "label" = @Translation("title_one"),
+ *     },
+ *     "title_two" = {
+ *       "label" = @Translation("title_two"),
+ *     },
+ *     "title_three" = {
+ *       "label" = @Translation("title_three"),
+ *     },
+ *     "title_four" = {
+ *       "label" = @Translation("title_four"),
+ *     },
+ *     "title_five" = {
+ *       "label" = @Translation("title_five"),
+ *     },
+ *     "title_six" = {
+ *       "label" = @Translation("title_six"),
+ *     },
+ *     "title_seven" = {
+ *       "label" = @Translation("title_seven"),
+ *     },
+ *     "title_height" = {
+ *       "label" = @Translation("title_height"),
+ *     },
+ *     "title_nine" = {
+ *       "label" = @Translation("title_nine"),
+ *     },
+ *     "text_one" = {
+ *       "label" = @Translation("text_one"),
+ *     },
+ *     "text_two" = {
+ *       "label" = @Translation("text_two"),
+ *     },
+ *     "text_three" = {
+ *       "label" = @Translation("text_three"),
+ *     },
+ *     "text_four" = {
+ *       "label" = @Translation("text_four"),
+ *     },
+ *     "text_five" = {
+ *       "label" = @Translation("text_five"),
+ *     },
+ *     "text_six" = {
+ *       "label" = @Translation("text_six"),
+ *     },
+ *     "text_seven" = {
+ *       "label" = @Translation("text_seven"),
+ *     },
+ *     "text_height" = {
+ *       "label" = @Translation("text_height"),
+ *     },
+ *     "text_nine" = {
+ *       "label" = @Translation("text_nine"),
  *     },
  *  }
  * )
@@ -71,16 +137,148 @@ class VesperrPortfolioSection extends FormatageModels
                     'loader' => 'static'
                 ],
                 'fields' => [
-                    'link' => [
+                    'title' => [
                         'text_html' => [
-                            'label' => 'lien',
-                            'value' => 'Home'
+                            'label' => 'titre',
+                            'value' => 'Portfolio'
                         ]
                     ],
-                    'logo' => [
+                    'text' => [
                         'text_html' => [
-                            'label' => 'logo',
-                            'value' => 'Wb Universe'
+                            'label' => 'Paragraphe',
+                            'value' => 'Necessitatibus eius consequatur ex aliquid fuga eum quidem'
+                        ]
+                    ],
+                    'list_one' => [
+                        'text_html' => [
+                            'label' => 'liste 1',
+                            'value' => 'All'
+                        ]
+                    ],
+                    'list_two' => [
+                        'text_html' => [
+                            'label' => 'liste 2',
+                            'value' => 'App'
+                        ]
+                    ],
+                    'list_three' => [
+                        'text_html' => [
+                            'label' => 'liste 3',
+                            'value' => 'Card'
+                        ]
+                    ],
+                    'list_four' => [
+                        'text_html' => [
+                            'label' => 'liste 4',
+                            'value' => 'Web'
+                        ]
+                    ],
+                    'title_one' => [
+                        'text_html' => [
+                            'label' => 'titre 1',
+                            'value' => 'App 1'
+                        ]
+                    ],
+                    'title_two' => [
+                        'text_html' => [
+                            'label' => 'titre 2',
+                            'value' => 'Web 3'
+                        ]
+                    ],
+                    'title_three' => [
+                        'text_html' => [
+                            'label' => 'titre 3',
+                            'value' => 'App 2'
+                        ]
+                    ],
+                    'title_four' => [
+                        'text_html' => [
+                            'label' => 'titre 4',
+                            'value' => 'Card 2'
+                        ]
+                    ],
+                    'title_five' => [
+                        'text_html' => [
+                            'label' => 'titre 5',
+                            'value' => 'Web 2'
+                        ]
+                    ],
+                    'title_six' => [
+                        'text_html' => [
+                            'label' => 'titre 6',
+                            'value' => 'App 3'
+                        ]
+                    ],
+                    'title_seven' => [
+                        'text_html' => [
+                            'label' => 'titre 7',
+                            'value' => 'Card 1'
+                        ]
+                    ],
+                    'title_height' => [
+                        'text_html' => [
+                            'label' => 'titre 8',
+                            'value' => 'Card 3'
+                        ]
+                    ],
+                    'title_nine' => [
+                        'text_html' => [
+                            'label' => 'titre 9',
+                            'value' => 'Web 3'
+                        ]
+                    ],
+                    'text_one' => [
+                        'text_html' => [
+                            'label' => 'Paragraphe 1',
+                            'value' => 'App'
+                        ]
+                    ],
+                    'text_two' => [
+                        'text_html' => [
+                            'label' => 'Paragraphe 2',
+                            'value' => 'Web'
+                        ]
+                    ],
+                    'text_three' => [
+                        'text_html' => [
+                            'label' => 'Paragraphe 3',
+                            'value' => 'App'
+                        ]
+                    ],
+                    'text_four' => [
+                        'text_html' => [
+                            'label' => 'Paragraphe 4',
+                            'value' => 'Card'
+                        ]
+                    ],
+                    'text_five' => [
+                        'text_html' => [
+                            'label' => 'Paragraphe 5',
+                            'value' => 'Web'
+                        ]
+                    ],
+                    'text_six' => [
+                        'text_html' => [
+                            'label' => 'Paragraphe 6',
+                            'value' => 'App'
+                        ]
+                    ],
+                    'text_seven' => [
+                        'text_html' => [
+                            'label' => 'Paragraphe 7',
+                            'value' => 'Card'
+                        ]
+                    ],
+                    'text_height' => [
+                        'text_html' => [
+                            'label' => 'Paragraphe 8',
+                            'value' => 'Card'
+                        ]
+                    ],
+                    'text_nine' => [
+                        'text_html' => [
+                            'label' => 'Paragraphe 9',
+                            'value' => 'Web'
                         ]
                     ],
                 ]
