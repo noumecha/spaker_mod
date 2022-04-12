@@ -17,11 +17,35 @@ use Drupal\formatage_models\Plugin\Layout\FormatageModels;
  *  library = "spaker_mod/vesperr_team",
  *  default_region = "main",
  *  regions = {
- *     "logo" = {
- *       "label" = @Translation("logo"),
+ *     "title" = {
+ *       "label" = @Translation("title"),
  *     },
- *     "link" = {
- *       "label" = @Translation("link"),
+ *     "text" = {
+ *       "label" = @Translation("text"),
+ *     },
+ *     "title_one" = {
+ *       "label" = @Translation("title_one"),
+ *     },
+ *     "title_two" = {
+ *       "label" = @Translation("title_two"),
+ *     },
+ *     "title_three" = {
+ *       "label" = @Translation("title_three"),
+ *     },
+ *     "title_four" = {
+ *       "label" = @Translation("title_four"),
+ *     },
+ *     "text_one" = {
+ *       "label" = @Translation("text_one"),
+ *     },
+ *     "text_two" = {
+ *       "label" = @Translation("text_two"),
+ *     },
+ *     "text_three" = {
+ *       "label" = @Translation("text_three"),
+ *     },
+ *     "text_four" = {
+ *       "label" = @Translation("text_four"),
  *     },
  *  }
  * )
@@ -70,16 +94,64 @@ class VesperrTeamSection extends FormatageModels
                     'loader' => 'static'
                 ],
                 'fields' => [
-                    'link' => [
+                    'title' => [
                         'text_html' => [
-                            'label' => 'lien',
-                            'value' => 'Home'
+                            'label' => 'Titre',
+                            'value' => 'Team'
                         ]
                     ],
-                    'logo' => [
+                    'text' => [
                         'text_html' => [
-                            'label' => 'logo',
-                            'value' => 'Wb Universe'
+                            'label' => 'Paragraphe titre',
+                            'value' => 'Necessitatibus eius consequatur ex aliquid fuga eum quidem'
+                        ]
+                    ],
+                    'title_one' => [
+                        'text_html' => [
+                            'label' => 'Titre 1',
+                            'value' => 'Walter White'
+                        ]
+                    ],
+                    'title_two' => [
+                        'text_html' => [
+                            'label' => 'Titre 2',
+                            'value' => 'Sarah Jhonson'
+                        ]
+                    ],
+                    'title_three' => [
+                        'text_html' => [
+                            'label' => 'Titre 3',
+                            'value' => 'William Anderson'
+                        ]
+                    ],
+                    'title_four' => [
+                        'text_html' => [
+                            'label' => 'Titre 4',
+                            'value' => 'Amanda Jepson'
+                        ]
+                    ],
+                    'text_one' => [
+                        'text_html' => [
+                            'label' => 'Paragraphe 1',
+                            'value' => 'Chief Executive Officer'
+                        ]
+                    ],
+                    'text_two' => [
+                        'text_html' => [
+                            'label' => 'Paragraphe 2',
+                            'value' => 'Product ManagerWb Universe'
+                        ]
+                    ],
+                    'text_three' => [
+                        'text_html' => [
+                            'label' => 'Paragraphe 3',
+                            'value' => 'CTO'
+                        ]
+                    ],
+                    'text_four' => [
+                        'text_html' => [
+                            'label' => 'Paragraphe 4',
+                            'value' => 'Accountant'
                         ]
                     ],
                 ]
