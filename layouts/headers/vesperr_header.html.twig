@@ -1,10 +1,12 @@
     <!-- bootstrap icons cdn : add by TMC-->
     {{ attach_library('spaker_mod/vesperr_header') }}
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
     />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
     
 <header id="header" class="fixed-top d-flex align-items-center">
 
@@ -28,31 +30,31 @@
 
             <li>
             
-                <a class="nav-link scrollto" href="#about"> About </a>
+                <a class="nav-link scrollto" href="#about"> {{ content.link_one }} </a>
                 
             </li>
 
             <li>
             
-                <a class="nav-link scrollto" href="#services"> Services </a>
+                <a class="nav-link scrollto" href="#services"> {{ content.link_two }} </a>
                 
             </li>
 
             <li>
 
-              <a class="nav-link scrollto" href="#portfolio"> Portfolio </a>
+              <a class="nav-link scrollto" href="#portfolio"> {{ content.link_three }} </a>
 
             </li>
 
             <li>
             
-                <a class="nav-link scrollto" href="#team"> Team </a>
+                <a class="nav-link scrollto" href="#team"> {{ content.link_four }} </a>
                 
             </li>
 
             <li>
             
-                <a class="nav-link scrollto" href="#pricing"> Pricing </a>
+                <a class="nav-link scrollto" href="#pricing"> {{ content.link_five }} </a>
                 
             </li>
 
@@ -60,7 +62,7 @@
 
                 <a href="#"> 
               
-                    <span> Drop Down </span> <i class="bi bi-chevron-down"></i>
+                    <span> {{ content.sub_link }} </span> <i class="bi bi-chevron-down"></i>
                 
                 </a>
 
@@ -68,7 +70,7 @@
 
                 <li>
                 
-                    <a href="#">Drop Down 1</a>
+                    <a href="#">{{ content.sub_link_one }} </a>
                     
                 </li>
 
@@ -76,7 +78,7 @@
 
                   <a href="#"> 
                   
-                    <span>Deep Drop Down</span>
+                    <span> {{ content.sub_link_two }} </span>
 
                     <i class="bi bi-chevron-right"></i>
                     
@@ -86,31 +88,31 @@
 
                     <li>
                     
-                        <a href="#">Deep Drop Down 1</a>
+                        <a href="#"> {{ content.sub_sub_link_one}} </a>
                         
                     </li>
 
                     <li>
                         
-                        <a href="#">Deep Drop Down 2</a>
-                        
-                    </li>
-
-                    <li>
-                    
-                        <a href="#">Deep Drop Down 3</a>
-                        
-                    </li>
-
-                    <li>
-                        
-                        <a href="#">Deep Drop Down 4</a>
+                        <a href="#"> {{ content.sub_sub_link_two }} </a>
                         
                     </li>
 
                     <li>
                     
-                        <a href="#">Deep Drop Down 5</a>
+                        <a href="#"> {{ content.sub_sub_link_three }} </a>
+                        
+                    </li>
+
+                    <li>
+                        
+                        <a href="#"> {{ content.sub_sub_link_four }} </a>
+                        
+                    </li>
+
+                    <li>
+                    
+                        <a href="#"> {{ content.sub_sub_link_five }} </a>
                         
                     </li>
 
@@ -120,19 +122,19 @@
 
                 <li>
                 
-                    <a href="#">Drop Down 2</a>
+                    <a href="#"> {{ content.sub_link_three }} </a>
                     
                 </li>
 
                 <li>
                 
-                    <a href="#">Drop Down 3</a>
+                    <a href="#"> {{ content.sub_link_four }} </a>
                     
                 </li>
 
                 <li>
                 
-                    <a href="#">Drop Down 4</a>
+                    <a href="#"> {{ content.sub_link_five }} </a>
                     
                 </li>
 
@@ -142,13 +144,13 @@
 
             <li>
             
-                <a class="nav-link scrollto" href="#contact">Contact</a>
+                <a class="nav-link scrollto" href="#contact"> {{ content.link_six }} </a>
                 
             </li>
 
             <li>
 
-              <a class="getstarted scrollto" href="#about">Get Started</a>
+              <a class="getstarted scrollto" href="#about"> {{ content.boutton }} </a>
 
             </li>
 
@@ -161,4 +163,4 @@
         <!-- .navbar -->
       </div>
 
-    </header>
+</header>
