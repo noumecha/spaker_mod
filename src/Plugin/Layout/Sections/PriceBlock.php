@@ -15,8 +15,11 @@ use Drupal\formatage_models\Plugin\Layout\FormatageModels;
  *  path = "layouts/sections",
  *  template = "price_section_rcweb",
  *  library = "spaker_mod/price_section_rcweb",
- *  default_region = "title",
+ *  default_region = "main",
  *  regions = {
+ *     "title" = {
+ *       "label" = @Translation("title"),
+ *     },
  *     "title_one" = {
  *       "label" = @Translation("title_one"),
  *     },
@@ -31,6 +34,36 @@ use Drupal\formatage_models\Plugin\Layout\FormatageModels;
  *     },
  *     "title_five" = {
  *       "label" = @Translation("title_five"),
+ *     },
+ *     "title_six" = {
+ *       "label" = @Translation("title_six"),
+ *     },
+ *     "title_seven" = {
+ *       "label" = @Translation("title_seven"),
+ *     },
+ *     "title_height" = {
+ *       "label" = @Translation("title_height"),
+ *     },
+ *     "title_nine" = {
+ *       "label" = @Translation("title_nine"),
+ *     },
+ *     "title_ten" = {
+ *       "label" = @Translation("title_ten"),
+ *     },
+ *     "title_eleven" = {
+ *       "label" = @Translation("title_eleven"),
+ *     },
+ *     "title_twelwe" = {
+ *       "label" = @Translation("title_twelwe"),
+ *     },
+ *     "title_thirtheen" = {
+ *       "label" = @Translation("title_thirtheen"),
+ *     },
+ *     "title_fourthteen" = {
+ *       "label" = @Translation("title_fourthteen"),
+ *     },
+ *     "btn" = {
+ *       "label" = @Translation("btn"),
  *     },
  *  }
  * )
@@ -79,34 +112,100 @@ class PriceBlock extends FormatageModels
                     'loader' => 'static'
                 ],
                 'fields' => [
+                    'title' => [
+                        'text_html' => [
+                            'label' => 'titre',
+                            'value' => 'BOUTIQUE PROFESSIONNELLE SHOPIFY'
+                        ]
+                    ],
                     'title_one' => [
                         'text_html' => [
                             'label' => 'titre un',
-                            'value' => 'GESTION DE VOS RÉSEAUX SOCIAUX ET CRÉATION DE VOTRE STRATEGIE'
+                            'value' => 'Création de votre boutique clé en main avec Shopify'
                         ]
                     ],
                     'title_two' => [
                         'text_html' => [
                             'label' => 'titre deux',
-                            'value' => 'GESTION DE VOS RÉSEAUX SOCIAUX ET CRÉATION DE VOTRE STRATEGIE'
+                            'value' => 'Installation d un thème professionnel'
                         ]
                     ],
                     'title_three' => [
                         'text_html' => [
                             'label' => 'titre trois',
-                            'value' => 'GESTION DE VOS RÉSEAUX SOCIAUX ET CRÉATION DE VOTRE STRATEGIE'
+                            'value' => 'Mise en forme de vos contenus pour 5 pages'
                         ]
                     ],
                     'title_four' => [
                         'text_html' => [
                             'label' => 'titre quatre',
-                            'value' => 'GESTION DE VOS RÉSEAUX SOCIAUX ET CRÉATION DE VOTRE STRATEGIE'
+                            'value' => '+ Vos pages de mentions légales et RGPD '
                         ]
                     ],
                     'title_five' => [
                         'text_html' => [
                             'label' => 'titre cinq',
-                            'value' => 'GESTION DE VOS RÉSEAUX SOCIAUX ET CRÉATION DE VOTRE STRATEGIE'
+                            'value' => '1 formulaire de contact'
+                        ]
+                    ],
+                    'title_six' => [
+                        'text_html' => [
+                            'label' => 'titre six',
+                            'value' => 'Site modifiable par vos soins'
+                        ]
+                    ],
+                    'title_seven' => [
+                        'text_html' => [
+                            'label' => 'titre sept',
+                            'value' => 'Ajout de 5 collections et 30 produits '
+                        ]
+                    ],
+                    'title_height' => [
+                        'text_html' => [
+                            'label' => 'titre huit',
+                            'value' => 'Création du compte client'
+                        ]
+                    ],
+                    'title_nine' => [
+                        'text_html' => [
+                            'label' => 'titre neuf',
+                            'value' => 'Votre site relié à vos réseaux sociaux'
+                        ]
+                    ],
+                    'title_ten' => [
+                        'text_html' => [
+                            'label' => 'titre neuf',
+                            'value' => 'Pages supplémentaires possibles'
+                        ]
+                    ],
+                    'title_eleven' => [
+                        'text_html' => [
+                            'label' => 'titre neuf',
+                            'value' => 'Mise à jour et maintenance du site durant une année '
+                        ]
+                    ],
+                    'title_twelwe' => [
+                        'text_html' => [
+                            'label' => 'titre neuf',
+                            'value' => 'Référencement SEO simple'
+                        ]
+                    ],
+                    'title_thirtheen' => [
+                        'text_html' => [
+                            'label' => 'titre neuf',
+                            'value' => 'Installation de Google Analytics'
+                        ]
+                    ],
+                    'title_fourthteen' => [
+                        'text_html' => [
+                            'label' => 'titre neuf',
+                            'value' => 'Option : Multilingue +190&thinsp;€ '
+                        ]
+                    ],
+                    'btn' => [
+                        'text_html' => [
+                            'label' => 'titre neuf',
+                            'value' => 'Nous Contacter'
                         ]
                     ],
                 ]
