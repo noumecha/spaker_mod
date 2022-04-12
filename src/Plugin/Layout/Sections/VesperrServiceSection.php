@@ -17,11 +17,35 @@ use Drupal\formatage_models\Plugin\Layout\FormatageModels;
  *  library = "spaker_mod/vesperr_service",
  *  default_region = "main",
  *  regions = {
- *     "logo" = {
- *       "label" = @Translation("logo"),
+ *     "title" = {
+ *       "label" = @Translation("title"),
  *     },
- *     "link" = {
- *       "label" = @Translation("link"),
+ *     "text" = {
+ *       "label" = @Translation("text"),
+ *     },
+ *     "title_one" = {
+ *       "label" = @Translation("title_one"),
+ *     },
+ *     "title_two" = {
+ *       "label" = @Translation("title_two"),
+ *     },
+ *     "title_three" = {
+ *       "label" = @Translation("title_three"),
+ *     },
+ *     "title_four" = {
+ *       "label" = @Translation("title_four"),
+ *     },
+ *     "text_one" = {
+ *       "label" = @Translation("text_one"),
+ *     },
+ *     "text_two" = {
+ *       "label" = @Translation("text_two"),
+ *     },
+ *     "text_three" = {
+ *       "label" = @Translation("text_three"),
+ *     },
+ *     "text_four" = {
+ *       "label" = @Translation("text_four"),
  *     },
  *  }
  * )
@@ -70,16 +94,64 @@ class VesperrServiceSection extends FormatageModels
                     'loader' => 'static'
                 ],
                 'fields' => [
-                    'link' => [
+                    'title' => [
                         'text_html' => [
-                            'label' => 'lien',
-                            'value' => 'Home'
+                            'label' => 'Titre',
+                            'value' => 'Services'
                         ]
                     ],
-                    'logo' => [
+                    'text' => [
                         'text_html' => [
-                            'label' => 'logo',
-                            'value' => 'Wb Universe'
+                            'label' => 'Paragraphe titre',
+                            'value' => 'Magnam dolores commodi suscipit eius consequatur ex aliquid fug'
+                        ]
+                    ],
+                    'title_one' => [
+                        'text_html' => [
+                            'label' => 'Titre 1',
+                            'value' => 'Lorem Ipsum'
+                        ]
+                    ],
+                    'title_two' => [
+                        'text_html' => [
+                            'label' => 'Titre 2',
+                            'value' => 'Sed ut perspiciatis'
+                        ]
+                    ],
+                    'title_three' => [
+                        'text_html' => [
+                            'label' => 'Titre 3',
+                            'value' => 'Magni Dolores'
+                        ]
+                    ],
+                    'title_four' => [
+                        'text_html' => [
+                            'label' => 'Titre 4',
+                            'value' => 'Nemo Enim'
+                        ]
+                    ],
+                    'text_one' => [
+                        'text_html' => [
+                            'label' => 'Paragraphe 1',
+                            'value' => 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi'
+                        ]
+                    ],
+                    'text_two' => [
+                        'text_html' => [
+                            'label' => 'Paragraphe 2',
+                            'value' => 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore'
+                        ]
+                    ],
+                    'text_three' => [
+                        'text_html' => [
+                            'label' => 'Paragraphe 3',
+                            'value' => 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia'
+                        ]
+                    ],
+                    'text_four' => [
+                        'text_html' => [
+                            'label' => 'Paragraphe 4',
+                            'value' => 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis'
                         ]
                     ],
                 ]
