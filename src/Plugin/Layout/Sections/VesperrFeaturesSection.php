@@ -17,11 +17,47 @@ use Drupal\formatage_models\Plugin\Layout\FormatageModels;
  *  library = "spaker_mod/vesperr_feature",
  *  default_region = "main",
  *  regions = {
- *     "logo" = {
- *       "label" = @Translation("logo"),
+ *     "title" = {
+ *       "label" = @Translation("title"),
  *     },
- *     "link" = {
- *       "label" = @Translation("link"),
+ *     "text" = {
+ *       "label" = @Translation("text"),
+ *     },
+ *     "title_one" = {
+ *       "label" = @Translation("title_one"),
+ *     },
+ *     "title_two" = {
+ *       "label" = @Translation("title_two"),
+ *     },
+ *     "title_three" = {
+ *       "label" = @Translation("title_three"),
+ *     },
+ *     "title_four" = {
+ *       "label" = @Translation("title_four"),
+ *     },
+ *     "title_five" = {
+ *       "label" = @Translation("title_five"),
+ *     },
+ *     "title_six" = {
+ *       "label" = @Translation("title_six"),
+ *     },
+ *     "title_seven" = {
+ *       "label" = @Translation("title_seven"),
+ *     },
+ *     "title_height" = {
+ *       "label" = @Translation("title_height"),
+ *     },
+ *     "title_nine" = {
+ *       "label" = @Translation("title_nine"),
+ *     },
+ *     "title_ten" = {
+ *       "label" = @Translation("title_ten"),
+ *     },
+ *     "title_eleven" = {
+ *       "label" = @Translation("title_eleven"),
+ *     },
+ *     "title_twelve" = {
+ *       "label" = @Translation("title_twelve"),
  *     },
  *  }
  * )
@@ -70,16 +106,88 @@ class VesperrFeaturesSection extends FormatageModels
                     'loader' => 'static'
                 ],
                 'fields' => [
-                    'link' => [
+                    'title' => [
                         'text_html' => [
-                            'label' => 'lien',
-                            'value' => 'Home'
+                            'label' => 'titre',
+                            'value' => 'Features'
                         ]
                     ],
-                    'logo' => [
+                    'text' => [
                         'text_html' => [
-                            'label' => 'logo',
-                            'value' => 'Wb Universe'
+                            'label' => 'Paragraphe',
+                            'value' => 'Necessitatibus eius consequatur ex aliquid fuga eum quidem'
+                        ]
+                    ],
+                    'title_one' => [
+                        'text_html' => [
+                            'label' => 'titre 1',
+                            'value' => 'Lorem Ipsum'
+                        ]
+                    ],
+                    'title_two' => [
+                        'text_html' => [
+                            'label' => 'titre 2',
+                            'value' => 'Dolor Sitema'
+                        ]
+                    ],
+                    'title_three' => [
+                        'text_html' => [
+                            'label' => 'titre 3',
+                            'value' => 'Sed perspiciatis'
+                        ]
+                    ],
+                    'title_four' => [
+                        'text_html' => [
+                            'label' => 'titre 4',
+                            'value' => 'Magni Dolores'
+                        ]
+                    ],
+                    'title_five' => [
+                        'text_html' => [
+                            'label' => 'titre 5',
+                            'value' => 'Nemo Enim'
+                        ]
+                    ],
+                    'title_six' => [
+                        'text_html' => [
+                            'label' => 'titre 6',
+                            'value' => 'Eiusmod Tempor'
+                        ]
+                    ],
+                    'title_seven' => [
+                        'text_html' => [
+                            'label' => 'titre 7',
+                            'value' => 'Midela Teren'
+                        ]
+                    ],
+                    'title_height' => [
+                        'text_html' => [
+                            'label' => 'titre 8',
+                            'value' => 'Pira Neve'
+                        ]
+                    ],
+                    'title_nine' => [
+                        'text_html' => [
+                            'label' => 'titre 9',
+                            'value' => 'Dirada Pack'
+                        ]
+                    ],
+                    'title_ten' => [
+                        'text_html' => [
+                            'label' => 'titre 10',
+                            'value' => 'Moton Ideal'
+                        ]
+                    ],
+                    'title_eleven' => [
+                        'text_html' => [
+                            'label' => 'titre 11',
+                            'value' => 'Verdo Park'
+                        ]
+                    ],
+                    'title_twelve' => [
+                        'text_html' => [
+                            'label' => 'titre 12',
+                            'value' => 'Flavor Nivelanda'
                         ]
                     ],
                 ]
