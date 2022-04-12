@@ -6,28 +6,25 @@
   <div class="container">
 
     <div class="section-title aos-init aos-animate" data-aos="fade-up">
-      <h2>About Us</h2>
+      <h2> {{ content.title }} </h2>
     </div>
 
     <div class="row content">
       <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="150">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua.
+          {{ content.text_one }}
         </p>
         <ul>
-          <li><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M11.602 13.76l1.412 1.412l8.466-8.466l1.414 1.414l-9.88 9.88l-6.364-6.364l1.414-1.414l2.125 2.125l1.413 1.412zm.002-2.828l4.952-4.953l1.41 1.41l-4.952 4.953l-1.41-1.41zm-2.827 5.655L7.364 18L1 11.636l1.414-1.414l1.413 1.413l-.001.001l4.951 4.951z" fill="#3498db"/></svg> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M11.602 13.76l1.412 1.412l8.466-8.466l1.414 1.414l-9.88 9.88l-6.364-6.364l1.414-1.414l2.125 2.125l1.413 1.412zm.002-2.828l4.952-4.953l1.41 1.41l-4.952 4.953l-1.41-1.41zm-2.827 5.655L7.364 18L1 11.636l1.414-1.414l1.413 1.413l-.001.001l4.951 4.951z" fill="#3498db"/></svg> Duis aute irure dolor in reprehenderit in voluptate velit</li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M11.602 13.76l1.412 1.412l8.466-8.466l1.414 1.414l-9.88 9.88l-6.364-6.364l1.414-1.414l2.125 2.125l1.413 1.412zm.002-2.828l4.952-4.953l1.41 1.41l-4.952 4.953l-1.41-1.41zm-2.827 5.655L7.364 18L1 11.636l1.414-1.414l1.413 1.413l-.001.001l4.951 4.951z" fill="#3498db"/></svg> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M11.602 13.76l1.412 1.412l8.466-8.466l1.414 1.414l-9.88 9.88l-6.364-6.364l1.414-1.414l2.125 2.125l1.413 1.412zm.002-2.828l4.952-4.953l1.41 1.41l-4.952 4.953l-1.41-1.41zm-2.827 5.655L7.364 18L1 11.636l1.414-1.414l1.413 1.413l-.001.001l4.951 4.951z" fill="#3498db"/></svg> {{ content.list_item_1 }} </li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M11.602 13.76l1.412 1.412l8.466-8.466l1.414 1.414l-9.88 9.88l-6.364-6.364l1.414-1.414l2.125 2.125l1.413 1.412zm.002-2.828l4.952-4.953l1.41 1.41l-4.952 4.953l-1.41-1.41zm-2.827 5.655L7.364 18L1 11.636l1.414-1.414l1.413 1.413l-.001.001l4.951 4.951z" fill="#3498db"/></svg> {{ content.list_item_2 }} </li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M11.602 13.76l1.412 1.412l8.466-8.466l1.414 1.414l-9.88 9.88l-6.364-6.364l1.414-1.414l2.125 2.125l1.413 1.412zm.002-2.828l4.952-4.953l1.41 1.41l-4.952 4.953l-1.41-1.41zm-2.827 5.655L7.364 18L1 11.636l1.414-1.414l1.413 1.413l-.001.001l4.951 4.951z" fill="#3498db"/></svg> {{ content.list_item_3 }} </li>
         </ul>
       </div>
       <div class="col-lg-6 pt-4 pt-lg-0 aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
         <p>
-          Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-          velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          {{ content.text_two }}
         </p>
-        <a href="#" class="btn-learn-more">Learn More</a>
+        <a href="#" class="btn-learn-more"> {{ content.link }} </a>
       </div>
     </div>
 

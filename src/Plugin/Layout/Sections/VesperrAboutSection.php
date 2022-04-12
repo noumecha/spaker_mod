@@ -17,8 +17,23 @@ use Drupal\formatage_models\Plugin\Layout\FormatageModels;
  *  library = "spaker_mod/vesperr_about",
  *  default_region = "main",
  *  regions = {
- *     "logo" = {
- *       "label" = @Translation("logo"),
+ *     "title" = {
+ *       "label" = @Translation("title"),
+ *     },
+ *     "text_one" = {
+ *       "label" = @Translation("text_one"),
+ *     },
+ *     "text_two" = {
+ *       "label" = @Translation("text_two"),
+ *     },
+ *     "list_item_1" = {
+ *       "label" = @Translation("list_item_1"),
+ *     },
+ *     "list_item_2" = {
+ *       "label" = @Translation("list_item_2"),
+ *     },
+ *     "list_item_3" = {
+ *       "label" = @Translation("list_item_3"),
  *     },
  *     "link" = {
  *       "label" = @Translation("link"),
@@ -70,16 +85,55 @@ class VesperrAboutSection extends FormatageModels
                     'loader' => 'static'
                 ],
                 'fields' => [
+                    'title' => [
+                        'text_html' => [
+                            'label' => 'titre',
+                            'value' => 'About Us'
+                        ]
+                    ],
+                    'text_one' => [
+                        'text_html' => [
+                            'label' => 'paragraphe 1',
+                            'value' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                        magna aliqua.Wb Universe'
+                        ]
+                    ],
+                    'text_two' => [
+                        'text_html' => [
+                            'label' => 'titre',
+                            'value' => 'About Us'
+                        ]
+                    ],
+                    'list_item_1' => [
+                        'text_html' => [
+                            'label' => 'élément 1',
+                            'value' => 'Ullamco laboris nisi ut aliquip ex ea commodo consequat'
+                        ]
+                    ],
+                    'list_item_2' => [
+                        'text_html' => [
+                            'label' => 'élément 2',
+                            'value' => 'Duis aute irure dolor in reprehenderit in voluptate velit'
+                        ]
+                    ],
+                    'list_item_3' => [
+                        'text_html' => [
+                            'label' => 'élément 3',
+                            'value' => 'Ullamco laboris nisi ut aliquip ex ea commodo consequat'
+                        ]
+                    ],
+                    'text_two' => [
+                        'text_html' => [
+                            'label' => 'paragraphe 2',
+                            'value' => 'Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                                        culpa qui officia deserunt mollit anim id est laborum.'
+                        ]
+                    ],
                     'link' => [
                         'text_html' => [
                             'label' => 'lien',
-                            'value' => 'Home'
-                        ]
-                    ],
-                    'logo' => [
-                        'text_html' => [
-                            'label' => 'logo',
-                            'value' => 'Wb Universe'
+                            'value' => 'Learn More'
                         ]
                     ],
                 ]
