@@ -17,8 +17,29 @@ use Drupal\formatage_models\Plugin\Layout\FormatageModels;
  *  library = "spaker_mod/vesperr_more_service",
  *  default_region = "main",
  *  regions = {
- *     "logo" = {
- *       "label" = @Translation("logo"),
+ *     "title_one" = {
+ *       "label" = @Translation("title_one"),
+ *     },
+ *     "title_two" = {
+ *       "label" = @Translation("title_two"),
+ *     },
+ *     "title_three" = {
+ *       "label" = @Translation("title_three"),
+ *     },
+ *     "title_four" = {
+ *       "label" = @Translation("title_four"),
+ *     },
+ *     "text_one" = {
+ *       "label" = @Translation("text_one"),
+ *     },
+ *     "text_two" = {
+ *       "label" = @Translation("text_two"),
+ *     },
+ *     "text_three" = {
+ *       "label" = @Translation("text_three"),
+ *     },
+ *     "text_four" = {
+ *       "label" = @Translation("text_four"),
  *     },
  *     "link" = {
  *       "label" = @Translation("link"),
@@ -71,16 +92,58 @@ class VesperrMoreServiceSection extends FormatageModels
                     'loader' => 'static'
                 ],
                 'fields' => [
-                    'link' => [
+                    'title_one' => [
                         'text_html' => [
-                            'label' => 'lien',
-                            'value' => 'Home'
+                            'label' => 'titre 1',
+                            'value' => 'Lobira Duno'
                         ]
                     ],
-                    'logo' => [
+                    'title_two' => [
                         'text_html' => [
-                            'label' => 'logo',
-                            'value' => 'Wb Universe'
+                            'label' => 'titre 2',
+                            'value' => 'Limere Radses'
+                        ]
+                    ],
+                    'title_three' => [
+                        'text_html' => [
+                            'label' => 'titre 3',
+                            'value' => 'Nive Lodo'
+                        ]
+                    ],
+                    'title_four' => [
+                        'text_html' => [
+                            'label' => 'titre 4',
+                            'value' => 'Pale Treda'
+                        ]
+                    ],
+                    'text_one' => [
+                        'text_html' => [
+                            'label' => 'Paragraphe 1',
+                            'value' => 'Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua.'
+                        ]
+                    ],
+                    'text_two' => [
+                        'text_html' => [
+                            'label' => 'Paragraphe 2',
+                            'value' => 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium, totam rem.'
+                        ]
+                    ],
+                    'text_three' => [
+                        'text_html' => [
+                            'label' => 'Paragraphe 3',
+                            'value' => 'Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores.'
+                        ]
+                    ],
+                    'text_four' => [
+                        'text_html' => [
+                            'label' => 'Paragraphe 4',
+                            'value' => 'Nostrum eum sed et autem dolorum perspiciatis. Magni porro quisquam laudantium voluptatem.'
+                        ]
+                    ],
+                    'link' => [
+                        'text_html' => [
+                            'label' => 'titre 1',
+                            'value' => 'Read More'
                         ]
                     ],
                 ]

@@ -2,6 +2,9 @@
 {{ attach_library('spaker_mod/vesperr_more_service') }}
 
 <!-- ======= More Services Section ======= -->
+{%
+  if content
+%}
 
     <section id="more-services" class="more-services">
 
@@ -15,11 +18,11 @@
 
               <div class="card-body">
 
-                <h5 class="card-title"><a href="">Lobira Duno</a></h5>
+                <h5 class="card-title"><a href=""> {{ content.title_one }} </a></h5>
 
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
+                <p class="card-text"> {{ content.text_one }} </p>
 
-                <div class="read-more"><a href="#"><i class="bi bi-arrow-right"></i> Read More</a></div>
+                <div class="read-more"><a href="#"><i class="bi bi-arrow-right"></i> {{ content.link }} </a></div>
 
               </div>
 
@@ -33,16 +36,16 @@
 
               <div class="card-body">
 
-                <h5 class="card-title"><a href="">Limere Radses</a></h5>
+                <h5 class="card-title"><a href=""> {{ content.title_two }} </a></h5>
 
-                <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium, totam rem.</p>
+                <p class="card-text"> {{ content.text_two }} </p>
 
                 <div class="read-more">
                     
                     <a href="#">
                         
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><g fill="currentColor"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></g></svg> 
-                        Read More
+                        {{ content.link }}
                     </a>
 
                 </div>
@@ -60,11 +63,11 @@
 
               <div class="card-body">
 
-                <h5 class="card-title"><a href="">Nive Lodo</a></h5>
+                <h5 class="card-title"><a href=""> {{ content.title_three }} </a></h5>
 
-                <p class="card-text">Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores.</p>
+                <p class="card-text"> {{ content.text_three }} </p>
 
-                <div class="read-more"><a href="#"><i class="bi bi-arrow-right"></i> Read More</a></div>
+                <div class="read-more"><a href="#"><i class="bi bi-arrow-right"></i> {{ content.link }} </a></div>
 
               </div>
 
@@ -78,11 +81,11 @@
 
               <div class="card-body">
 
-                <h5 class="card-title"><a href="">Pale Treda</a></h5>
+                <h5 class="card-title"><a href=""> {{ content.title_four }} </a></h5>
 
-                <p class="card-text">Nostrum eum sed et autem dolorum perspiciatis. Magni porro quisquam laudantium voluptatem.</p>
+                <p class="card-text"> {{ content.text_four }} </p>
 
-                <div class="read-more"><a href="#"><i class="bi bi-arrow-right"></i> Read More</a></div>
+                <div class="read-more"><a href="#"><i class="bi bi-arrow-right"></i> {{ content.link }} </a></div>
 
               </div>
 
@@ -95,3 +98,6 @@
       </div>
       
     </section><!-- End More Services Section -->
+{%
+  endif
+%}
