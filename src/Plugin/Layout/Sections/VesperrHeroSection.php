@@ -40,7 +40,7 @@ use Drupal\bootstrap_styles\StylesGroup\StylesGroupManager;
  *
  */
 class VesperrHeroSection extends FormatageModelsSection {
-  
+
   /**
    *
    * {@inheritdoc}
@@ -51,21 +51,21 @@ class VesperrHeroSection extends FormatageModelsSection {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $styles_group_manager);
     $this->pluginDefinition->set('icon', drupal_get_path('module', 'spaker_mod') . "/icons/Vessper_hero_map.jpg");
   }
-  
+
   /**
    *
    * {@inheritdoc}
    * @see \Drupal\formatage_models\Plugin\Layout\FormatageModels:build()
    */
   public function build(array $regions) {
-    
+
     // TODO Auto-generated method stub
     $build = parent::build($regions);
     FormatageModelsThemes::formatSettingValues($build);
-    
+
     return $build;
   }
-  
+
   public function defaultConfiguration() {
     return parent::defaultConfiguration() + [
       'css' => 'd-flex align-items-center',
@@ -121,5 +121,5 @@ Un site web personnalisé pour valoriser votre entreprise : présentation de vot
       ]
     ];
   }
-  
+
 }

@@ -1,2 +1,1 @@
-import "@stephane888/wbu-atomique/scss/wbu-ressources-clean.scss";
-import "@stephane888/wbu-atomique/scss/organisme/rc-web/hero.scss";
+import "@stephane888/wbu-atomique/scss/organisme/rc-web/rc_web__hero_tmc.scss";
