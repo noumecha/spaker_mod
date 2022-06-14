@@ -95,10 +95,10 @@ vesperr_service:
 # more service library : 
 vesperr_more_service:
   js:
-    layouts/js/vesperr_more_service_tmc.js: {}
+    layouts/js/vesperr_more_service.js: {}
   css:
     theme:
-      layouts/css/vesperr_more_service_tmc.css: {}
+      layouts/css/vesperr_more_service.css: {}
 
 # feature library : 
 vesperr_feature:
