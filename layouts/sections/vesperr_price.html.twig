@@ -47,114 +47,115 @@
 									{{ content.list_four }}
 								</li>
 							{% endif %}
-							<li {{region_attributes.list_five.addClass('na')}}>
-								{{ content.list_five }}
-							</li>
-						{% endif %}
-					</ul>
-					<div class="btn-wrap">
-						{% if content.link_one %}
-							<a href="#" class="btn-buy">
-								{{ content.link_one }}
-							</a>
-						{% endif %}
+							{% if content.list_five %}
+								<li {{region_attributes.list_five.addClass('na')}}>
+									{{ content.list_five }}
+								</li>
+							{% endif %}
+						</ul>
+						<div class="btn-wrap">
+							{% if content.link_one %}
+								<a href="#" class="btn-buy">
+									{{ content.link_one }}
+								</a>
+							{% endif %}
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-lg-4 col-md-6 mt-4 mt-md-0">
-				<div class="box recommended aos-init" data-aos="zoom-in" data-aos-delay="100">
-					{% if content.title_two  %}
+				<div class="col-lg-4 col-md-6 mt-4 mt-md-0">
+					<div class="box recommended aos-init" data-aos="zoom-in" data-aos-delay="100">
+						{% if content.title_two  %}
+							<h3>
+								{{ content.title_two }}</h3>
+						{% endif %}
+						{% if content.subtitle_two %}
+							<h4>
+								{{ content.subtitle_two}}
+							</h4>
+						{% endif %}
+						<ul>
+							{% if content.list_six %}
+								<li>
+									{{ content.list_six}}
+								</li>
+							{% endif %}
+							{% if content.list_seven %}
+								<li>
+									{{ content.list_seven}}
+								</li>
+							{% endif %}
+							{% if content.list_height %}
+								<li>
+									{{ content.list_height}}
+								</li>
+							{% endif %}
+							{% if content.list_nine %}
+								<li>
+									{{ content.list_nine}}
+								</li>
+							{% endif %}
+							{% if content.list_ten %}
+								<li {{region_attributes.list_ten.addClass('na')}}>
+									{{ content.list_ten}}
+								</li>
+							{% endif %}
+						</ul>
+						<div class="btn-wrap">
+							{% if content.link_two %}
+								<a href="#" class="btn-buy">
+									{{ content.link_two }}
+								</a>
+							{% endif %}
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
+					<div class="box aos-init" data-aos="zoom-in-left" data-aos-delay="200">
 						<h3>
-							{{ content.title_two }}</h3>
-					{% endif %}
-					{% if content.subtitle_two %}
+							{{ content.title_three }}
+						</h3>
 						<h4>
-							{{ content.subtitle_two}}
+							{{ content.subtitle_three }}
 						</h4>
-					{% endif %}
-					<ul>
-						{% if content.list_six %}
-							<li>
-								{{ content.list_six}}
-							</li>
-						{% endif %}
-						{% if content.list_seven %}
-							<li>
-								{{ content.list_seven}}
-							</li>
-						{% endif %}
-						{% if content.list_height %}
-							<li>
-								{{ content.list_height}}
-							</li>
-						{% endif %}
-						{% if content.list_nine %}
-							<li>
-								{{ content.list_nine}}
-							</li>
-						{% endif %}
-						{% if content.list_ten %}
-							<li {{region_attributes.list_ten.addClass('na')}}>
-								{{ content.list_ten}}
-							</li>
-						{% endif %}
-					</ul>
-					<div class="btn-wrap">
-						{% if content.link_two %}
-							<a href="#" class="btn-buy">
-								{{ content.link_two }}
-							</a>
-						{% endif %}
+						<ul>
+							{% if content.list_eleven %}
+								<li>
+									{{ content.list_eleven }}
+								</li>
+							{% endif %}
+							{% if content.list_twelve %}
+								<li>
+									{{ content.list_twelve }}
+								</li>
+							{% endif %}
+							{% if content.list_thirthteen %}
+								<li>
+									{{ content.list_thirthteen }}
+								</li>
+							{% endif %}
+							{% if content.list_fourthteen %}
+								<li>
+									{{ content.list_fourthteen }}
+								</li>
+							{% endif %}
+							{% if content.list_fifteen %}
+								<li>
+									{{ content.list_fifteen}}
+								</li>
+							{% endif %}
+						</ul>
+						<div class="btn-wrap">
+							{% if content.link_three %}
+								<a href="#" class="btn-buy">
+									{{ content.link_three }}
+								</a>
+							{% endif %}
+						</div>
 					</div>
 				</div>
-			</div>
 
-			<div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
-				<div class="box aos-init" data-aos="zoom-in-left" data-aos-delay="200">
-					<h3>
-						{{ content.title_three }}
-					</h3>
-					<h4>
-						{{ content.subtitle_three }}
-					</h4>
-					<ul>
-						{% if content.list_eleven %}
-							<li>
-								{{ content.list_eleven }}
-							</li>
-						{% endif %}
-						{% if content.list_twelve %}
-							<li>
-								{{ content.list_twelve }}
-							</li>
-						{% endif %}
-						{% if content.list_thirthteen %}
-							<li>
-								{{ content.list_thirthteen }}
-							</li>
-						{% endif %}
-						{% if content.list_fourthteen %}
-							<li>
-								{{ content.list_fourthteen }}
-							</li>
-						{% endif %}
-						{% if content.list_fifteen %}
-							<li>
-								{{ content.list_fifteen}}
-							</li>
-						{% endif %}
-					</ul>
-					<div class="btn-wrap">
-						{% if content.link_three %}
-							<a href="#" class="btn-buy">
-								{{ content.link_three }}
-							</a>
-						{% endif %}
-					</div>
-				</div>
 			</div>
-
-		</div>
-	</section>
-	<!-- End Pricing Section -->
-{% endif %}
+		</section>
+		<!-- End Pricing Section -->
+	{% endif %}
