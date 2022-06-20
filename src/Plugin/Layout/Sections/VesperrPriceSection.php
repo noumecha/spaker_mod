@@ -58,43 +58,7 @@ use Drupal\formatage_models\Plugin\Layout\FormatageModels;
  *     },
  *     "list_three" = {
  *       "label" = @Translation("list_three"),
- *     },
- *     "list_four" = {
- *       "label" = @Translation("list_four"),
- *     },
- *     "list_five" = {
- *       "label" = @Translation("list_five"),
- *     },
- *     "list_six" = {
- *       "label" = @Translation("list_six"),
- *     },
- *     "list_seven" = {
- *       "label" = @Translation("list_seven"),
- *     },
- *     "list_height" = {
- *       "label" = @Translation("list_height"),
- *     },
- *     "list_nine" = {
- *       "label" = @Translation("list_nine"),
- *     },
- *     "list_ten" = {
- *       "label" = @Translation("list_ten"),
- *     },
- *     "list_eleven" = {
- *       "label" = @Translation("list_eleven"),
- *     },
- *     "list_twelve" = {
- *       "label" = @Translation("list_twelve"),
- *     },
- *     "list_thirthteen" = {
- *       "label" = @Translation("list_thirthteen"),
- *     },
- *     "list_fourthteen" = {
- *       "label" = @Translation("list_fourthteen"),
- *     },
- *     "list_fifteen" = {
- *       "label" = @Translation("list_fifteen"),
- *     },
+ *     }
  *  }
  * )
  * 
@@ -153,25 +117,7 @@ class VesperrPriceSection extends FormatageModels
                             'label' => 'Paragraphe par défaut',
                             'value' => 'Sit sint consectetur velit nemo qui impedit suscipit alias ea'
                         ]
-                    ],
-                    'link_one' => [
-                        'text_html' => [
-                            'label' => 'lien 1',
-                            'value' => 'Buy Now'
-                        ]
-                    ],
-                    'link_two' => [
-                        'text_html' => [
-                            'label' => 'lien 2',
-                            'value' => 'Buy Now'
-                        ]
-                    ],
-                    'link_three' => [
-                        'text_html' => [
-                            'label' => 'lien 3',
-                            'value' => 'Buy Now'
-                        ]
-                    ],
+                    ]
                 ]
             ],
             'card_one' => [
@@ -195,34 +141,22 @@ class VesperrPriceSection extends FormatageModels
                     ],
                     'list_one' => [
                         'text_html' => [
-                            'label' => 'elément 1',
-                            'value' => 'Aida dere'
+                            'label' => 'list 1',
+                            'value' => '<ul>
+                                            <li>Aida dere</li>
+                                            <li>Nec feugiat nisl</li>
+                                            <li>Nulla at volutpat dola Nulla at volutpat dolaNulla at volutpat dola</li>
+                                            <li>Nulla at volutpat dola</li>
+                                            <li class="na">Massa ultricies mi</li>
+                                        </ul>'
                         ]
                     ],
-                    'list_two' => [
+                    'link_one' => [
                         'text_html' => [
-                            'label' => 'elément 2',
-                            'value' => 'Nec feugiat nisl'
+                            'label' => 'lien 1',
+                            'value' => '<a href="#" class="btn-buy">Buy Now</a>'
                         ]
-                    ],
-                    'list_three' => [
-                        'text_html' => [
-                            'label' => 'elément 3',
-                            'value' => 'Nulla at volutpat dola'
-                        ]
-                    ],
-                    'list_four' => [
-                        'text_html' => [
-                            'label' => 'elément 4',
-                            'value' => 'Pharetra massa'
-                        ]
-                    ],
-                    'list_five' => [
-                        'text_html' => [
-                            'label' => 'elément 5',
-                            'value' => 'Massa ultricies mi'
-                        ]
-                    ],
+                    ]
                 ]
             ],
             'card_two' => [
@@ -244,36 +178,24 @@ class VesperrPriceSection extends FormatageModels
                             'value' => '<sup>$</sup>0<span> / month</span>'
                         ]
                     ],
-                    'list_six' => [
+                    'list_two' => [
                         'text_html' => [
-                            'label' => 'elément 1',
-                            'value' => 'Aida dere'
+                            'label' => 'list 2',
+                            'value' => '<ul>
+                                            <li>Aida dere</li>
+                                            <li>Nec feugiat nisl</li>
+                                            <li>Nulla at volutpat dola Nulla at volutpat dolaNulla at volutpat dola</li>
+                                            <li>Nulla at volutpat dola</li>
+                                            <li class="na">Massa ultricies mi</li>
+                                        </ul>'
                         ]
                     ],
-                    'list_seven' => [
+                    'link_two' => [
                         'text_html' => [
-                            'label' => 'elément 2',
-                            'value' => 'Nec feugiat nisl'
+                            'label' => 'lien card 2',
+                            'value' => '<a href="#" class="btn-buy">Buy Now</a>'
                         ]
-                    ],
-                    'list_height' => [
-                        'text_html' => [
-                            'label' => 'elément 3',
-                            'value' => 'Nulla at volutpat dola'
-                        ]
-                    ],
-                    'list_nine' => [
-                        'text_html' => [
-                            'label' => 'elément 4',
-                            'value' => 'Pharetra massa'
-                        ]
-                    ],
-                    'list_ten' => [
-                        'text_html' => [
-                            'label' => 'elément 5',
-                            'value' => 'Massa ultricies mi'
-                        ]
-                    ],
+                    ]
                 ]
             ],
             'card_three' => [
@@ -295,36 +217,24 @@ class VesperrPriceSection extends FormatageModels
                             'value' => '<sup>$</sup>29<span> / month</span>'
                         ]
                     ],
-                    'list_eleven' => [
+                    'list_three' => [
                         'text_html' => [
-                            'label' => 'elément 1',
-                            'value' => 'Aida dere'
+                            'label' => 'list 3',
+                            'value' => '<ul>
+                                            <li>Aida dere</li>
+                                            <li>Nec feugiat nisl</li>
+                                            <li>Nulla at volutpat dola Nulla at volutpat dolaNulla at volutpat dola</li>
+                                            <li>Nulla at volutpat dola</li>
+                                            <li class="na">Massa ultricies mi</li>
+                                        </ul>'
                         ]
                     ],
-                    'list_twelve' => [
+                    'link_three' => [
                         'text_html' => [
-                            'label' => 'elément 2',
-                            'value' => 'Nec feugiat nisl'
+                            'label' => 'lien card 3',
+                            'value' => '<a href="#" class="btn-buy">Buy Now</a>'
                         ]
-                    ],
-                    'list_thirthteen' => [
-                        'text_html' => [
-                            'label' => 'elément 3',
-                            'value' => 'Nulla at volutpat dola'
-                        ]
-                    ],
-                    'list_fourthteen' => [
-                        'text_html' => [
-                            'label' => 'elément 4',
-                            'value' => 'Pharetra massa'
-                        ]
-                    ],
-                    'list_fifteen' => [
-                        'text_html' => [
-                            'label' => 'elément 5',
-                            'value' => 'Massa ultricies mi'
-                        ]
-                    ],
+                    ]
                 ]
             ]
 
