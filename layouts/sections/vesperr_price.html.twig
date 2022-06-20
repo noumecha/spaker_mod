@@ -16,10 +16,22 @@
 			<div class="row">
 				<div class="col-lg-4 col-md-6">
 					<div class="box aos-init" data-aos="zoom-in-right" data-aos-delay="200">
+						{% if content.icon_one|has_value %}
+							<div class="illustration ">
+								<div class="icon">
+									{{content.icon_one}}
+								</div>
+							</div>
+						{% endif %}
 						{% if content.title_one %}
 							<h3>
 								{{ content.title_one }}
 							</h3>
+						{% endif %}
+						{% if content.desc_one|has_value %}
+							<div class="desc ">
+								{{content.desc_one}}
+							</div>
 						{% endif %}
 						{% if content.subtitle_one %}
 							<h4>
@@ -28,7 +40,7 @@
 						{% endif %}
 						{% if content.list_one %}
 							{{content.list_one}}
-						{% endif %}}
+						{% endif %}
 
 						<div class="btn-wrap">
 							{% if content.link_one %}
@@ -39,9 +51,21 @@
 				</div>
 				<div class="col-lg-4 col-md-6 mt-4 mt-md-0">
 					<div class="box recommended aos-init" data-aos="zoom-in" data-aos-delay="100">
+						{% if content.icon_two|has_value %}
+							<div class="illustration ">
+								<div class="icon">
+									{{content.icon_two}}
+								</div>
+							</div>
+						{% endif %}
 						{% if content.title_two  %}
 							<h3>
 								{{ content.title_two }}</h3>
+						{% endif %}
+						{% if content.desc_two|has_value %}
+							<div class="desc ">
+								{{content.desc_two}}
+							</div>
 						{% endif %}
 						{% if content.subtitle_two %}
 							<h4>
@@ -50,7 +74,7 @@
 						{% endif %}
 						{% if content.list_two %}
 							{{content.list_two}}
-						{% endif %}}
+						{% endif %}
 
 						<div class="btn-wrap">
 							{% if content.link_two %}
@@ -62,15 +86,27 @@
 
 				<div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
 					<div class="box aos-init" data-aos="zoom-in-left" data-aos-delay="200">
+						{% if content.icon_three|has_value %}
+							<div class="illustration ">
+								<div class="icon">
+									{{content.icon_three}}
+								</div>
+							</div>
+						{% endif %}
 						<h3>
 							{{ content.title_three }}
 						</h3>
+						{% if content.desc_three|has_value %}
+							<div class="desc ">
+								{{content.desc_three}}
+							</div>
+						{% endif %}
 						<h4>
 							{{ content.subtitle_three }}
 						</h4>
 						{% if content.list_three %}
 							{{content.list_three}}
-						{% endif %}}
+						{% endif %}
 
 						<div class="btn-wrap">
 							{% if content.link_three %}
