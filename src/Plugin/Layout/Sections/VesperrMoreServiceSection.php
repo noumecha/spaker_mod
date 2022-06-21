@@ -88,7 +88,7 @@ class VesperrMoreServiceSection extends FormatageModels
             'tmc' => [
                 'builder-form' => true,
                 'info' => [
-                    'title' => 'Contenu 1',
+                    'title' => 'Card 1',
                     'loader' => 'static'
                 ],
                 'fields' => [
@@ -98,28 +98,31 @@ class VesperrMoreServiceSection extends FormatageModels
                             'value' => '<a href="">Lobira Duno</a>'
                         ]
                     ],
-                    'title_two' => [
-                        'text_html' => [
-                            'label' => 'titre 2',
-                            'value' => '<a href="">Lobira Duno</a>'
-                        ]
-                    ],
-                    'title_three' => [
-                        'text_html' => [
-                            'label' => 'titre 3',
-                            'value' => '<a href="">Lobira Duno</a>'
-                        ]
-                    ],
-                    'title_four' => [
-                        'text_html' => [
-                            'label' => 'titre 4',
-                            'value' => '<a href="">Lobira Duno</a>'
-                        ]
-                    ],
                     'text_one' => [
                         'text_html' => [
                             'label' => 'Paragraphe 1',
                             'value' => 'Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua.'
+                        ]
+                    ],
+                    'link_one' => [
+                        'text_html' => [
+                            'label' => 'titre 1',
+                            'value' => '<a href="#">Read More</a>'
+                        ]
+                    ]
+                ]
+            ],
+            'card_two' => [
+                'builder-form' => true,
+                'info' => [
+                    'title' => 'Card 2',
+                    'loader' => 'static'
+                ],
+                'fields' => [
+                    'title_two' => [
+                        'text_html' => [
+                            'label' => 'titre 2',
+                            'value' => '<a href="">Lobira Duno</a>'
                         ]
                     ],
                     'text_two' => [
@@ -128,10 +131,53 @@ class VesperrMoreServiceSection extends FormatageModels
                             'value' => 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium, totam rem.'
                         ]
                     ],
+                    'link_two' => [
+                        'text_html' => [
+                            'label' => 'titre 1',
+                            'value' => '<a href="#">Read More</a>'
+                        ]
+                    ]
+                ]
+            ],
+            'card_three' => [
+                'builder-form' => true,
+                'info' => [
+                    'title' => 'card 3',
+                    'loader' => 'static'
+                ],
+                'fields' => [
+                  
+                    'title_three' => [
+                        'text_html' => [
+                            'label' => 'titre 3',
+                            'value' => '<a href="">Lobira Duno</a>'
+                        ]
+                    ],
                     'text_three' => [
                         'text_html' => [
                             'label' => 'Paragraphe 3',
                             'value' => 'Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores.'
+                        ]
+                    ],
+                    'link_three' => [
+                        'text_html' => [
+                            'label' => 'titre 1',
+                            'value' => '<a href="#">Read More</a>'
+                        ]
+                    ]
+                ]
+            ],
+            'card_four' => [
+                'builder-form' => true,
+                'info' => [
+                    'title' => 'Card 4',
+                    'loader' => 'static'
+                ],
+                'fields' => [
+                    'title_four' => [
+                        'text_html' => [
+                            'label' => 'titre 4',
+                            'value' => '<a href="">Lobira Duno</a>'
                         ]
                     ],
                     'text_four' => [
@@ -140,7 +186,7 @@ class VesperrMoreServiceSection extends FormatageModels
                             'value' => 'Nostrum eum sed et autem dolorum perspiciatis. Magni porro quisquam laudantium voluptatem.'
                         ]
                     ],
-                    'link' => [
+                    'link_four' => [
                         'text_html' => [
                             'label' => 'titre 1',
                             'value' => '<a href="#">Read More</a>'
