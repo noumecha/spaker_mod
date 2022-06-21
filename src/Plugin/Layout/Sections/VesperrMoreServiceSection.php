@@ -95,25 +95,25 @@ class VesperrMoreServiceSection extends FormatageModels
                     'title_one' => [
                         'text_html' => [
                             'label' => 'titre 1',
-                            'value' => 'Lobira Duno'
+                            'value' => '<a href="">Lobira Duno</a>'
                         ]
                     ],
                     'title_two' => [
                         'text_html' => [
                             'label' => 'titre 2',
-                            'value' => 'Limere Radses'
+                            'value' => '<a href="">Lobira Duno</a>'
                         ]
                     ],
                     'title_three' => [
                         'text_html' => [
                             'label' => 'titre 3',
-                            'value' => 'Nive Lodo'
+                            'value' => '<a href="">Lobira Duno</a>'
                         ]
                     ],
                     'title_four' => [
                         'text_html' => [
                             'label' => 'titre 4',
-                            'value' => 'Pale Treda'
+                            'value' => '<a href="">Lobira Duno</a>'
                         ]
                     ],
                     'text_one' => [
@@ -143,12 +143,12 @@ class VesperrMoreServiceSection extends FormatageModels
                     'link' => [
                         'text_html' => [
                             'label' => 'titre 1',
-                            'value' => 'Read More'
+                            'value' => '<a href="#">Read More</a>'
                         ]
-                    ],
+                    ]
                 ]
             ]
 
-                ];
+        ];
     }
 }
