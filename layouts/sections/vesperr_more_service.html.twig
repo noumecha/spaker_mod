@@ -14,16 +14,19 @@
 					<div class="more-card-item aos-init" style="background-image: url(&quot;https://bootstrapmade.com/demo/templates/Vesperr/assets/img/more-services-1.jpg&quot;);" data-aos="fade-up" data-aos-delay="100">
 
 						<div class="card-body">
+							{% if content.title_one %}
+								<h5 class="card-title">
+									<a href="">
+										{{ content.title_one }}
+									</a>
+								</h5>
+							{% endif %}
 
-							<h5 class="card-title">
-								<a href="">
-									{{ content.title_one }}
-								</a>
-							</h5>
-
-							<p class="card-text">
-								{{ content.text_one }}
-							</p>
+							{% if content.text_one  %}
+								<p class="card-text">
+									{{ content.text_one }}
+								</p>
+							{% endif %}
 
 							<div class="read-more">
 								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveaspectratio="xMidYMid meet" viewbox="0 0 16 16">
@@ -31,10 +34,10 @@
 										<path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
 									</g>
 								</svg>
-								<a href="#">
 
+								{% if content.link  %}
 									{{ content.link }}
-								</a>
+								{% endif %}
 							</div>
 
 						</div>
@@ -46,18 +49,20 @@
 				<div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
 
 					<div class="more-card-item aos-init" style="background-image: url(&quot;https://bootstrapmade.com/demo/templates/Vesperr/assets/img/more-services-2.jpg&quot;);" data-aos="fade-up" data-aos-delay="200">
-
 						<div class="card-body">
+							{% if content.title_two %}
+								<h5 class="card-title">
+									<a href="">
+										{{ content.title_two }}
+									</a>
+								</h5>
+							{% endif %}
 
-							<h5 class="card-title">
-								<a href="">
-									{{ content.title_two }}
-								</a>
-							</h5>
-
-							<p class="card-text">
-								{{ content.text_two }}
-							</p>
+							{% if content.text_two %}
+								<div class="card-text">
+									{{ content.text_two}}
+								</div>
+							{% endif %}
 
 							<div class="read-more">
 								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveaspectratio="xMidYMid meet" viewbox="0 0 16 16">
@@ -65,15 +70,12 @@
 										<path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
 									</g>
 								</svg>
-								<a href="#">
 
+								{% if content.link  %}
 									{{ content.link }}
-								</a>
-
+								{% endif %}
 							</div>
-
 						</div>
-
 					</div>
 
 
@@ -82,18 +84,20 @@
 				<div class="col-md-6 d-flex align-items-stretch mt-4">
 
 					<div class="more-card-item aos-init" style="background-image: url(&quot;https://bootstrapmade.com/demo/templates/Vesperr/assets/img/more-services-3.jpg&quot;);" data-aos="fade-up" data-aos-delay="100">
-
 						<div class="card-body">
+							{% if content.title_three %}
+								<h5 class="card-title">
+									<a href="">
+										{{ content.title_three }}
+									</a>
+								</h5>
+							{% endif %}
 
-							<h5 class="card-title">
-								<a href="">
-									{{ content.title_three }}
-								</a>
-							</h5>
-
-							<p class="card-text">
-								{{ content.text_three }}
-							</p>
+							{% if content.text_three %}
+								<div class="card-text">
+									{{ content.text_three }}
+								</div>
+							{% endif %}
 
 							<div class="read-more">
 								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveaspectratio="xMidYMid meet" viewbox="0 0 16 16">
@@ -101,13 +105,12 @@
 										<path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
 									</g>
 								</svg>
-								<a href="#">
+
+								{% if content.link  %}
 									{{ content.link }}
-								</a>
+								{% endif %}
 							</div>
-
 						</div>
-
 					</div>
 
 				</div>
@@ -115,27 +118,34 @@
 				<div class="col-md-6 d-flex align-items-stretch mt-4">
 
 					<div class="more-card-item aos-init" style="background-image: url(&quot;https://bootstrapmade.com/demo/templates/Vesperr/assets/img/more-services-4.jpg&quot;);" data-aos="fade-up" data-aos-delay="200">
-
 						<div class="card-body">
+							{% if content.title_four %}
+								<h5 class="card-title">
+									<a href="">
+										{{ content.title_four }}
+									</a>
+								</h5>
+							{% endif %}
 
-							<h5 class="card-title">
-								<a href="">
-									{{ content.title_four }}
-								</a>
-							</h5>
-
-							<p class="card-text">
-								{{ content.text_four }}
-							</p>
+							{% if content.text_four %}
+								<div class="card-text">
+									{{ content.text_four }}
+								</div>
+							{% endif %}
 
 							<div class="read-more">
-								<a href="#">
-									<i class="bi bi-arrow-right"></i>
-									{{ content.link }}
-								</a>
-							</div>
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveaspectratio="xMidYMid meet" viewbox="0 0 16 16">
+									<g fill="currentColor">
+										<path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+									</g>
+								</svg>
 
+								{% if content.link  %}
+									{{ content.link }}
+								{% endif %}
+							</div>
 						</div>
+
 
 					</div>
 
