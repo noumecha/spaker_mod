@@ -1,3 +1,58 @@
-{{ attach_library('spaker_mod/agence_constant_footer') }}
+{{% if content %}}
+<footer class="footer footer-agence-constant ">
+	{% if content.video_bg %}
+		<div class="fac-video-bg">
+			{{content.video_bg}}
+		</div>
+	{% endif %}
 
-{{ content.contenu }}
+
+	<div class="container">
+		<div class="fac-content">
+			<div class="first-content ">
+				<div class="row justify-content-center">
+					{% if content.first_one %}
+						{{content.first_one}}
+					{% endif %}
+					{% if content.first_two %}
+						{{content.first_two}}
+					{% endif %}
+					{% if content.first_three %}
+						{{content.first_three}}
+					{% endif %}
+					{% if content.first_four %}
+						{{content.first_four}}
+					{% endif %}
+
+				</div>
+			</div>
+			<div class="second-content">
+				{% if content.logo %}
+					<div class="sc-logo">
+						{{content.logo}}
+					</div>
+				{% endif %}
+				{% if content.form %}
+					<div class="form">
+						{{content.form}}
+					</div>
+				{% endif %}
+
+			</div>
+			<div class="last-content">
+				<div class="row align-items-center justify-content-between">
+					<div class="col-md-4  copyright">
+						{% if content.copyright %}
+							{{content.copyright}}
+						{% endif %}
+					</div>
+					<div class=" col-md-8">
+						{% if content.list_menu %}
+							{{content.list_menu}}
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>{% endif %}
