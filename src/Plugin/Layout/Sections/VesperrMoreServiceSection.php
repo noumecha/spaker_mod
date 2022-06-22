@@ -44,6 +44,19 @@ use Drupal\formatage_models\Plugin\Layout\FormatageModels;
  *     "link" = {
  *       "label" = @Translation("link"),
  *     },
+ *     "image_one" = {
+ *       "label" = @Translation("image_one"),
+ *     },
+ *     "image_two" = {
+ *       "label" = @Translation("image_two"),
+ *     },
+ *     "image_three" = {
+ *       "label" = @Translation("image_three"),
+ *     },
+ *     "image_four" = {
+ *       "label" = @Translation("image_four"),
+ *     },
+ * 
  *  }
  * )
  * 
@@ -92,6 +105,12 @@ class VesperrMoreServiceSection extends FormatageModels
                     'loader' => 'static'
                 ],
                 'fields' => [
+                    'image_one' => [
+                        'text_html' => [
+                            'label' => 'image 1',
+                            'value' => '<img src="https://bootstrapmade.com/demo/templates/Vesperr/assets/img/more-services-1.jpg" alt="">'
+                        ]
+                    ],
                     'title_one' => [
                         'text_html' => [
                             'label' => 'titre 1',
@@ -119,6 +138,12 @@ class VesperrMoreServiceSection extends FormatageModels
                     'loader' => 'static'
                 ],
                 'fields' => [
+                    'image_two' => [
+                        'text_html' => [
+                            'label' => 'image 2',
+                            'value' => '<img src="https://bootstrapmade.com/demo/templates/Vesperr/assets/img/more-services-2.jpg" alt="">'
+                        ]
+                    ],
                     'title_two' => [
                         'text_html' => [
                             'label' => 'titre 2',
@@ -146,7 +171,12 @@ class VesperrMoreServiceSection extends FormatageModels
                     'loader' => 'static'
                 ],
                 'fields' => [
-                  
+                   'image_three' => [
+                        'text_html' => [
+                            'label' => 'image 3',
+                            'value' => '<img src="https://bootstrapmade.com/demo/templates/Vesperr/assets/img/more-services-3.jpg" alt="">'
+                        ]
+                    ],
                     'title_three' => [
                         'text_html' => [
                             'label' => 'titre 3',
@@ -174,6 +204,12 @@ class VesperrMoreServiceSection extends FormatageModels
                     'loader' => 'static'
                 ],
                 'fields' => [
+                    'image_four' => [
+                        'text_html' => [
+                            'label' => 'image 4',
+                            'value' => '<img src="https://bootstrapmade.com/demo/templates/Vesperr/assets/img/more-services-4.jpg" alt="">'
+                        ]
+                    ],
                     'title_four' => [
                         'text_html' => [
                             'label' => 'titre 4',
