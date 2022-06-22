@@ -237,7 +237,7 @@ class AgenceConstantFooter extends FormatageModels
                         ]
                     ]
                 ]
-            ]
+            ],
             'last' => [
                 'builder-form' => true,
                 'info' => [
