@@ -41,8 +41,17 @@ use Drupal\formatage_models\Plugin\Layout\FormatageModels;
  *     "text_four" = {
  *       "label" = @Translation("text_four"),
  *     },
- *     "link" = {
- *       "label" = @Translation("link"),
+ *     "link_one" = {
+ *       "label" = @Translation("link_one"),
+ *     },
+ *      "link_two" = {
+ *       "label" = @Translation("link_two"),
+ *     },
+ *      "link_three" = {
+ *       "label" = @Translation("link_three"),
+ *     },
+ *      "link_four" = {
+ *       "label" = @Translation("link_four"),
  *     },
  *     "image_one" = {
  *       "label" = @Translation("image_one"),
@@ -55,7 +64,7 @@ use Drupal\formatage_models\Plugin\Layout\FormatageModels;
  *     },
  *     "image_four" = {
  *       "label" = @Translation("image_four"),
- *     },
+ *     }
  * 
  *  }
  * )
@@ -125,7 +134,7 @@ class VesperrMoreServiceSection extends FormatageModels
                     ],
                     'link_one' => [
                         'text_html' => [
-                            'label' => 'titre 1',
+                            'label' => 'lien 1',
                             'value' => '<a href="#">Read More</a>'
                         ]
                     ]
@@ -158,7 +167,7 @@ class VesperrMoreServiceSection extends FormatageModels
                     ],
                     'link_two' => [
                         'text_html' => [
-                            'label' => 'titre 1',
+                            'label' => 'link 2',
                             'value' => '<a href="#">Read More</a>'
                         ]
                     ]
@@ -191,7 +200,7 @@ class VesperrMoreServiceSection extends FormatageModels
                     ],
                     'link_three' => [
                         'text_html' => [
-                            'label' => 'titre 1',
+                            'label' => 'link 2',
                             'value' => '<a href="#">Read More</a>'
                         ]
                     ]
@@ -224,7 +233,7 @@ class VesperrMoreServiceSection extends FormatageModels
                     ],
                     'link_four' => [
                         'text_html' => [
-                            'label' => 'titre 1',
+                            'label' => 'lien 2',
                             'value' => '<a href="#">Read More</a>'
                         ]
                     ]
