@@ -4,9 +4,12 @@
 		<div class="container-fluid p-0">
 			<div class="row no-gutters">
 				<div class="col-0 col-md-4 d-none d-lg-block">
-					<div class="ac-column-image">
-						<img src="https://agenceconstant.ch/wp-content/uploads/2021/06/sigmund-KAN4bY3oqSw-unsplash-scaled.jpg" alt="">
-					</div>
+					{% if content.image %}
+						<div class="ac-column-image">
+							{{content.image}}
+						</div>
+					{% endif %}
+
 				</div>
 
 				<div class="col-lg-8 ml-auto">
