@@ -1,23 +1,48 @@
-{{ attach_library('spaker_mod/agence_constant_services') }}
+{% if content %}
+	<section class="ac-nos-services ">
 
-<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' crossorigin='anonymous'>
+		<div class="container-fluid p-0">
+			<div class="row no-gutters">
+				<div class="col-0 col-md-4 d-none d-lg-block">
+					<div class="ac-column-image">
+						<img src="https://agenceconstant.ch/wp-content/uploads/2021/06/sigmund-KAN4bY3oqSw-unsplash-scaled.jpg" alt="">
+					</div>
+				</div>
 
-<section class="ac-nos-services">
+				<div class="col-lg-8 ml-auto">
+					<div class="ac-nos-services--content">
+						<div class="ac-content">
+							<div class="ac-left-header">
+								{% if content.sub_title %}
+									<div class="ac-first-title">
+										{{content.sub_title}}
+									</div>
+								{% endif %}
+								{% if content.title %}
+									<h2 class="ac-head-title">
+										{{content.title}}
+									</h2>
+								{% endif %}
+								{% if content.desc %}
+									<div class="ac-text-descriptor">
+										{{content.desc}}
+									</div>
+								{% endif %}
 
-    <div class="container-flex ac-container">
+							</div>
 
-        <div class="ac-column-image">
 
-            {{ content.image }}
+							{% if content.contenu %}
+								{{content}}
+							{% endif %}
 
-        </div>
+						</div>
+					</div>
+				</div>
+			</div>
 
-        <div class="ac-nos-services--content">
-        
-            {{ content.services }}
+		</div>
 
-        </div>
+	</section>
 
-    </div>
-
-</section>
+{% endif %}
