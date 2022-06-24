@@ -89,7 +89,6 @@ class VesperrPriceSection extends FormatageModels
                         'text_html' => [
                             'label' => 'contenu',
                             'value' => '<div class="row">
-
                                     <div class="col-lg-4 col-md-6">
                                         <div class="box aos-init" data-aos="zoom-in-right" data-aos-delay="200">
                                         <div class="illustration ">
@@ -178,7 +177,6 @@ class VesperrPriceSection extends FormatageModels
                                         </div>
                                         </div>
                                     </div>
-
                                     </div>'
                         ]
                     ]
