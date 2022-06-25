@@ -5,11 +5,11 @@
 			<div class="section-title">
 				{% if content.title %}
 					<h2>
-						{{ content.title }}</h2>
+						{{ content.title|layout_value }}</h2>
 				{% endif %}
 				{% if content.desc %}
 					<div {{region_attributes.desc.addClass('desc')}}>
-						{{ content.desc|layout_value }}
+						{{ content.desc }}
 					</div>
 				{% endif %}
 			</div>
