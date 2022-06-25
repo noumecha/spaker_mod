@@ -8,8 +8,8 @@
 						{{ content.title }}</h2>
 				{% endif %}
 				{% if content.desc %}
-					<div>
-						{{ content.desc }}
+					<div {{region_attributes.desc.addClass('desc')}}>
+						{{ content.desc|layout_value }}
 					</div>
 				{% endif %}
 			</div>
