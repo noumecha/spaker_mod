@@ -1,13 +1,13 @@
 <!-- ======= Clients Section ======= -->
 
-{{ attach_library('spaker_mod/vesperr_client') }}
 
-<section id="clients" class="{{attributes.addClass('clients')}}">
-
-	<div class="container">
-		{% if content.icon_list %}
-			{{content.icon_list}}
-		{% endif %}
-	</div>
-</section>
+{% if content %}
+	<section id="clients" class="{{attributes.addClass('clients')}}">
+		<div class="container">
+			{% if content.icon_list %}
+				{{content.icon_list}}
+			{% endif %}
+		</div>
+	</section>
+{% endif %}
 <!-- End Clients Section -->
