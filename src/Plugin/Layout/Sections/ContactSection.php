@@ -3,7 +3,7 @@
 namespace Drupal\spaker_mod\Plugin\Layout\Sections;
 
 use Drupal\formatage_models\FormatageModelsThemes;
-use Drupal\formatage_models\Plugin\Layout\FormatageModels;
+use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
 /**
  * A team section by TMC 
  * 
@@ -31,7 +31,7 @@ use Drupal\formatage_models\Plugin\Layout\FormatageModels;
  * 
  * 
  */
-class ContactSection extends FormatageModels
+class ContactSection extends FormatageModelsSection
 {
 
     /**

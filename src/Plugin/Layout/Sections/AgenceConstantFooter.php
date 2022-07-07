@@ -2,8 +2,7 @@
 
 namespace Drupal\spaker_mod\Plugin\Layout\Sections;
 
-use Drupal\formatage_models\FormatageModelsThemes;
-use Drupal\formatage_models\Plugin\Layout\FormatageModels;
+use Drupal\formatage_models\FormatageModelsThemes;use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
 /**
  * Agence constant footer section by TMC 
  * 

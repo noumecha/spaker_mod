@@ -3,7 +3,7 @@
 namespace Drupal\spaker_mod\Plugin\Layout\Sections;
 
 use Drupal\formatage_models\FormatageModelsThemes;
-use Drupal\formatage_models\Plugin\Layout\FormatageModels;
+use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
 /**
  * A Header Layout for vesperr theme : By TMC 
  * 
@@ -55,7 +55,7 @@ use Drupal\formatage_models\Plugin\Layout\FormatageModels;
  * 
  * 
  */
-class VesperrAskSection extends FormatageModels
+class VesperrAskSection extends FormatageModelsSection
 {
 
     /**

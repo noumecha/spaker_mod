@@ -4,7 +4,6 @@ namespace Drupal\spaker_mod\Plugin\Layout\Sections;
 
 use Drupal\formatage_models\FormatageModelsThemes;
 use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
-use Drupal\bootstrap_styles\StylesGroup\StylesGroupManager;
 
 /**
  * A Header Layout for vesperr theme : By TMC

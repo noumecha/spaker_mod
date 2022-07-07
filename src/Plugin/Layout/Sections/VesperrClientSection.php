@@ -2,8 +2,6 @@
 
 namespace Drupal\spaker_mod\Plugin\Layout\Sections;
 
-
-use Drupal\bootstrap_styles\StylesGroup\StylesGroupManager;
 use Drupal\formatage_models\FormatageModelsThemes;
 use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
 /**
@@ -27,7 +25,7 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
  * 
  * 
  */
-class VesperrClientSection extends FormatageModels
+class VesperrClientSection extends FormatageModelsSection
 {
 
     /**
