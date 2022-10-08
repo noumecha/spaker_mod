@@ -1,6 +1,8 @@
 {% if content %}
 <footer {{attributes.addClass('footer-agence-constant')}}>
-	{% if content.video_bg %}
+	{% if content.video_bg.layout_builder_add_block %}
+		{{ content.video_bg }}
+	{% elseif content.video_bg %}
 	<div class="fac-video-bg">
 		{{content.video_bg | layout_value}}
 	</div>
