@@ -5,11 +5,12 @@ namespace Drupal\spaker_mod\Plugin\Layout\Sections;
 use Drupal\bootstrap_styles\StylesGroup\StylesGroupManager;
 use Drupal\formatage_models\FormatageModelsThemes;
 use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
+
 /**
- * Agence constant footer section by TMC 
- * 
+ * Agence constant footer section by TMC
+ *
  * @Layout (
- * 
+ *
  *  id = "agence_constant_footer_section",
  *  label = @Translation("Agence Constant Footer Section"),
  *  category = @Translation("spaker_mod"),
@@ -22,16 +23,25 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
  *       "label" = @Translation("video_bg"),
  *     },
  *      "first_one" = {
- *       "label" = @Translation("first_one"),
+ *       "label" = @Translation("Call to action"),
  *     },
  *      "first_two" = {
- *       "label" = @Translation("first_two"),
+ *       "label" = @Translation("Titre 2"),
+ *     },
+ *     "content_two" = {
+ *       "label" = @Translation("Content 2 "),
  *     },
  *      "first_three" = {
- *       "label" = @Translation("first_three"),
+ *       "label" = @Translation("Titre 3"),
+ *     },
+ *     "content_three" = {
+ *       "label" = @Translation("Content 3 "),
  *     },
  *      "first_four" = {
- *       "label" = @Translation("first_four"),
+ *       "label" = @Translation("Titre 4"),
+ *     },
+ *     "content_four" = {
+ *       "label" = @Translation("Content 3 "),
  *     },
  *      "logo" = {
  *       "label" = @Translation("logo"),
@@ -47,80 +57,72 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
  *     }
  *  }
  * )
- * 
- * 
+ *
+ *
  */
-class AgenceConstantFooter extends FormatageModelsSection
-{
+class AgenceConstantFooter extends FormatageModelsSection {
 
-    /**
-     *
-     * {@inheritdoc}
-     * @see \Drupal\formatage_models\Plugin\Layout\FormatageModels::__construct()
-     */
-   
-    public function __construct(array $configuration, $plugin_id, $plugin_definition, StylesGroupManager $styles_group_manager) {
+  /**
+   *
+   * {@inheritdoc}
+   * @see \Drupal\formatage_models\Plugin\Layout\FormatageModels::__construct()
+   */
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, StylesGroupManager $styles_group_manager) {
     // TODO Auto-generated method stub
     parent::__construct($configuration, $plugin_id, $plugin_definition, $styles_group_manager);
     $this->pluginDefinition->set('icon', drupal_get_path('module', 'spaker_mod') . "/icons/agence_constant_footer_map.jpg");
-    }
-    /**
-     * 
-     * {@inheritdoc}
-     * @see \Drupal\formatage_models\Plugin\Layout\FormatageModels:build()
-     */
+  }
 
-    public function build(array $regions) 
-    {
+  /**
+   *
+   * {@inheritdoc}
+   * @see \Drupal\formatage_models\Plugin\Layout\FormatageModels:build()
+   */
+  public function build(array $regions) {
 
-        // TODO Auto-generated method stub
-        $build = parent::build($regions);
-        FormatageModelsThemes::formatSettingValues($build);
+    // TODO Auto-generated method stub
+    $build = parent::build($regions);
+    FormatageModelsThemes::formatSettingValues($build);
 
-        return $build;
+    return $build;
+  }
 
-    }
+  public function defaultConfiguration() {
+    return parent::defaultConfiguration() + [
 
-    public function defaultConfiguration()
-    {
-        return parent::defaultConfiguration() + [
-
-            'tmc' => [
-                'builder-form' => true,
-                'info' => [
-                    'title' => 'first content & bg',
-                    'loader' => 'static'
-                ],
-                'fields' => [
-                    'video_bg' => [
-                        'text_html' => [
-                            'label' => 'video background',
-                            'value' => '<video class="elementor-background-video-hosted bgvideo elementor-html5-video" autoplay="" muted=""
+      'tmc' => [
+        'builder-form' => true,
+        'info' => [
+          'title' => 'first content & bg',
+          'loader' => 'static'
+        ],
+        'fields' => [
+          'video_bg' => [
+            'text_html' => [
+              'label' => 'video background',
+              'value' => '<video class="elementor-background-video-hosted bgvideo elementor-html5-video" autoplay="" muted=""
                                         playsinline="" loop=""
                                         src="https://demo.detheme.com/faber/wp-content/uploads/sites/114/2020/03/highway.webm"
                                         class="bgvideo">
                                     </video>'
-                        ]
-                    ],
-                    'first_one' => [
-                        'text_html' => [
-                            'label' => 'column one',
-                            'value' => '<div class="col-sm-6 col-lg-3">
-                                    <div class="ac-bloc">
-                                        <div class="fac-btn">
-                                            <a href="#">Contactez nous</a>
-                                        </div>
-                                    </div>
-                                </div>'
-                        ]
-                    ],
-                    'first_two' => [
-                        'text_html' => [
-                            'label' => 'column two',
-                            'value' => '<div class="col-sm-6 col-lg-3">
-                                    <div class="fac-menu">
-                                        <h4 class="fac-title">Contact</h4>
-                                        <ul class="fac-ul">
+            ]
+          ],
+          'first_one' => [
+            'text_html' => [
+              'label' => 'column one',
+              'value' => '<a href="#">Contactez nous</a>'
+            ]
+          ],
+          'first_two' => [
+            'text' => [
+              'label' => 'column two',
+              'value' => 'Contact'
+            ]
+          ],
+          'content_two' => [
+            'text_html' => [
+              'label' => 'content_two',
+              'value' => '<ul class="fac-ul">
                                             <li class="fac-ul-li">
                                                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="13"
                                                     height="14.86" preserveAspectRatio="xMidYMid meet" viewBox="0 0 448 512">
@@ -152,19 +154,19 @@ class AgenceConstantFooter extends FormatageModelsSection
                                                 </svg>
                                                 <a href="#">wbuniverse@hotmail.com</a>
                                             </li>
-
-                                        </ul>
-                                    </div>
-                                </div>'
-                        ]
-                    ],
-                    'first_three' => [
-                        'text_html' => [
-                            'label' => 'column three',
-                            'value' => '  <div class="col-sm-6 col-lg-3">
-                                    <div class="fac-menu">
-                                    <h4 class="fac-title">Nos services</h4>
-                                    <ul class="fac-ul">
+                                        </ul>'
+            ]
+          ],
+          'first_three' => [
+            'text' => [
+              'label' => 'column three',
+              'value' => 'Nos services'
+            ]
+          ],
+          'content_three' => [
+            'text_html' => [
+              'label' => 'content_three',
+              'value' => '<ul class="fac-ul">
                                         <li class="fac-ul-li">
                                             <a href="#">Création Site Web</a>
                                         </li>
@@ -182,15 +184,13 @@ class AgenceConstantFooter extends FormatageModelsSection
                                             <a href="#">Sage</a>
                                         </li>
 
-                                        </ul>
-                                    </div>
-                                </div>'
-                        ]
-                    ],
-                    'first_four' => [
-                        'text_html' => [
-                            'label' => 'column four',
-                            'value' => '<div class="col-sm-6 col-lg-3">
+                                        </ul>'
+            ]
+          ],
+          'first_four' => [
+            'text_html' => [
+              'label' => 'column four',
+              'value' => '<div class="col-sm-6 col-lg-3">
                                     <div class="fac-menu">
                                         <h4 class="fac-title">Lien utiles</h4>
                                         <ul class="fac-ul">
@@ -210,52 +210,51 @@ class AgenceConstantFooter extends FormatageModelsSection
                                         </ul>
                                         </div>
                                     </div>'
-                        ]
-                    ]
-
-                ]
-            ],
-            'second' => [
-                'builder-form' => true,
-                'info' => [
-                    'title' => 'second content',
-                    'loader' => 'static'
-                ],
-                'fields' => [
-                    'logo' => [
-                        'text_html' => [
-                            'label' => 'logo',
-                            'value' => '<img src="http://agenceconstant.fr/wp-content/uploads/2021/06/logo-blanc-constant.png" alt="">'
-                        ]
-                    ],
-                    'form' => [
-                        'text_html' => [
-                            'label' => 'form',
-                            'value' => ' <input type="emaeil" placeholder="Ton email" class="form-control">
+            ]
+          ]
+        ]
+      ],
+      'second' => [
+        'builder-form' => true,
+        'info' => [
+          'title' => 'second content',
+          'loader' => 'static'
+        ],
+        'fields' => [
+          'logo' => [
+            'text_html' => [
+              'label' => 'logo',
+              'value' => '<img src="http://agenceconstant.fr/wp-content/uploads/2021/06/logo-blanc-constant.png" alt="">'
+            ]
+          ],
+          'form' => [
+            'text_html' => [
+              'label' => 'form',
+              'value' => ' <input type="emaeil" placeholder="Ton email" class="form-control">
                                 <div class="fac-btn">
                                     <a href="#">Inscription</a>
                                 </div>'
-                        ]
-                    ]
-                ]
-            ],
-            'last' => [
-                'builder-form' => true,
-                'info' => [
-                    'title' => 'last content',
-                    'loader' => 'static'
-                ],
-                'fields' => [
-                    'copyright' => [
-                        'text_html' => [
-                            'label' => 'copyright',
-                            'value' => ' <p>© 2021 <strong>Agence Wb-Universe</strong></p>'
-                        ]
-                    ],
-                    'list_menu' => [
-                        'text_html' => [
-                            'label' => 'list_menu',
-                            'value' => ' <ul class="list-menu">
+            ]
+          ]
+        ]
+      ],
+      'last' => [
+        'builder-form' => true,
+        'info' => [
+          'title' => 'last content',
+          'loader' => 'static'
+        ],
+        'fields' => [
+          'copyright' => [
+            'text_html' => [
+              'label' => 'copyright',
+              'value' => ' <p>© 2021 <strong>Agence Wb-Universe</strong></p>'
+            ]
+          ],
+          'list_menu' => [
+            'text_html' => [
+              'label' => 'list_menu',
+              'value' => ' <ul class="list-menu">
                             <li class="list-menu-item">
                                 <a href="#">Mention legal</a>
                             </li>
@@ -267,11 +266,11 @@ class AgenceConstantFooter extends FormatageModelsSection
                             </li>
                             </li>
                         </ul>'
-                        ]
-                    ]
-                ]
             ]
+          ]
+        ]
+      ]
+    ];
+  }
 
-        ];
-    }
 }
