@@ -1,3 +1,100 @@
-{#{ attach_library('spaker_mod/agence_constant_footer') }#}
+{% if content %}
+<footer {{attributes.addClass('footer-agence-constant')}}>
+	{% if content.video_bg.layout_builder_add_block %}
+		{{ content.video_bg }}
+	{% elseif content.video_bg %}
+	<div class="fac-video-bg">
+		{{content.video_bg | layout_value}}
+	</div>
+	{% endif %}
+	<div class="container">
+		<div class="fac-content">
+			<div class="first-content ">
+				<div class="row justify-content-center">
+					{% if content.first_one %}
+					<div class="col-sm-6 col-lg-3">
+						<div class="ac-bloc">
+							<div {{ region_attributes.first_one.addClass(['fac-btn']) }}>
+								{{content.first_one}}
+							</div>
+						</div>
+					</div>
+					{% endif %}
+					<div class="col-sm-6 col-lg-3">
+						<div class="fac-menu">
+							{% if content.first_two %}
+							<h4 {{ region_attributes.first_two.addClass(['fac-title']) }}>
+								{{ content.first_two }}
+							</h4>
+							{% endif %}
+							
+							{% if content.content_two %}
+							<div {{ region_attributes.content_two }}>
+							    {{ content.content_two }}
+							</div>
+							{% endif %}
+						</div>
+					</div>
+					<div class="col-sm-6 col-lg-3">
+						<div class="fac-menu">
+							{% if content.first_three %}
+							<h4 {{ region_attributes.first_three.addClass(['fac-title']) }}>
+								{{ content.first_three }}
+							</h4>
+							{% endif %}
+							{% if content.content_three  %}
+							<div {{ region_attributes.content_three }}> {{ content.content_three }} </div>
+							{% endif %}						
+						</div>
+					</div>
 
-{{ content.contenu }}
+					<div class="col-sm-6 col-lg-3">
+						<div class="fac-menu">
+							{% if content.first_four %}
+							<h4 {{ region_attributes.first_four.addClass(['fac-title']) }}>
+								{{ content.first_four }}
+							</h4>
+							{% endif %}
+							{% if content.content_four %}
+							<div {{ region_attributes.content_four }}>
+								{{ content.content_four }}
+							</div>
+							{% endif %}
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="second-content">
+				{% if content.logo %}
+				<div {{ region_attributes.logo.addClass('sc-logo') }}>
+					{{content.logo}}
+				</div>
+				{% endif %}
+				{% if content.form %}
+				<div {{ region_attributes.form.addClass('form') }}>
+					{{content.form}}
+					<input type="emaeil" placeholder="Ton email" class="form-control">
+                                <div class="fac-btn">
+                                    <a href="#">Inscription</a>
+                                </div>
+				</div>
+				{% endif %}
+			</div>
+			<div class="last-content">
+				<div class="row align-items-center justify-content-between">
+					{% if content.copyright %}
+    					<div {{ region_attributes.copyright.addClass(['col-md-4','copyright']) }}>						
+    						{{content.copyright}}						
+    					</div>
+					{% endif %}
+					{% if content.list_menu %}
+    					<div {{ region_attributes.list_menu.addClass(['col-md-8']) }}>						
+    						{{content.list_menu}}						
+    					</div>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+{% endif %}

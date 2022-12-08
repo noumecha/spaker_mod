@@ -1,51 +1,13 @@
 <!-- ======= Clients Section ======= -->
 
-{{ attach_library('spaker_mod/vesperr_client') }}
 
-<section id="clients" class="clients clients">
-
-    <div class="container">
-
-      <div class="row">
-
-        <div class="col-lg-2 col-md-4 col-6">
-
-          <img src="https://bootstrapmade.com/demo/templates/Vesperr/assets/img/clients/client-1.png" class="img-fluid aos-init aos-animate" alt="" data-aos="zoom-in">
-
-        </div>
-
-        <div class="col-lg-2 col-md-4 col-6">
-
-          <img src="https://bootstrapmade.com/demo/templates/Vesperr/assets/img/clients/client-2.png" class="img-fluid aos-init aos-animate" alt="" data-aos="zoom-in" data-aos-delay="100">
-
-        </div>
-
-        <div class="col-lg-2 col-md-4 col-6">
-
-          <img src="https://bootstrapmade.com/demo/templates/Vesperr/assets/img/clients/client-3.png" class="img-fluid aos-init aos-animate" alt="" data-aos="zoom-in" data-aos-delay="200">
-
-        </div>
-
-        <div class="col-lg-2 col-md-4 col-6">
-
-          <img src="	https://bootstrapmade.com/demo/templates/Vesperr/assets/img/clients/client-4.png" class="img-fluid aos-init aos-animate" alt="" data-aos="zoom-in" data-aos-delay="300">
-
-        </div>
-        
-        <div class="col-lg-2 col-md-4 col-6">
-
-          <img src="https://bootstrapmade.com/demo/templates/Vesperr/assets/img/clients/client-5.png" class="img-fluid aos-init aos-animate" alt="" data-aos="zoom-in" data-aos-delay="400">
-
-        </div>
-
-
-        <div class="col-lg-2 col-md-4 col-6">
-
-          <img src="https://bootstrapmade.com/demo/templates/Vesperr/assets/img/clients/client-6.png" class="img-fluid aos-init aos-animate" alt="" data-aos="zoom-in" data-aos-delay="500">
-          
-        </div>
-
-      </div>
-
-    </div>
-  </section><!-- End Clients Section -->
+{% if content %}
+	<section id="clients" {{attributes.addClass('clients')}}>
+		<div class="container">
+			{% if content.icon_list %}
+				{{content.icon_list}}
+			{% endif %}
+		</div>
+	</section>
+{% endif %}
+<!-- End Clients Section -->

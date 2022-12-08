@@ -2,8 +2,9 @@
 
 namespace Drupal\spaker_mod\Plugin\Layout\Sections;
 
+use Drupal\bootstrap_styles\StylesGroup\StylesGroupManager;
 use Drupal\formatage_models\FormatageModelsThemes;
-use Drupal\formatage_models\Plugin\Layout\FormatageModels;
+use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
 /**
  * A Header Layout for vesperr theme : By TMC 
  * 
@@ -17,10 +18,7 @@ use Drupal\formatage_models\Plugin\Layout\FormatageModels;
  *  library = "spaker_mod/vesperr_client",
  *  default_region = "main",
  *  regions = {
- *     "logo" = {
- *       "label" = @Translation("logo"),
- *     },
- *     "link" = {
+ *     "icon_list" = {
  *       "label" = @Translation("link"),
  *     },
  *  }
@@ -28,39 +26,40 @@ use Drupal\formatage_models\Plugin\Layout\FormatageModels;
  * 
  * 
  */
-class VesperrClientSection extends FormatageModels
+class VesperrClientSection extends FormatageModelsSection
 {
-
     /**
-     *
-     * {@inheritdoc}
-     * @see \Drupal\formatage_models\Plugin\Layout\FormatageModels::__construct()
-     */
-    public function __construct(array $configuration, $plugin_id, $plugin_definition) {
-        // TODO Auto-generated method stub
-        parent::__construct($configuration, $plugin_id, $plugin_definition);
-        $this->pluginDefinition->set('icon', drupal_get_path('module', 'spaker_mod') . "/icons/Vessper_client_map.jpg");
-    }
+   *
+   * {@inheritdoc}
+   * @see \Drupal\formatage_models\Plugin\Layout\FormatageModels::__construct()
+   */
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, StylesGroupManager $styles_group_manager) {
+    // TODO Auto-generated method stub
+    parent::__construct($configuration, $plugin_id, $plugin_definition, $styles_group_manager);
+     $this->pluginDefinition->set('icon', drupal_get_path('module', 'spaker_mod') . "/icons/Vessper_client_map.jpg");
+  }
+  
+  /**
+   *
+   * {@inheritdoc}
+   * @see \Drupal\formatage_models\Plugin\Layout\FormatageModels:build()
+   */
+  public function build(array $regions) {
+    
+    // TODO Auto-generated method stub
+    $build = parent::build($regions);
+    FormatageModelsThemes::formatSettingValues($build);
+    
+    return $build;
+  }
 
-    /**
-     * 
-     * {@inheritdoc}
-     * @see \Drupal\formatage_models\Plugin\Layout\FormatageModels:build()
-     */
-
-    public function build(array $regions) 
-    {
-
-        // TODO Auto-generated method stub
-        $build = parent::build($regions);
-        FormatageModelsThemes::formatSettingValues($build);
-
-        return $build;
-
-    }
-
-    public function defaultConfiguration()
-    {
+  /**
+   * 
+   * {@inheritdoc}
+   * 
+   */
+  public function defaultConfiguration() 
+  {
         return parent::defaultConfiguration() + [
 
             'tmc' => [
@@ -70,21 +69,53 @@ class VesperrClientSection extends FormatageModels
                     'loader' => 'static'
                 ],
                 'fields' => [
-                    'link' => [
+                    'icon_list' => [
                         'text_html' => [
                             'label' => 'lien',
-                            'value' => 'Home'
+                            'value' => '  <div class="row">
+
+                            <div class="col-lg-2 col-md-4 col-6">
+
+                            <img src="https://bootstrapmade.com/demo/templates/Vesperr/assets/img/clients/client-1.png" class="img-fluid aos-init aos-animate" alt="" data-aos="zoom-in">
+
+                            </div>
+
+                            <div class="col-lg-2 col-md-4 col-6">
+
+                            <img src="https://bootstrapmade.com/demo/templates/Vesperr/assets/img/clients/client-2.png" class="img-fluid aos-init aos-animate" alt="" data-aos="zoom-in" data-aos-delay="100">
+
+                            </div>
+
+                            <div class="col-lg-2 col-md-4 col-6">
+
+                            <img src="https://bootstrapmade.com/demo/templates/Vesperr/assets/img/clients/client-3.png" class="img-fluid aos-init aos-animate" alt="" data-aos="zoom-in" data-aos-delay="200">
+
+                            </div>
+
+                            <div class="col-lg-2 col-md-4 col-6">
+
+                            <img src="	https://bootstrapmade.com/demo/templates/Vesperr/assets/img/clients/client-4.png" class="img-fluid aos-init aos-animate" alt="" data-aos="zoom-in" data-aos-delay="300">
+
+                            </div>
+                            
+                            <div class="col-lg-2 col-md-4 col-6">
+
+                            <img src="https://bootstrapmade.com/demo/templates/Vesperr/assets/img/clients/client-5.png" class="img-fluid aos-init aos-animate" alt="" data-aos="zoom-in" data-aos-delay="400">
+
+                            </div>
+
+
+                            <div class="col-lg-2 col-md-4 col-6">
+
+                            <img src="https://bootstrapmade.com/demo/templates/Vesperr/assets/img/clients/client-6.png" class="img-fluid aos-init aos-animate" alt="" data-aos="zoom-in" data-aos-delay="500">
+                            
+                            </div>
+                        </div>'
                         ]
-                    ],
-                    'logo' => [
-                        'text_html' => [
-                            'label' => 'logo',
-                            'value' => 'Wb Universe'
-                        ]
-                    ],
+                    ]
                 ]
             ]
 
-                ];
+        ];
     }
 }
