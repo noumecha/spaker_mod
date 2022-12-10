@@ -1,8 +1,5 @@
-<!-- ======= About Us Section ======= -->
-
-{{ attach_library('spaker_mod/vesperr_about') }}
-
-<section id="about" class="about">
+{% if content %}
+<section {{ attributes.addClass('spaker_mod_about') }}>
 	<div class="container">
 
 		<div class="section-vs-title  aos-init aos-animate" data-aos="fade-up">
@@ -43,4 +40,4 @@
 
 	</div>
 </section>
-<!-- End About Us Section -->
+{% endif %}

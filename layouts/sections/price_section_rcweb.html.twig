@@ -1,51 +1,54 @@
-<!-- ======= price-block ======= -->
+{% if content %}
+<div {{ attributes.addClass('spaker_mod_price-block') }}>
 
-{{ attach_library('spaker_mod/price_section_rcweb') }}
+	<div class="item-price">
 
-<div class="price-block">
+		<div class="item-price__head">
 
-  <div class="item-price">
+			<div class="name-wrap">
 
-    <div class="item-price__head">
+				<h2>
+					{{ content.title }}
+				</h2>
 
-      <div class="name-wrap">
+			</div>
 
-        <h2> {{ content.title }} </h2>
+			<div class="item-price__wrap">
 
-      </div>
+				<p></p>
+				<span class="per-mn"></span>
 
-      <div class="item-price__wrap">
+			</div>
 
-        <p></p><span class="per-mn"></span>
+		</div>
 
-      </div>
+		<div class="item-price__body">
 
-    </div>
+			<ul>
 
-    <div class="item-price__body">
+				<li class="">{{ content.title_one }}</li>
+				<li class="">{{ content.title_two }}</li>
+				<li class="">{{ content.title_three }}</li>
+				<li class="">{{ content.title_four }}</li>
+				<li class="">{{ content.title_five }}</li>
+				<li class="">{{ content.title_six }}</li>
+				<li class="">{{ content.title_seven }}</li>
+				<li class="">{{ content.title_height }}</li>
+				<li class="">{{ content.title_nine }}</li>
+				<li class="">{{ content.title_ten }}</li>
+				<li class="">{{ content.title_eleven }}</li>
+				<li class="">{{ content.title_twelwe }}</li>
+				<li class="">{{ content.title_thirtheen }}</li>
+				<li class="">{{ content.title_fourthteen }}</li>
+				<li><a href="https://rc-web.fr/contact/" target="_self"
+					class="btn btn-blue"> {{ content.btn }}
+				</a></li>
 
-      <ul>
+			</ul>
 
-        <li class=""> {{ content.title_one }} </li>
-        <li class=""> {{ content.title_two }} </li>
-        <li class=""> {{ content.title_three }} </li>
-        <li class=""> {{ content.title_four }} </li>
-        <li class=""> {{ content.title_five }} </li>
-        <li class=""> {{ content.title_six }} </li>
-        <li class=""> {{ content.title_seven }} </li>
-        <li class=""> {{ content.title_height }} </li>
-        <li class=""> {{ content.title_nine }} </li>
-        <li class=""> {{ content.title_ten }} </li>
-        <li class=""> {{ content.title_eleven }} </li>
-        <li class=""> {{ content.title_twelwe }} </li>
-        <li class=""> {{ content.title_thirtheen }} </li>
-        <li class=""> {{ content.title_fourthteen }} </li>
-        <li><a href="https://rc-web.fr/contact/" target="_self" class="btn btn-blue"> {{ content.btn }} </a></li>
+		</div>
 
-      </ul>
-
-    </div>
-
-  </div>
+	</div>
 
 </div>
+{% endif %}

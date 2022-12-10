@@ -1,5 +1,4 @@
 // importation de mon scss 
-import "@stephane888/wbu-atomique/scss/atome/typography/_default.scss";
 import "@stephane888/wbu-atomique/scss/organisme/sections/theme_builder/vesperr/section__header.scss";
 
 /**

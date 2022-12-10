@@ -1,0 +1,36 @@
+{% if content %}
+<footer {{attributes.addClass('spaker_mod_footer')}}>
+	<div class="container">
+		<div class="row d-flex align-items-center">
+			<div class="col-lg-6 text-lg-left text-center">
+				<div class="copyright">
+					© Copyright <strong> {{ content.strong_text }}
+					</strong>. All Rights Reserved
+
+				</div>
+
+				<div class="credits">
+					Designed by <a href="https://bootstrapmade.com/"> {{ content.author_link }}
+					</a>
+
+				</div>
+			</div>
+
+			<div class="col-lg-6">
+
+				<nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
+
+					<a href="#intro" class="scrollto"> {{ content.link_one }}
+					</a> <a href="#about" class="scrollto"> {{ content.link_two }}
+					</a> <a href="#"> {{ content.link_three }}
+					</a> <a href="#"> {{ content.link_four }}
+					</a>
+
+				</nav>
+
+			</div>
+		</div>
+	</div>
+</footer>
+{% endif %}
+

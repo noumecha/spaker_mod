@@ -44,14 +44,6 @@ spaker_mod_home_page:
     theme:
       layouts/css/spaker_mod_home_page.css: {}
 
-# header library : 
-vesperr_header:
-  js:
-    layouts/js/vesperr_header_tmc.js: {}
-  css:
-    theme: 
-      layouts/css/vesperr_header_tmc.css: {}
-
 # hero library : 
 vesperr_hero:
   js:
@@ -84,14 +76,6 @@ vesperr_count:
     theme:
       layouts/css/vesperr_count_tmc.css: {}
 
-# service library : 
-vesperr_service:
-  js:
-    layouts/js/vesperr_service_tmc.js: {}
-  css:
-    theme:
-      layouts/css/vesperr_service_tmc.css: {}
-
 # more service library : 
 vesperr_more_service:
   js:
@@ -100,37 +84,6 @@ vesperr_more_service:
     theme:
       layouts/css/vesperr_more_service.css: {}
 
-# feature library : 
-vesperr_feature:
-  js:
-    layouts/js/vesperr_feature_tmc.js: {}
-  css:
-    theme:
-      layouts/css/vesperr_feature_tmc.css: {}
-
-# testimonial library : 
-vesperr_testimonial:
-  js:
-    layouts/js/vesperr_testimonial_tmc.js: {}
-  css:
-    theme:
-      layouts/css/vesperr_testimonial_tmc.css: {}
-
-# portfolio library : 
-vesperr_portfolio:
-  js:
-    layouts/js/vesperr_portfolio_tmc.js: {}
-  css:
-    theme:
-      layouts/css/vesperr_portfolio_tmc.css: {}
-
-# team library : 
-vesperr_team:
-  js:
-    layouts/js/vesperr_team_tmc.js: {}
-  css:
-    theme:
-      layouts/css/vesperr_team_tmc.css: {}
 
 # price library :
 vesperr_price:
@@ -140,29 +93,7 @@ vesperr_price:
     theme:
       layouts/css/vesperr_price_tmc.css: {}
 
-# faq library
-vesperr_faq:
-  js:
-    layouts/js/vesperr_faq_tmc.js: {}
-  css:
-    theme:
-      layouts/css/vesperr_faq_tmc.css: {}
 
-# contact librarys
-vesperr_contact:
-  js:
-    layouts/js/vesperr_contact_tmc.js: {}
-  css:
-    theme:
-      layouts/css/vesperr_contact_tmc.css: {}
-
-# footer library
-vesperr_footer:
-  js:
-    layouts/js/vesperr_footer_tmc.js: {}
-  css:
-    theme:
-      layouts/css/vesperr_footer_tmc.css: {}
 
 # team section by tmc : 
 team_section:
@@ -172,14 +103,6 @@ team_section:
     theme:
       layouts/css/team_section_tmc.css: {}
 
-# contact section rcweb by tmc : 
-contact_section_rcweb:
-  js:
-    layouts/js/contact_section_rcweb_tmc.js: {}
-  css:
-    theme:
-      layouts/css/contact_section_rcweb_tmc.css: {}
-
 # list section rcweb by tmc : 
 list_section_rcweb:
   js:
@@ -188,13 +111,6 @@ list_section_rcweb:
     theme:
       layouts/css/list_section_rcweb_tmc.css: {}
 
-# price section rcweb by tmc:
-price_section_rcweb:
-  js:
-    layouts/js/price_section _rcweb_tmc.js: {}
-  css:
-    theme:
-      layouts/css/price_section_rcweb_tmc.css: {}
 
 # agence constant services section: 
 agence_constant_services:

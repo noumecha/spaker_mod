@@ -1,7 +1,5 @@
-{{ attach_library('spaker_mod/vesperr_contact') }}
-
-<!-- ======= Contact Section ======= -->
-<section id="contact" class="contact">
+{% if content %}
+<section {{ attributes.addClass('spaker_mod_contact') }}>
 	<div class="container">
 
 		<div class="section-vs-title  aos-init" data-aos="fade-up">
@@ -101,4 +99,4 @@
 
 	</div>
 </section>
-<!-- End Contact Section -->
+{% endif %}

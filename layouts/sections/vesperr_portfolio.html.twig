@@ -1,10 +1,6 @@
-{{ attach_library('spaker_mod/vesperr_portfolio') }}
-{%
-  if content
-%}
-	<section id="portfolio" class="portfolio">
+{% if content %}
+	<section {{ attributes.addClass('spaker_mod_portfolio') }}>
 		<div class="container">
-
 			<div class="section-vs-title  aos-init aos-animate" data-aos="fade-up">
 				<h2>
 					{{ content.title }}
@@ -16,7 +12,7 @@
 
 			<div class="row aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
 				<div class="col-lg-12 d-flex justify-content-center">
-					<ul id="portfolio-flters">
+					<ul class="portfolio-flters">
 						<li data-filter="*" class="filter-active">
 							{{ content.list_one }}
 						</li>

@@ -1,13 +1,7 @@
-{{ attach_library('spaker_mod/vesperr_testimonial') }}
-{%
-  if content
-%}
-
-	<section id="testimonials" class="testimonials section-bg">
+{%  if content %}
+	<section {{ attributes.addClass(['spaker_mod_testimonials','section-bg']) }}>
 		<div class="container">
-
 			<div class="section-vs-title  aos-init aos-animate" data-aos="fade-up">
-
 				{% if content.title %}
 					<h2>
 						{{ content.title }}</h2>
@@ -18,9 +12,7 @@
 						{{ content.text }}
 					</p>
 				{% endif %}
-
 			</div>
-
 			<div class="testimonials-slider swiper swiper-initialized swiper-horizontal swiper-pointer-events aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
 				<div class="swiper-wrapper" id="swiper-wrapper-5faca244629f69310" aria-live="off" style="transition-duration: 0ms; transform: translate3d(-3408px, 0px, 0px);">
 					<div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev" data-swiper-slide-index="3" role="group" aria-label="4 / 5" style="width: 548px; margin-right: 20px;">
@@ -225,9 +217,6 @@
 				</div>
 				<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
 			</div>
-
 		</div>
 	</section>
-{% 
-  endif 
-%}
+{% endif %}
