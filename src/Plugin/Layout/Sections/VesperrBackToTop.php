@@ -10,29 +10,23 @@ use Drupal\bootstrap_styles\StylesGroup\StylesGroupManager;
  * 
  * @Layout (
  * 
- *  id = "vesperr_footer",
- *  label = @Translation("Vesperr footer by TMC"),
+ *  id = "vesperr_back_to_top",
+ *  label = @Translation("Vesperr back To Top"),
  *  category = @Translation("spaker_mod"),
- *  path = "layouts/footer",
- *  template = "vesperr_footer",
- *  library = "spaker_mod/vesperr_footer",
- *  default_region = "footer_copy",
+ *  path = "layouts/sections",
+ *  template = "vesperr_back_to_top",
+ *  library = "spaker_mod/vesperr_back_to_top",
+ *  default_region = "svg",
  *  regions = {
- *     "author_link" = {
- *       "label" = @Translation("author_link"),
- *     },
- *     "footer_copy" = {
- *       "label" = @Translation("footer_copy"),
- *     },
- *     "footer_links_container" = {
- *       "label" = @Translation("footer_links_container"),
+ *     "svg" = {
+ *       "label" = @Translation("svg"),
  *     },
  *  }
  * )
  * 
  * 
  */
-class VesperrFooterSection extends FormatageModels
+class VesperrBackToTop extends FormatageModels
 {
 
     /**
@@ -43,7 +37,7 @@ class VesperrFooterSection extends FormatageModels
     public function __construct(array $configuration, $plugin_id, $plugin_definition) {
         // TODO Auto-generated method stub
         parent::__construct($configuration, $plugin_id, $plugin_definition);
-        $this->pluginDefinition->set('icon', drupal_get_path('module', 'spaker_mod') . "/icons/Vessper_footer_map.jpg");
+        $this->pluginDefinition->set('icon', drupal_get_path('module', 'spaker_mod') . "/icons/Vessper_back_to_top.png");
     }
 
    /**
@@ -73,22 +67,14 @@ class VesperrFooterSection extends FormatageModels
                     'loader' => 'static'
                 ],
                 'fields' => [
-                    'footer_copy' => [
+                    'svg' => [
                         'text_html' => [
-                            'label' => 'Copyright text',
-                            'value' => '© Copyright <strong> Vesperr </strong>. All Rights Reserved'
-                        ]
-                    ],
-                    'footer_links_container' => [
-                        'text_html' => [
-                            'label' => 'Links container',
-                            'value' => ''
-                        ]
-                    ],
-                    'author_link' => [
-                        'text_html' => [
-                            'label' => 'Author Link',
-                            'value' => 'Designed by tmc--Spaker'
+                            'label' => 'SVG Icon',
+                            'value' => '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16">
+                                            <g fill="white">
+                                                <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
+                                            </g>
+                                        </svg>'
                         ]
                     ],
                 ]
