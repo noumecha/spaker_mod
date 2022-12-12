@@ -1,100 +1,101 @@
-{{ attach_library('spaker_mod/vesperr_price') }}
-{%
-  if content
-%}
-	<!-- ======= F.A.Q Section ======= -->
-	<section id="faq" class="faq">
+{% if content %}
+	<section id="faq" {{ attributes.addClass('faq')}} >
 		<div class="container">
-
-			<div class="section-vs-title  aos-init" data-aos="fade-up">
-				<h2>
-					{{ content.title }}
-				</h2>
-			</div>
-
+			{% if content.title %}
+			<h2 {{ region_attributes.title.addClass(['section-vs-title','aos-init'])}} data-aos="fade-up">
+				{{ content.title }}
+			</h2>
+			{% endif %}
 			<div class="row faq-item d-flex align-items-stretch aos-init" data-aos="fade-up" data-aos-delay="100">
 				<div class="col-lg-5">
 					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="40" height="40" preserveaspectratio="xMidYMid meet" viewbox="0 0 24 24"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10s-4.477 10-10 10zm0-2a8 8 0 1 0 0-16a8 8 0 0 0 0 16zm-1-5h2v2h-2v-2zm2-1.645V14h-2v-1.5a1 1 0 0 1 1-1a1.5 1.5 0 1 0-1.471-1.794l-1.962-.393A3.501 3.501 0 1 1 13 13.355z" fill="#8bc4ea"/>
 					</svg>
-					<h4>
+					{% if content.title_one %}
+					<h4 {{ region_attributes.title_one.addClass('')}}>
 						{{ content.title_one }}
 					</h4>
+					{% endif %}
 				</div>
 				<div class="col-lg-7">
-					<p>
+					{% if content.text_one %}
+					<div {{ region_attributes.text_one.addClass('')}}>
 						{{ content.text_one }}
 					</p>
+					{% endif %}
 				</div>
 			</div>
-			<!-- End F.A.Q Item-->
-
 			<div class="row faq-item d-flex align-items-stretch aos-init" data-aos="fade-up" data-aos-delay="200">
 				<div class="col-lg-5">
 					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="40" height="40" preserveaspectratio="xMidYMid meet" viewbox="0 0 24 24"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10s-4.477 10-10 10zm0-2a8 8 0 1 0 0-16a8 8 0 0 0 0 16zm-1-5h2v2h-2v-2zm2-1.645V14h-2v-1.5a1 1 0 0 1 1-1a1.5 1.5 0 1 0-1.471-1.794l-1.962-.393A3.501 3.501 0 1 1 13 13.355z" fill="#8bc4ea"/>
 					</svg>
-					<h4>
+					{% if content.title_two %}
+					<h4 {{ region_attributes.title_two.addClass('') }} >
 						{{ content.title_two }}
 					</h4>
+					{% endif %}
 				</div>
 				<div class="col-lg-7">
-					<p>
+					{% if content.text_two %}
+					<div {{ region_attributes.text_two.addClass('')}} >
 						{{ content.text_two }}
-					</p>
+					</div>
+					{% endif %}
 				</div>
 			</div>
-			<!-- End F.A.Q Item-->
-
 			<div class="row faq-item d-flex align-items-stretch aos-init" data-aos="fade-up" data-aos-delay="300">
 				<div class="col-lg-5">
 					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="40" height="40" preserveaspectratio="xMidYMid meet" viewbox="0 0 24 24"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10s-4.477 10-10 10zm0-2a8 8 0 1 0 0-16a8 8 0 0 0 0 16zm-1-5h2v2h-2v-2zm2-1.645V14h-2v-1.5a1 1 0 0 1 1-1a1.5 1.5 0 1 0-1.471-1.794l-1.962-.393A3.501 3.501 0 1 1 13 13.355z" fill="#8bc4ea"/>
 					</svg>
-					<h4>
+					{% if content.title_three %}
+					<h4 {{ region_attributes.title_three.addClass('')}} >
 						{{ content.title_three }}
 					</h4>
+					{% endif %}
 				</div>
 				<div class="col-lg-7">
-					<p>
+					{% if content.text_three %}
+					<div {{ region_attributes.text_three.addClass('')}} >
 						{{ content.text_three }}
-					</p>
+					</div>
+					{% endif %}
 				</div>
 			</div>
-			<!-- End F.A.Q Item-->
-
 			<div class="row faq-item d-flex align-items-stretch aos-init" data-aos="fade-up" data-aos-delay="400">
 				<div class="col-lg-5">
 					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="40" height="40" preserveaspectratio="xMidYMid meet" viewbox="0 0 24 24"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10s-4.477 10-10 10zm0-2a8 8 0 1 0 0-16a8 8 0 0 0 0 16zm-1-5h2v2h-2v-2zm2-1.645V14h-2v-1.5a1 1 0 0 1 1-1a1.5 1.5 0 1 0-1.471-1.794l-1.962-.393A3.501 3.501 0 1 1 13 13.355z" fill="#8bc4ea"/>
 					</svg>
-					<h4>
+					{% if content.title_four %}
+					<h4 {{ region_attributes.title_four.addClass('')}}>
 						{{ content.title_four }}
 					</h4>
+					{% endif %}
 				</div>
 				<div class="col-lg-7">
-					<p>
+					{% if content.text_four %}
+					<div {{ region_attributes.text_four.addClass('')}}>
 						{{ content.text_four }}
-					</p>
+					</div>
+					{% endif %}
 				</div>
 			</div>
-			<!-- End F.A.Q Item-->
-
 			<div class="row faq-item d-flex align-items-stretch aos-init" data-aos="fade-up" data-aos-delay="500">
 				<div class="col-lg-5">
 					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="40" height="40" preserveaspectratio="xMidYMid meet" viewbox="0 0 24 24"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10s-4.477 10-10 10zm0-2a8 8 0 1 0 0-16a8 8 0 0 0 0 16zm-1-5h2v2h-2v-2zm2-1.645V14h-2v-1.5a1 1 0 0 1 1-1a1.5 1.5 0 1 0-1.471-1.794l-1.962-.393A3.501 3.501 0 1 1 13 13.355z" fill="#8bc4ea"/>
 					</svg>
-					<h4>
+					{% if content.title_five %}
+					<h4 {{ region_attributes.title_five.addClass('')}}>
 						{{ content.title_five }}
 					</h4>
+					{% endif %}
 				</div>
 				<div class="col-lg-7">
-					<p>
+					{% if content.text_five %}
+					<div {{ region_attributes.text_five.addClass('')}}>
 						{{ content.text_five }}
-					</p>
+					</div>
+					{% endif %}
 				</div>
 			</div>
-			<!-- End F.A.Q Item-->
-
 		</div>
 	</section>
-	<!-- End F.A.Q Section -->
-{%
-  endif
-%}
+{% endif %}

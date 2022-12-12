@@ -1,20 +1,11 @@
-    <!-- bootstrap icons cdn : add by TMC-->
-    {{ attach_library('spaker_mod/vesperr_header') }}
-
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
-    />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-
-    
+{% if content %}    
 <header id="header" class="fixed-top d-flex align-items-center">
 
       <div class="container d-flex align-items-center justify-content-between">
 
         <div class="logo">
 
-          <h1><a href="#"> {{ content.logo }} </a></h1>
+          <h1> {{ content.logo }} </h1>
 
         </div>
 
@@ -164,3 +155,4 @@
       </div>
 
 </header>
+{% endif %}
