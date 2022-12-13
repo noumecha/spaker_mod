@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\fast_models\Plugin\Layout\Teasers;
+namespace Drupal\spaker_mod\Plugin\Layout\Teasers;
 
 use Drupal\bootstrap_styles\StylesGroup\StylesGroupManager;
 use Drupal\formatage_models\FormatageModelsThemes;
@@ -23,10 +23,10 @@ use Drupal\formatage_models\Plugin\Layout\Teasers\FormatageModelsTeasers;
  *          "label" = @Translation("faq_teaser_svg"),     
  *      },
  *      "faq_teaser_title" = {
- *          "label" = @Translation("faq_teaser_svg"),     
+ *          "label" = @Translation("faq_teaser_title"),     
  *      },
  *      "faq_teaser_text" = {
- *          "label" = @Translation("faq_teaser_svg"),     
+ *          "label" = @Translation("faq_teaser_text"),     
  *      },
  *  }
  * )

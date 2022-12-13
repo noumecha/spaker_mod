@@ -1,7 +1,7 @@
 {% if content %}
 <div {{ attributes.addClass(['row','faq-item','d-flex','align-items-stretch','aos-init'])}}
 	data-aos="fade-up" data-aos-delay="100">
-	<div class="col-lg-5">
+	<div class="col-lg-5 d-flex">
         {% if content.faq_teaser_svg %}
             <div {{ region_attributes.faq_teaser_svg.addClass('') }} >
                 {{ content.faq_teaser_svg }}
