@@ -4,15 +4,25 @@
 		class="container d-flex align-items-center justify-content-between">
 
 		<div class="logo">
-
-			<h1>
-				<a href="#"> {{ content.logo }}
-				</a>
+			{% if content.logo %}
+			<h1 {{ region_attributes.logo.addClass('')}} >
+				{{ content.logo }}	
 			</h1>
-
+			{% endif %}
 		</div>
-
+		
 		<nav id="navbar" class="navbar">
+			{% if content.links_container %}
+				{{ content.links_container }}
+			{% endif %}
+			{% if content.button %}
+				{% for item in content.button|array_elements(region_attributes.button.addClass(['getstarted','scrollto'])) %}
+					{{ item }}
+				{% endfor %}
+			{% endif %}
+			<i class="bi bi-list mobile-nav-toggle"></i>
+		</nav>
+		{#<nav id="navbar" class="navbar">
 			<ul>
 				<li><a class="nav-link scrollto active" href="#hero"> {{ content.link }}
 				</a></li>
@@ -86,9 +96,7 @@
 
 			<i class="bi bi-list mobile-nav-toggle"></i>
 
-		</nav>
-
-		<!-- .navbar -->
+		</nav>#}
 	</div>
 </header>
 {% endif %}

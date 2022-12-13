@@ -22,62 +22,11 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
  *     "logo" = {
  *       "label" = @Translation("logo"),
  *     },
- *     "link" = {
- *       "label" = @Translation("link"),
- *     },
- *     "link_one" = {
- *       "label" = @Translation("link_one"),
- *      },
- *     "link_two" = {
- *       "label" = @Translation("link_two"),
- *      },
- *     "link_three" = {
- *       "label" = @Translation("link_three"),
- *      },
- *     "link_four" = {
- *       "label" = @Translation("link_four"),
- *      },
- *     "link_five" = {
- *       "label" = @Translation("link_five"),
- *     },
- *     "link_six" = {
- *       "label" = @Translation("link_six"),
- *     },
- *     "sub_link" = {
- *       "label" = @Translation("sub_link"),
- *     },
- *     "sub_link_one" = {
- *       "label" = @Translation("sub_link_one"),
- *     },
- *     "sub_link_two" = {
- *       "label" = @Translation("sub_link_two"),
- *     },
- *     "sub_sub_link_one" = {
- *       "label" = @Translation("sub_sub_link_one"),
- *     },
- *     "sub_sub_link_two" = {
- *       "label" = @Translation("sub_sub_link_two"),
- *     },
- *     "sub_sub_link_three" = {
- *       "label" = @Translation("sub_sub_link_three"),
- *     },
- *     "sub_sub_link_four" = {
- *       "label" = @Translation("sub_sub_link_four"),
- *     },
- *     "sub_sub_link_five" = {
- *       "label" = @Translation("sub_sub_link_five"),
- *     },
- *     "sub_link_three" = {
- *       "label" = @Translation("sub_link_three"),
- *     },
- *     "sub_link_four" = {
- *       "label" = @Translation("sub_link_four"),
- *     },
- *     "sub_link_five" = {
- *       "label" = @Translation("sub_link_five"),
- *     },
  *    "boutton" = {
  *       "label" = @Translation("boutton"),
+ *     },
+ *    "links_container" = {
+ *       "label" = @Translation("links_container"),
  *     },
  *  }
  * )
@@ -96,21 +45,77 @@ class VesperrHeaderSection extends FormatageModelsSection {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $styles_group_manager);
     $this->pluginDefinition->set('icon', drupal_get_path('module', 'spaker_mod') . "/icons/Vessper_header_map.jpg");
   }
-  
   /**
    *
    * {@inheritdoc}
    * @see \Drupal\formatage_models\Plugin\Layout\FormatageModels:build()
+   *
    */
   public function build(array $regions) {
-    
+
     // TODO Auto-generated method stub
     $build = parent::build($regions);
     FormatageModelsThemes::formatSettingValues($build);
-    
+    if (is_array($build['menu_nav']))
+        $build['menu_nav'] = $this->getMenus($build['menu_nav']);
+    //dump($build['menu_nav']);
     return $build;
   }
-  
+  /**
+   * {@inheritdoc}
+   */
+  private function getMenus(array $menu_nav) {
+      foreach ($menu_nav as $k => $m) {
+          if (isset($m['#base_plugin_id']) && $m['#base_plugin_id'] === 'system_menu_block') {
+              // set new theme.
+              $menu_nav[$k]['content']['#theme'] = 'layoutmenu_vesperr_header_menu';
+            
+              // add class
+              $menu_nav[$k]['content']['#attributes'] = [
+                  'class' => [
+                      'nav-list'
+                  ]
+              ];
+              // format-it if is not empty
+              if (!empty($menu_nav[$k]['content']['#items'])) 
+              {
+                  $this->formatListMenus($menu_nav[$k]['content']['#items']);
+                  //dump($menu_nav[$k]['content']['#items']);
+              }
+          }
+      }
+      return $menu_nav;
+  }
+  /**
+   * {@inheritdoc}
+   */
+  private function formatListMenus(array &$items) {
+      foreach ($items as $k => $item) {
+          if (!empty($item['attributes'])) {
+              /**
+               *
+               * @var \Drupal\Core\Template\Attribute $attribute
+               */
+              $attribute = $item['attributes'];
+              $attribute->addClass('nav-item');
+              // add sub menu
+              if ($item['is_expanded']) {
+                  $attribute->addClass('sub-alt');
+              }
+              // menu actif
+              if ($item['in_active_trail']) {
+                  $attribute->addClass('nav-item--active');
+              }
+              $items[$k]['attributes'] = $attribute;
+              //
+              if (!empty($item['below'])) {
+                  $this->formatListMenus($item['below']);
+                  $items[$k]['below'] = $item['below'];
+              }
+          }
+      }
+  }
+
   public function defaultConfiguration() {
     return parent::defaultConfiguration() + [
       
@@ -121,124 +126,22 @@ class VesperrHeaderSection extends FormatageModelsSection {
           'loader' => 'static'
         ],
         'fields' => [
-          'link' => [
-            'text_html' => [
-              'label' => 'lien',
-              'value' => 'Home'
-            ]
-          ],
-          'link_one' => [
-            'text_html' => [
-              'label' => 'lien_1',
-              'value' => 'About Us'
-            ]
-          ],
-          'link_two' => [
-            'text_html' => [
-              'label' => 'lien_2',
-              'value' => 'Services'
-            ]
-          ],
-          'link_three' => [
-            'text_html' => [
-              'label' => 'lien_3',
-              'value' => 'Portfolio'
-            ]
-          ],
-          'link_four' => [
-            'text_html' => [
-              'label' => 'lien_4',
-              'value' => 'Team'
-            ]
-          ],
-          'link_five' => [
-            'text_html' => [
-              'label' => 'lien_5',
-              'value' => 'Pricing'
-            ]
-          ],
-          'link_six' => [
-            'text_html' => [
-              'label' => 'lien_6',
-              'value' => 'Contact'
-            ]
-          ],
           'boutton' => [
             'text_html' => [
               'label' => 'boutton',
               'value' => 'Commencer ici'
             ]
           ],
+          'links_container' => [
+            'text_html' => [
+              'label' => 'Navbar container',
+              'value' => ''
+            ]
+          ],
           'logo' => [
             'text_html' => [
               'label' => 'logo',
               'value' => 'Wb Universe'
-            ]
-          ],
-          'sub_link' => [
-            'text_html' => [
-              'label' => 'sous menu',
-              'value' => 'Premier niveau'
-            ]
-          ],
-          'sub_link_one' => [
-            'text_html' => [
-              'label' => 'sous menu 1',
-              'value' => 'sous menu 1'
-            ]
-          ],
-          'sub_link_two' => [
-            'text_html' => [
-              'label' => 'sous menu 2',
-              'value' => 'Deuxième niveau'
-            ]
-          ],
-          'sub_sub_link_one' => [
-            'text_html' => [
-              'label' => 'sous sous menu 1',
-              'value' => 'sous menu 1'
-            ]
-          ],
-          'sub_sub_link_two' => [
-            'text_html' => [
-              'label' => 'sous sous menu 2',
-              'value' => 'sous menu 2'
-            ]
-          ],
-          'sub_sub_link_three' => [
-            'text_html' => [
-              'label' => 'sous sous menu 3',
-              'value' => 'sous menu 3'
-            ]
-          ],
-          'sub_sub_link_four' => [
-            'text_html' => [
-              'label' => 'sous sous menu 4',
-              'value' => 'sous menu 4'
-            ]
-          ],
-          'sub_sub_link_five' => [
-            'text_html' => [
-              'label' => 'sous sous menu 5',
-              'value' => 'sous menu 5'
-            ]
-          ],
-          'sub_link_three' => [
-            'text_html' => [
-              'label' => 'sous menu 3',
-              'value' => 'menu 3'
-            ]
-          ],
-          'sub_link_four' => [
-            'text_html' => [
-              'label' => 'sous menu 4',
-              'value' => 'menu 4'
-            ]
-          ],
-          'sub_link_five' => [
-            'text_html' => [
-              'label' => 'sous menu 5',
-              'value' => 'menu 5'
             ]
           ]
         ]
