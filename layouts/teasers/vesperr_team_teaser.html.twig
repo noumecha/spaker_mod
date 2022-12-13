@@ -1,0 +1,28 @@
+{% if content %}
+<div {{ attributes.addClass(['member','aos-init','aos-animate'])}} data-aos="fade-up" data-aos-delay="100">
+	<div class="member-img">
+        {% if content.team_teaser_image %}
+            {{ content.team_teaser_image }}
+        {% endif %}
+		<div class="social">
+            {% if content.team_teaser_icontainer %}
+                {% for item in content.team_teaser_icontainer|array_elements(region_attributes.team_teaser_icontainer.addClass('')) %}
+                    {{ item }}
+                {% endfor %}
+            {% endif %}
+		</div>
+	</div>
+	<div class="member-info">
+        {% if content.team_teaser_title %}
+		<h4 {{ region_attributes.team_teaser_title.addClass('')}}>
+			{{ content.team_teaser_title }}
+		</h4>
+        {% endif %}
+        {% if content.team_teaser_text %}
+		<div {{ region_attributes.team_teaser_text.addClass('')}}>
+			{{ content.team_teaser_text }}
+		</div>
+        {% endif %}
+	</div>
+</div>
+{% endif %}
