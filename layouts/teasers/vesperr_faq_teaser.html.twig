@@ -1,0 +1,24 @@
+{% if content %}
+<div {{ attributes.addClass(['row','faq-item','d-flex','align-items-stretch','aos-init'])}}
+	data-aos="fade-up" data-aos-delay="100">
+	<div class="col-lg-5">
+        {% if content.faq_teaser_svg %}
+            <div {{ region_attributes.faq_teaser_svg.addClass('') }} >
+                {{ content.faq_teaser_svg }}
+            </div>            
+        {% endif %}
+        {% if content.faq_teaser_title %}
+		<h4 {{ region_attributes.faq_teaser_title.addClass('')}} >
+			{{ content.faq_teaser_title }}
+		</h4>
+        {% endif %}
+	</div>
+	<div class="col-lg-7">
+        {% if content.faq_teaser_text %}
+		<div {{ region_attributes.faq_teaser_text.addClass('')}} >
+			{{ content.faq_teaser_text }}
+		</div>
+        {% endif %}
+	</div>
+</div>
+{% endif %}
