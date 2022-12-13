@@ -7,7 +7,7 @@
 		</h2>
 		{% endif %}
 		{% if content.faq_items_container %}
-			{% for item in content.faq_items_container|array_elements(region_attributes.faq_items_container.addClass('')) %}
+			{% for item in content.faq_items_container|array_elements(region_attributes.faq_items_container.addClass('p-20')) %}
 				{{ item }}
 			{% endfor %}
 		{% endif %}
