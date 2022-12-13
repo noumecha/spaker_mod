@@ -17,25 +17,13 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
  *  path = "layouts/footers",
  *  template = "vesperr_footer",
  *  library = "spaker_mod/vesperr_footer",
- *  default_region = "main",
+ *  default_region = "copyright",
  *  regions = {
- *     "author_link" = {
- *       "label" = @Translation("author_link"),
+ *     "copyright" = {
+ *       "label" = @Translation("copyright"),
  *     },
- *     "strong_text" = {
- *       "label" = @Translation("strong_text"),
- *     },
- *     "link_one" = {
- *       "label" = @Translation("link_one"),
- *     },
- *     "link_two" = {
- *       "label" = @Translation("link_two"),
- *     },
- *     "link_three" = {
- *       "label" = @Translation("link_three"),
- *     },
- *     "link_four" = {
- *       "label" = @Translation("link_four"),
+ *     "footer_links" = {
+ *       "label" = @Translation("footer_links"),
  *     },
  *  }
  * )
@@ -79,40 +67,19 @@ class VesperrFooterSection extends FormatageModelsSection {
           'loader' => 'static'
         ],
         'fields' => [
-          'link_one' => [
+          'footer_links' => [
             'text_html' => [
               'label' => 'lien 1',
-              'value' => 'Home'
+              'value' => '<a href="#intro" class="scrollto"> Home </a> 
+                        <a href="#about" class="scrollto"> About </a> 
+                        <a href="#"> Services </a> 
+                        <a href="#"> Contacts </a>'
             ]
           ],
-          'link_two' => [
+          'copyright' => [
             'text_html' => [
-              'label' => 'lien 2',
-              'value' => 'About'
-            ]
-          ],
-          'link_three' => [
-            'text_html' => [
-              'label' => 'lien 3',
-              'value' => 'Privacy Policy'
-            ]
-          ],
-          'link_four' => [
-            'text_html' => [
-              'label' => 'lien 4',
-              'value' => 'Terms of use'
-            ]
-          ],
-          'author_link' => [
-            'text_html' => [
-              'label' => 'nom auteur',
-              'value' => 'Noumecha Spaker'
-            ]
-          ],
-          'strong_text' => [
-            'text_html' => [
-              'label' => 'en gras',
-              'value' => 'Vesperr'
+              'label' => 'Copyright',
+              'value' => '© Copyright Vesperr All Rights Reserved Designed by Noumecha Spaker'
             ]
           ]
         ]
