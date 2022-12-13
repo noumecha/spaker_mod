@@ -10,13 +10,11 @@
 				{% endif %}
 			</div>
 			<div class="col-lg-6">
-				<nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
-					{% if content.footer_links %}
-						{% for item in content.footer_links|array_elements(region_attributes.footer_links.addClass('scrollto')) %}
-							{{ item }}
-						{% endfor %}
-					{% endif %}
+				{% if content.footer_links %}	
+				<nav  {{ region_attributes.footer_links.addClass(['footer-links','text-lg-right','text-center','pt-2','pt-lg-0'])}} class="">
+					{{ content.footer_links}}
 				</nav>
+				{% endif %}
 			</div>
 		</div>
 	</div>
