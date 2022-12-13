@@ -1,0 +1,12 @@
+<div class="col-lg-3 col-md-4">
+	<div class="icon-box">
+        {% if content.feature_svg %}
+            {{ content.feature_svg }}
+        {% endif %}
+        {% if content.feature_title %}
+		<h3 {{ region_attributes.feature_title.addClass('')}}>
+			{{ content.feature_title }}
+		</h3>
+        {% endif %}
+	</div>
+</div>

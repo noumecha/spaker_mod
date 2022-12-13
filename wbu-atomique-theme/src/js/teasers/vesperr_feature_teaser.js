@@ -1,0 +1,1 @@
+import "@stephane888/wbu-atomique/scss/organisme/sections/theme_builder/vesperr/feature_teaser.scss";
