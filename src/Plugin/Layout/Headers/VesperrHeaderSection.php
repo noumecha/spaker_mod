@@ -17,16 +17,16 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
  *  path = "layouts/headers",
  *  template = "vesperr_header",
  *  library = "spaker_mod/vesperr_header",
- *  default_region = "navbar",
+ *  default_region = "menu_nav",
  *  regions = {
  *     "logo" = {
  *       "label" = @Translation("logo"),
  *     },
- *    "boutton" = {
- *       "label" = @Translation("boutton"),
+ *    "button" = {
+ *       "label" = @Translation("button"),
  *     },
- *    "links_container" = {
- *       "label" = @Translation("links_container"),
+ *    "menu_nav" = {
+ *       "label" = @Translation("menu_nav"),
  *     },
  *  }
  * )
@@ -57,8 +57,9 @@ class VesperrHeaderSection extends FormatageModelsSection {
     $build = parent::build($regions);
     FormatageModelsThemes::formatSettingValues($build);
     if (is_array($build['menu_nav']))
-        $build['menu_nav'] = $this->getMenus($build['menu_nav']);
+      $build['menu_nav'] = $this->getMenus($build['menu_nav']);
     //dump($build['menu_nav']);
+    //dump($build);
     return $build;
   }
   /**
@@ -126,13 +127,13 @@ class VesperrHeaderSection extends FormatageModelsSection {
           'loader' => 'static'
         ],
         'fields' => [
-          'boutton' => [
+          'button' => [
             'text_html' => [
-              'label' => 'boutton',
+              'label' => 'button',
               'value' => 'Commencer ici'
             ]
           ],
-          'links_container' => [
+          'menu_nav' => [
             'text_html' => [
               'label' => 'Navbar container',
               'value' => ''

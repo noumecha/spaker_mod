@@ -12,15 +12,15 @@
 		</div>
 		
 		<nav id="navbar" class="navbar">
-			{% if content.links_container %}
-				{{ content.links_container }}
+			{% if content.menu_nav %}
+				{{ content.menu_nav }}
 			{% endif %}
 			{% if content.button %}
 				{% for item in content.button|array_elements(region_attributes.button.addClass(['getstarted','scrollto'])) %}
 					{{ item }}
 				{% endfor %}
 			{% endif %}
-			<i class="bi bi-list mobile-nav-toggle"></i>
+			{#<i class="bi bi-list mobile-nav-toggle"></i>#}
 		</nav>
 		{#<nav id="navbar" class="navbar">
 			<ul>
