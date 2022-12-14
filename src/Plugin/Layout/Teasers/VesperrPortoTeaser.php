@@ -23,10 +23,13 @@ use Drupal\formatage_models\Plugin\Layout\Teasers\FormatageModelsTeasers;
  *          "label" = @Translation("teaser_image"),     
  *      },
  *      "porto_teaser_title" = {
- *          "label" = @Translation("teaser_links"),     
+ *          "label" = @Translation("teaser_title"),     
  *      },
  *      "porto_teaser_links" = {
  *          "label" = @Translation("teaser_links"),     
+ *      },
+ *      "porto_teaser_text" = {
+ *          "label" = @Translation("teaser_text"),     
  *      },
  *  }
  * )
@@ -82,6 +85,12 @@ class VesperrPortoTeaser extends FormatageModelsTeasers
                         'text_html' => [
                             'label' => 'Image',
                             'value' => '<img src="https://bootstrapmade.com/demo/templates/Vesperr/assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt=""> '
+                        ]
+                    ],
+                    'porto_teaser_text' => [
+                        'text_html' => [
+                            'label' => 'Text',
+                            'value' => 'Feature'
                         ]
                     ],
                     'porto_teaser_title' => [
