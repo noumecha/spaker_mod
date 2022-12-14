@@ -87,53 +87,53 @@
 					</ul>
 					<!-- Tabs navs -->
 					<!-- Tabs content -->
-
-					<!-- Tabs content -->
-				</div>
-			</div>
-			<!-- /.navbar-collapse -->
-			<div class="row portfolio-container aos-init aos-animate" data-aos="fade-up" data-aos-delay="400" style="position: relative; height: 891px;">
-				<div class="tab-content" id="ex1-content">
-					<div
-						class="tab-pane fade show active"
-						id="ex1-tabs-1"
-						role="tabpanel"
-						aria-labelledby="ex1-tab-1"
-					>
-						{% if content.teaser_container_one %}
+					<!-- /.navbar-collapse -->
+					<div class="row portfolio-container aos-init aos-animate" data-aos="fade-up" data-aos-delay="400" style="position: relative; height: 891px;">
+						<div class="tab-content" id="ex1-content">
+							<div
+								class="tab-pane fade show active"
+								id="ex1-tabs-1"
+								role="tabpanel"
+								aria-labelledby="ex1-tab-1"
+							>
+								{% if content.teaser_container_one %}
+									{% for item in content.teaser_container_one|array_elements(region_attriutes.teaser_container_one.addClass('')) %}
+										{{ item }}
+									{% endfor %}
+								{% endif %}
+							</div>
+							<div class="tab-pane fade" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
+								{% if content.teaser_container_two %}
+									{% for item in content.teaser_container_two|array_elements(region_attriutes.teaser_container_two.addClass('')) %}
+										{{ item }}
+									{% endfor %}
+								{% endif %}
+							</div>
+							<div class="tab-pane fade" id="ex1-tabs-3" role="tabpanel" aria-labelledby="ex1-tab-3">
+								{% if content.teaser_container_three %}
+									{% for item in content.teaser_container_three|array_elements(region_attriutes.teaser_container_three.addClass('')) %}
+										{{ item }}
+									{% endfor %}
+								{% endif %}
+							</div>
+							<div class="tab-pane fade" id="ex1-tabs-4" role="tabpanel" aria-labelledby="ex1-tab-4s">
+								{% if content.teaser_container_four %}
+									{% for item in content.teaser_container_four|array_elements(region_attriutes.teaser_container_four.addClass('')) %}
+										{{ item }}
+									{% endfor %}
+								{% endif %}
+							</div>
+						</div>
+						{#% if content.teaser_container_one %}
 							{% for item in content.teaser_container_one|array_elements(region_attriutes.teaser_container_one.addClass('')) %}
 								{{ item }}
 							{% endfor %}
-						{% endif %}
+						{% endif %#}
 					</div>
-					<div class="tab-pane fade" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
-						{% if content.teaser_container_two %}
-							{% for item in content.teaser_container_two|array_elements(region_attriutes.teaser_container_two.addClass('')) %}
-								{{ item }}
-							{% endfor %}
-						{% endif %}
-					</div>
-					<div class="tab-pane fade" id="ex1-tabs-3" role="tabpanel" aria-labelledby="ex1-tab-3">
-						{% if content.teaser_container_three %}
-							{% for item in content.teaser_container_three|array_elements(region_attriutes.teaser_container_three.addClass('')) %}
-								{{ item }}
-							{% endfor %}
-						{% endif %}
-					</div>
-					<div class="tab-pane fade" id="ex1-tabs-4" role="tabpanel" aria-labelledby="ex1-tab-4s">
-						{% if content.teaser_container_four %}
-							{% for item in content.teaser_container_four|array_elements(region_attriutes.teaser_container_four.addClass('')) %}
-								{{ item }}
-							{% endfor %}
-						{% endif %}
-					</div>
+					<!-- Tabs content -->
 				</div>
-				{#% if content.teaser_container_one %}
-					{% for item in content.teaser_container_one|array_elements(region_attriutes.teaser_container_one.addClass('')) %}
-						{{ item }}
-					{% endfor %}
-				{% endif %#}
 			</div>
+			
 		</div>
 	</section>
 {% endif %}
