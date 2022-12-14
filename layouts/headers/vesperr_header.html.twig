@@ -1,13 +1,12 @@
 {% if content %}
 <header {{attributes.addClass(['spaker_mod_header','d-flex','align-items-center'])}}>
-	<div
-		class="container d-flex align-items-center justify-content-between">
+	<div class="container d-flex align-items-center justify-content-between">
 
 		<div class="logo">
 			{% if content.logo %}
-			<h1 {{ region_attributes.logo.addClass('')}} >
+			<div {{ region_attributes.logo.addClass('')}} >
 				{{ content.logo }}	
-			</h1>
+			</div>
 			{% endif %}
 		</div>
 		
@@ -20,83 +19,7 @@
 					{{ item }}
 				{% endfor %}
 			{% endif %}
-			{#<i class="bi bi-list mobile-nav-toggle"></i>#}
 		</nav>
-		{#<nav id="navbar" class="navbar">
-			<ul>
-				<li><a class="nav-link scrollto active" href="#hero"> {{ content.link }}
-				</a></li>
-
-				<li><a class="nav-link scrollto" href="#about"> {{ content.link_one }}
-				</a></li>
-
-				<li><a class="nav-link scrollto" href="#services"> {{ content.link_two }}
-				</a></li>
-
-				<li><a class="nav-link scrollto" href="#portfolio"> {{ content.link_three }}
-				</a></li>
-
-				<li><a class="nav-link scrollto" href="#team"> {{ content.link_four }}
-				</a></li>
-
-				<li><a class="nav-link scrollto" href="#pricing"> {{ content.link_five }}
-				</a></li>
-
-				<li class="dropdown"><a href="#"> <span> {{ content.sub_link }}
-					</span> <i class="bi bi-chevron-down"></i>
-
-				</a>
-
-					<ul>
-
-						<li><a href="#">{{ content.sub_link_one }} </a></li>
-
-						<li class="dropdown"><a href="#"> <span> {{ content.sub_link_two }}
-							</span> <i class="bi bi-chevron-right"></i>
-
-						</a>
-
-							<ul>
-
-								<li><a href="#"> {{ content.sub_sub_link_one}}
-								</a></li>
-
-								<li><a href="#"> {{ content.sub_sub_link_two }}
-								</a></li>
-
-								<li><a href="#"> {{ content.sub_sub_link_three }}
-								</a></li>
-
-								<li><a href="#"> {{ content.sub_sub_link_four }}
-								</a></li>
-
-								<li><a href="#"> {{ content.sub_sub_link_five }}
-								</a></li>
-
-							</ul></li>
-
-						<li><a href="#"> {{ content.sub_link_three }}
-						</a></li>
-
-						<li><a href="#"> {{ content.sub_link_four }}
-						</a></li>
-
-						<li><a href="#"> {{ content.sub_link_five }}
-						</a></li>
-
-					</ul></li>
-
-				<li><a class="nav-link scrollto" href="#contact"> {{ content.link_six }}
-				</a></li>
-
-				<li><a class="getstarted scrollto" href="#about"> {{ content.boutton }}
-				</a></li>
-
-			</ul>
-
-			<i class="bi bi-list mobile-nav-toggle"></i>
-
-		</nav>#}
 	</div>
 </header>
 {% endif %}
