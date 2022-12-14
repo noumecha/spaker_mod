@@ -1,236 +1,139 @@
 {% if content %}
 	<section {{ attributes.addClass('spaker_mod_portfolio') }}>
 		<div class="container">
-			<div class="section-vs-title  aos-init aos-animate" data-aos="fade-up">
-				<h2>
-					{{ content.title }}
-				</h2>
-				<p>
-					{{ content.text }}
-				</p>
-			</div>
-
+			<!-- Tabs navs -->
 			<div class="row aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
 				<div class="col-lg-12 d-flex justify-content-center">
-					<ul class="portfolio-flters">
+					{#<ul class="portfolio-flters">
 						<li data-filter="*" class="filter-active">
-							{{ content.list_one }}
+							{{ content.first_list }}
 						</li>
 						<li data-filter=".filter-app">
-							{{ content.list_two }}
+							{{ content.second_list }}
 						</li>
 						<li data-filter=".filter-card">
-							{{ content.list_three }}
+							{{ content.third_list }}
 						</li>
 						<li data-filter=".filter-web">
-							{{ content.list_four }}
+							{{ content.fourth_list }}
+						</li>
+					</ul>#}
+					<!-- Tabs navs -->
+					<ul class="nav nav-tabs mb-3 portfolio-flters" id="ex1" role="tablist">
+						<li class="nav-item" role="presentation">
+							<a
+							class="nav-link active"
+							id="ex1-tab-1"
+							data-mdb-toggle="tab"
+							href="#ex1-tabs-1"
+							role="tab"
+							aria-controls="ex1-tabs-1"
+							aria-selected="true"
+							>
+								{% if content.first_list %}
+									{{ content.first_list }}Tab 1
+								{% endif %}
+							</a
+							>
+						</li>
+						<li class="nav-item" role="presentation">
+							<a
+							class="nav-link"
+							id="ex1-tab-2"
+							data-mdb-toggle="tab"
+							href="#ex1-tabs-2"
+							role="tab"
+							aria-controls="ex1-tabs-2"
+							aria-selected="false"
+							>	
+								{% if content.second_list %}
+									{{ content.second_list }}
+								{% endif %}
+							</a
+							>
+						</li>
+						<li class="nav-item" role="presentation">
+							<a
+							class="nav-link"
+							id="ex1-tab-3"
+							data-mdb-toggle="tab"
+							href="#ex1-tabs-3"
+							role="tab"
+							aria-controls="ex1-tabs-3"
+							aria-selected="false"
+							>
+								{% if content.third_list %}
+									{{ content.third_list }}
+								{% endif %}
+							</a
+							>
+						</li>
+						<li class="nav-item" role="presentation">
+							<a
+							class="nav-link"
+							id="ex1-tab-4"
+							data-mdb-toggle="tab"
+							href="#ex1-tabs-4"
+							role="tab"
+							aria-controls="ex1-tabs-4"
+							aria-selected="false"
+							>
+								{% if content.fourth_list %}
+									{{ content.fourth_list }}
+								{% endif %}
+							</a
+							>
 						</li>
 					</ul>
+					<!-- Tabs navs -->
+					<!-- Tabs content -->
+
+					<!-- Tabs content -->
 				</div>
 			</div>
-
+			<!-- /.navbar-collapse -->
 			<div class="row portfolio-container aos-init aos-animate" data-aos="fade-up" data-aos-delay="400" style="position: relative; height: 891px;">
-
-				<div class="col-lg-4 col-md-6 portfolio-item filter-app" style="position: absolute; left: 0px; top: 0px;">
-					<div class="portfolio-wrap">
-						<img src="https://bootstrapmade.com/demo/templates/Vesperr/assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-						<div class="portfolio-info">
-							<h4>
-								{{ content.title_one }}
-							</h4>
-							<p>
-								{{ content.text_one }}
-							</p>
-							<div class="portfolio-links">
-								<a href="https://bootstrapmade.com/demo/templates/Vesperr/assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1">
-									<i class="bx bx-plus"></i>
-								</a>
-								<a href="portfolio-details.html" title="More Details">
-									<i class="bx bx-link"></i>
-								</a>
-							</div>
-						</div>
+				<div class="tab-content" id="ex1-content">
+					<div
+						class="tab-pane fade show active"
+						id="ex1-tabs-1"
+						role="tabpanel"
+						aria-labelledby="ex1-tab-1"
+					>
+						{% if content.teaser_container_one %}
+							{% for item in content.teaser_container_one|array_elements(region_attriutes.teaser_container_one.addClass('')) %}
+								{{ item }}
+							{% endfor %}
+						{% endif %}
+					</div>
+					<div class="tab-pane fade" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
+						{% if content.teaser_container_two %}
+							{% for item in content.teaser_container_two|array_elements(region_attriutes.teaser_container_two.addClass('')) %}
+								{{ item }}
+							{% endfor %}
+						{% endif %}
+					</div>
+					<div class="tab-pane fade" id="ex1-tabs-3" role="tabpanel" aria-labelledby="ex1-tab-3">
+						{% if content.teaser_container_three %}
+							{% for item in content.teaser_container_three|array_elements(region_attriutes.teaser_container_three.addClass('')) %}
+								{{ item }}
+							{% endfor %}
+						{% endif %}
+					</div>
+					<div class="tab-pane fade" id="ex1-tabs-4" role="tabpanel" aria-labelledby="ex1-tab-4s">
+						{% if content.teaser_container_four %}
+							{% for item in content.teaser_container_four|array_elements(region_attriutes.teaser_container_four.addClass('')) %}
+								{{ item }}
+							{% endfor %}
+						{% endif %}
 					</div>
 				</div>
-
-				<div class="col-lg-4 col-md-6 portfolio-item filter-web" style="position: absolute; left: 380px; top: 0px;">
-					<div class="portfolio-wrap">
-						<img src="https://bootstrapmade.com/demo/templates/Vesperr/assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-						<div class="portfolio-info">
-							<h4>
-								{{ content.title_two }}
-							</h4>
-							<p>
-								{{ content.text_two }}
-							</p>
-							<div class="portfolio-links">
-								<a href="https://bootstrapmade.com/demo/templates/Vesperr/assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3">
-									<i class="bx bx-plus"></i>
-								</a>
-								<a href="portfolio-details.html" title="More Details">
-									<i class="bx bx-link"></i>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6 portfolio-item filter-app" style="position: absolute; left: 760px; top: 0px;">
-					<div class="portfolio-wrap">
-						<img src="https://bootstrapmade.com/demo/templates/Vesperr/assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-						<div class="portfolio-info">
-							<h4>
-								{{ content.title_three }}
-							</h4>
-							<p>
-								{{ content.text_three }}
-							</p>
-							<div class="portfolio-links">
-								<a href="https://bootstrapmade.com/demo/templates/Vesperr/assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2">
-									<i class="bx bx-plus"></i>
-								</a>
-								<a href="portfolio-details.html" title="More Details">
-									<i class="bx bx-link"></i>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6 portfolio-item filter-card" style="position: absolute; left: 0px; top: 297px;">
-					<div class="portfolio-wrap">
-						<img src="https://bootstrapmade.com/demo/templates/Vesperr/assets/img/portfolio/portfolio-4.jpgg" class="img-fluid" alt="">
-						<div class="portfolio-info">
-							<h4>
-								{{ content.title_four }}
-							</h4>
-							<p>{{ content.text_four }}</p>
-							<div class="portfolio-links">
-								<a href="https://bootstrapmade.com/demo/templates/Vesperr/assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2">
-									<i class="bx bx-plus"></i>
-								</a>
-								<a href="portfolio-details.html" title="More Details">
-									<i class="bx bx-link"></i>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6 portfolio-item filter-web" style="position: absolute; left: 380px; top: 297px;">
-					<div class="portfolio-wrap">
-						<img src="https://bootstrapmade.com/demo/templates/Vesperr/assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-						<div class="portfolio-info">
-							<h4>
-								{{ content.title_five }}
-							</h4>
-							<p>
-								{{ content.text_five }}
-							</p>
-							<div class="portfolio-links">
-								<a href="https://bootstrapmade.com/demo/templates/Vesperr/assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2">
-									<i class="bx bx-plus"></i>
-								</a>
-								<a href="portfolio-details.html" title="More Details">
-									<i class="bx bx-link"></i>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6 portfolio-item filter-app" style="position: absolute; left: 760px; top: 297px;">
-					<div class="portfolio-wrap">
-						<img src="https://bootstrapmade.com/demo/templates/Vesperr/assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-						<div class="portfolio-info">
-							<h4>
-								{{ content.title_six }}
-							</h4>
-							<p>
-								{{ content.text_six }}
-							</p>
-							<div class="portfolio-links">
-								<a href="https://bootstrapmade.com/demo/templates/Vesperr/assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3">
-									<i class="bx bx-plus"></i>
-								</a>
-								<a href="portfolio-details.html" title="More Details">
-									<i class="bx bx-link"></i>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6 portfolio-item filter-card" style="position: absolute; left: 0px; top: 594px;">
-					<div class="portfolio-wrap">
-						<img src="https://bootstrapmade.com/demo/templates/Vesperr/assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-						<div class="portfolio-info">
-							<h4>
-								{{ content.title_seven }}
-							</h4>
-							<p>
-								{{ content.text_seven }}
-							</p>
-							<div class="portfolio-links">
-								<a href="https://bootstrapmade.com/demo/templates/Vesperr/assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1">
-									<i class="bx bx-plus"></i>
-								</a>
-								<a href="portfolio-details.html" title="More Details">
-									<i class="bx bx-link"></i>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6 portfolio-item filter-card" style="position: absolute; left: 380px; top: 594px;">
-					<div class="portfolio-wrap">
-						<img src="https://bootstrapmade.com/demo/templates/Vesperr/assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-						<div class="portfolio-info">
-							<h4>
-								{{ content.title_height }}
-							</h4>
-							<p>
-								{{ content.text_height }}
-							</p>
-							<div class="portfolio-links">
-								<a href="https://bootstrapmade.com/demo/templates/Vesperr/assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3">
-									<i class="bx bx-plus"></i>
-								</a>
-								<a href="portfolio-details.html" title="More Details">
-									<i class="bx bx-link"></i>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6 portfolio-item filter-web" style="position: absolute; left: 760px; top: 594px;">
-					<div class="portfolio-wrap">
-						<img src="https://bootstrapmade.com/demo/templates/Vesperr/assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-						<div class="portfolio-info">
-							<h4>
-								{{ content.title_nine }}
-							</h4>
-							<p>
-								{{ content.title_nine }}
-							</p>
-							<div class="portfolio-links">
-								<a href="https://bootstrapmade.com/demo/templates/Vesperr/assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3">
-									<i class="bx bx-plus"></i>
-								</a>
-								<a href="portfolio-details.html" title="More Details">
-									<i class="bx bx-link"></i>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
+				{#% if content.teaser_container_one %}
+					{% for item in content.teaser_container_one|array_elements(region_attriutes.teaser_container_one.addClass('')) %}
+						{{ item }}
+					{% endfor %}
+				{% endif %#}
 			</div>
-
 		</div>
 	</section>
-{% 
-  endif 
-%}
+{% endif %}

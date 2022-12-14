@@ -1,0 +1,26 @@
+{% if content %}
+<div {{ attributes.addClass('portfolio-wrap')}}>
+    {% if content.porto_teaser_image %}
+        {{ content.porto_teaser_image }}
+    {% endif %}
+	<div class="portfolio-info">
+        {% if content.porto_teaser_title %}
+		<h4 {{ region_attributes.porto_teaser_title.addClass('')}}>
+			{{ content.porto_teaser_title }}
+		</h4>
+        {% endif %}
+        {% if content.porto_teaser_text %}
+		<div {{ region_attributes.porto_teaser_text.addClass('')}}>
+			{{ content.porto_teaser_text }}
+		</div>
+        {% endif %}
+		<div class="portfolio-links">
+            {% if content.porto_teaser_links %}
+                {% for item in content.porto_teaser_links|array_elements(region_attributes.porto_teaser_links.addClass('')) %}
+                    {{ item }}
+                {% endfor %}
+            {% endif %}
+		</div>
+	</div>
+</div>
+{% endif %}

@@ -16,79 +16,31 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
  *  path = "layouts/sections",
  *  template = "vesperr_portfolio",
  *  library = "spaker_mod/vesperr_portfolio",
- *  default_region = "main",
+ *  default_region = "first_list",
  *  regions = {
- *     "title" = {
- *       "label" = @Translation("title"),
+ *     "first_list" = {
+ *       "label" = @Translation("first_list"),
  *     },
- *     "text" = {
- *       "label" = @Translation("text"),
+ *     "second_list" = {
+ *       "label" = @Translation("second_list"),
  *     },
- *     "list_one" = {
- *       "label" = @Translation("list_one"),
+ *     "third_list" = {
+ *       "label" = @Translation("third_list"),
  *     },
- *     "list_two" = {
- *       "label" = @Translation("list_two"),
+ *     "fourth_list" = {
+ *       "label" = @Translation("fourth_list"),
  *     },
- *     "list_three" = {
- *       "label" = @Translation("list_three"),
+ *     "teaser_container_one" = {
+ *       "label" = @Translation("teaser_container_one"),
  *     },
- *     "list_four" = {
- *       "label" = @Translation("list_four"),
+ *     "teaser_container_two" = {
+ *       "label" = @Translation("teaser_container_two"),
  *     },
- *     "title_one" = {
- *       "label" = @Translation("title_one"),
+ *     "teaser_container_three" = {
+ *       "label" = @Translation("teaser_container_three"),
  *     },
- *     "title_two" = {
- *       "label" = @Translation("title_two"),
- *     },
- *     "title_three" = {
- *       "label" = @Translation("title_three"),
- *     },
- *     "title_four" = {
- *       "label" = @Translation("title_four"),
- *     },
- *     "title_five" = {
- *       "label" = @Translation("title_five"),
- *     },
- *     "title_six" = {
- *       "label" = @Translation("title_six"),
- *     },
- *     "title_seven" = {
- *       "label" = @Translation("title_seven"),
- *     },
- *     "title_height" = {
- *       "label" = @Translation("title_height"),
- *     },
- *     "title_nine" = {
- *       "label" = @Translation("title_nine"),
- *     },
- *     "text_one" = {
- *       "label" = @Translation("text_one"),
- *     },
- *     "text_two" = {
- *       "label" = @Translation("text_two"),
- *     },
- *     "text_three" = {
- *       "label" = @Translation("text_three"),
- *     },
- *     "text_four" = {
- *       "label" = @Translation("text_four"),
- *     },
- *     "text_five" = {
- *       "label" = @Translation("text_five"),
- *     },
- *     "text_six" = {
- *       "label" = @Translation("text_six"),
- *     },
- *     "text_seven" = {
- *       "label" = @Translation("text_seven"),
- *     },
- *     "text_height" = {
- *       "label" = @Translation("text_height"),
- *     },
- *     "text_nine" = {
- *       "label" = @Translation("text_nine"),
+ *     "teaser_container_four" = {
+ *       "label" = @Translation("teaser_container_four"),
  *     },
  *  }
  * )
@@ -108,7 +60,7 @@ class VesperrPortfolioSection extends FormatageModelsSection
     public function __construct(array $configuration, $plugin_id, $plugin_definition, StylesGroupManager $styles_group_manager) {
         // TODO Auto-generated method stub
         parent::__construct($configuration, $plugin_id, $plugin_definition, $styles_group_manager);
-         $this->pluginDefinition->set('icon', drupal_get_path('module', 'spaker_mod') . "/icons/Vessper_portfolio_map.jpg");
+         $this->pluginDefinition->set('icon', drupal_get_path('module', 'spaker_mod') . "/icons/Vessper_portfolio_map.png");
     }
     /**
      * 
@@ -138,148 +90,52 @@ class VesperrPortfolioSection extends FormatageModelsSection
                     'loader' => 'static'
                 ],
                 'fields' => [
-                    'title' => [
-                        'text_html' => [
-                            'label' => 'titre',
-                            'value' => 'Portfolio'
-                        ]
-                    ],
-                    'text' => [
-                        'text_html' => [
-                            'label' => 'Paragraphe',
-                            'value' => 'Necessitatibus eius consequatur ex aliquid fuga eum quidem'
-                        ]
-                    ],
-                    'list_one' => [
+                    'first_list' => [
                         'text_html' => [
                             'label' => 'liste 1',
                             'value' => 'All'
                         ]
                     ],
-                    'list_two' => [
+                    'second_list' => [
                         'text_html' => [
                             'label' => 'liste 2',
                             'value' => 'App'
                         ]
                     ],
-                    'list_three' => [
+                    'third_list' => [
                         'text_html' => [
                             'label' => 'liste 3',
                             'value' => 'Card'
                         ]
                     ],
-                    'list_four' => [
+                    'fourth_list' => [
                         'text_html' => [
                             'label' => 'liste 4',
                             'value' => 'Web'
                         ]
                     ],
-                    'title_one' => [
+                    'teaser_container_one' => [
                         'text_html' => [
-                            'label' => 'titre 1',
-                            'value' => 'App 1'
+                            'label' => 'Teaser Container One',
+                            'value' => ''
                         ]
                     ],
-                    'title_two' => [
+                    'teaser_container_two' => [
                         'text_html' => [
-                            'label' => 'titre 2',
-                            'value' => 'Web 3'
+                            'label' => 'Teaser Container Two',
+                            'value' => ''
                         ]
                     ],
-                    'title_three' => [
+                    'teaser_container_three' => [
                         'text_html' => [
-                            'label' => 'titre 3',
-                            'value' => 'App 2'
+                            'label' => 'Teaser Container Three',
+                            'value' => ''
                         ]
                     ],
-                    'title_four' => [
+                    'teaser_container_four' => [
                         'text_html' => [
-                            'label' => 'titre 4',
-                            'value' => 'Card 2'
-                        ]
-                    ],
-                    'title_five' => [
-                        'text_html' => [
-                            'label' => 'titre 5',
-                            'value' => 'Web 2'
-                        ]
-                    ],
-                    'title_six' => [
-                        'text_html' => [
-                            'label' => 'titre 6',
-                            'value' => 'App 3'
-                        ]
-                    ],
-                    'title_seven' => [
-                        'text_html' => [
-                            'label' => 'titre 7',
-                            'value' => 'Card 1'
-                        ]
-                    ],
-                    'title_height' => [
-                        'text_html' => [
-                            'label' => 'titre 8',
-                            'value' => 'Card 3'
-                        ]
-                    ],
-                    'title_nine' => [
-                        'text_html' => [
-                            'label' => 'titre 9',
-                            'value' => 'Web 3'
-                        ]
-                    ],
-                    'text_one' => [
-                        'text_html' => [
-                            'label' => 'Paragraphe 1',
-                            'value' => 'App'
-                        ]
-                    ],
-                    'text_two' => [
-                        'text_html' => [
-                            'label' => 'Paragraphe 2',
-                            'value' => 'Web'
-                        ]
-                    ],
-                    'text_three' => [
-                        'text_html' => [
-                            'label' => 'Paragraphe 3',
-                            'value' => 'App'
-                        ]
-                    ],
-                    'text_four' => [
-                        'text_html' => [
-                            'label' => 'Paragraphe 4',
-                            'value' => 'Card'
-                        ]
-                    ],
-                    'text_five' => [
-                        'text_html' => [
-                            'label' => 'Paragraphe 5',
-                            'value' => 'Web'
-                        ]
-                    ],
-                    'text_six' => [
-                        'text_html' => [
-                            'label' => 'Paragraphe 6',
-                            'value' => 'App'
-                        ]
-                    ],
-                    'text_seven' => [
-                        'text_html' => [
-                            'label' => 'Paragraphe 7',
-                            'value' => 'Card'
-                        ]
-                    ],
-                    'text_height' => [
-                        'text_html' => [
-                            'label' => 'Paragraphe 8',
-                            'value' => 'Card'
-                        ]
-                    ],
-                    'text_nine' => [
-                        'text_html' => [
-                            'label' => 'Paragraphe 9',
-                            'value' => 'Web'
+                            'label' => 'Teaser Container Four',
+                            'value' => ''
                         ]
                     ],
                 ]
