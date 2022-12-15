@@ -2,7 +2,7 @@
 <section {{ attributes.addClass('spaker_mod_portfolio') }}>
 	<div class="container">
 		<div class="row aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
-			<div class="col-lg-12 d-flex justify-content-center">
+			<div class="col-lg-12 col-md-12 align-items-center d-flex justify-content-center">
 				<!-- Tabs navs -->
 				<ul class="nav nav-pills mb-3 portfolio-flters" id="pills-tab" role="tablist">
 					<li class="nav-item">
@@ -40,28 +40,28 @@
 		<!-- /.navbar-collapse -->
 		<div class="portfolio-container aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
 			<div class="tab-content" id="pills-tabContent">
-				<div class="row tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+				<div class="row align-items-center d-flex tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
 					{% if content.teaser_container_one %}
-						{% for item in content.teaser_container_one|array_elements(region_attriutes.teaser_container_one.addClass('')) %}
+						{% for item in content.teaser_container_one|array_elements(region_attributes.teaser_container_one.addClass('')) %}
 							{{ item }}
 						{% endfor %}
 					{% endif %}
 				</div>
-				<div class="row tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+				<div class="row align-items-center d-flex tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
 					{% if content.teaser_container_two %}
 						{% for item in content.teaser_container_two|array_elements(region_attriutes.teaser_container_two.addClass('')) %}
 							{{ item }}
 						{% endfor %}
 					{% endif %}
 				</div>
-				<div class="row tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+				<div class="row align-items-center d-flex tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
 					{% if content.teaser_container_three %}
 						{% for item in content.teaser_container_three|array_elements(region_attriutes.teaser_container_three.addClass('')) %}
 							{{ item }}
 						{% endfor %}
 					{% endif %}
 				</div>
-				<div class="row tab-pane fade" id="pills-web" role="tabpanel" aria-labelledby="pills-web-tab">
+				<div class="row align-items-center d-flex tab-pane fade" id="pills-web" role="tabpanel" aria-labelledby="pills-web-tab">
 					{% if content.teaser_container_four %}
 						{% for item in content.teaser_container_four|array_elements(region_attriutes.teaser_container_four.addClass('')) %}
 							{{ item }}
