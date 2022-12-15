@@ -5,22 +5,27 @@
     {% endif %}
 	<div class="portfolio-info">
         {% if content.porto_teaser_title %}
-		<h4 {{ region_attributes.porto_teaser_title.addClass('')}}>
+		<h4 {{ region_attributes.porto_teaser_title.addClass('portfolio-info_title')}}>
 			{{ content.porto_teaser_title }}
 		</h4>
         {% endif %}
         {% if content.porto_teaser_text %}
-		<div {{ region_attributes.porto_teaser_text.addClass('')}}>
+		<div {{ region_attributes.porto_teaser_text.addClass('portfolio-info_text')}}>
 			{{ content.porto_teaser_text }}
 		</div>
         {% endif %}
-		<div class="portfolio-links">
+		{#<div class="portfolio-links">
             {% if content.porto_teaser_links %}
                 {% for item in content.porto_teaser_links|array_elements(region_attributes.porto_teaser_links.addClass('')) %}
                     {{ item }}
                 {% endfor %}
             {% endif %}
-		</div>
+		</div>#}
+        {% if content.porto_teaser_links %}
+        <div {{ region_attributes.porto_teaser_links.addClass('portfolio-links')}}>
+            {{ content.porto_teaser_links }}
+        </div>
+        {% endif %}
 	</div>
 </div>
 {% endif %}
