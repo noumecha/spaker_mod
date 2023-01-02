@@ -1,0 +1,7 @@
+{% if content %}
+    <div href="#" {{ attributes.addClass(['back-to-top','d-flex','align-items-center','justify-content-center', 'active'])}}>
+        {% if content.svg %}
+            {{ content.svg }}
+        {% endif %}
+    </div>
+{% endif %}
