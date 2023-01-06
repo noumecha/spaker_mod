@@ -1,5 +1,5 @@
-<div class="col-lg-3 col-md-4">
-	<div class="icon-box">
+{% if content %}
+	<div attributes.addClass("icon-box")>
         {% if content.feature_svg %}
             {{ content.feature_svg }}
         {% endif %}
@@ -8,5 +8,5 @@
 			{{ content.feature_title }}
 		</h3>
         {% endif %}
-	</div>
-</div>
+    </div>
+{% endif %}
