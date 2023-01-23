@@ -76,6 +76,7 @@ class AgenceConstantService extends FormatageModelsSection
 
             'tmc' => [
                 'builder-form' => true,
+                'region_css_title' => 'h2',
                 'info' => [
                     'title' => 'configuration du contenu',
                     'loader' => 'static'

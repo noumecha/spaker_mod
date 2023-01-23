@@ -5,7 +5,7 @@
 			<div class="row no-gutters">
 				<div class="col-0 col-md-4 d-none d-lg-block">
 					{% if content.image %}
-						<div class="ac-column-image">
+						<div {{ region_attributes.image.addClass('ac-column-image')}} >
 							{{content.image|layout_value}}
 						</div>
 					{% endif %}
@@ -16,28 +16,28 @@
 						<div class="ac-content">
 							<div class="ac-left-header">
 								{% if content.sub_title %}
-									<div class="ac-first-title">
+									<div {{ region_attributes.sub_title.addClass('ac-first-title')}} >
 										{{content.sub_title}}
 									</div>
 								{% endif %}
 								{% if content.title %}
-									<h2 class="ac-head-title">
+									<h2 {{ region_attributes.title.addClass(['ac-head-title','h2'])}} >
 										{{content.title}}
 									</h2>
 								{% endif %}
 								{% if content.desc %}
-									<div class="ac-text-descriptor">
+									<div {{ region_attributes.desc.addClass('ac-text-descriptor') }} >
 										{{content.desc}}
 									</div>
 								{% endif %}
 
 							</div>
-
-
 							{% if content.contenu %}
-								{{content.contenu}}
+								{% for i in content.contenu|array_elements(region_attributes.contenu.addClass('')) %}
+									{{ i }}
+								{% endfor %}
+								{#{content.contenu}#}
 							{% endif %}
-
 						</div>
 					</div>
 				</div>
