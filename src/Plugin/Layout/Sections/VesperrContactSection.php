@@ -6,10 +6,10 @@ use Drupal\bootstrap_styles\StylesGroup\StylesGroupManager;
 use Drupal\formatage_models\FormatageModelsThemes;
 use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
 /**
- * A Header Layout for vesperr theme : By TMC 
- * 
+ * A Header Layout for vesperr theme : By TMC
+ *
  * @Layout (
- * 
+ *
  *  id = "vesperr_contact",
  *  label = @Translation("Vesperr contact by TMC"),
  *  category = @Translation("spaker_mod"),
@@ -45,10 +45,16 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
  *     "link" = {
  *       "label" = @Translation("link"),
  *     },
+ *     "social" = {
+ *       "label" = @Translation("social"),
+ *     },
+ *     "form" = {
+ *       "label" = @Translation("form"),
+ *     },
  *  }
  * )
- * 
- * 
+ *
+ *
  */
 class VesperrContactSection extends FormatageModelsSection
 {
@@ -58,19 +64,19 @@ class VesperrContactSection extends FormatageModelsSection
      * {@inheritdoc}
      * @see \Drupal\formatage_models\Plugin\Layout\FormatageModels::__construct()
      */
-    
+
     public function __construct(array $configuration, $plugin_id, $plugin_definition, StylesGroupManager $styles_group_manager) {
         // TODO Auto-generated method stub
         parent::__construct($configuration, $plugin_id, $plugin_definition, $styles_group_manager);
         $this->pluginDefinition->set('icon', drupal_get_path('module', 'spaker_mod') . "/icons/Vessper_contact_map.jpg");
     }
     /**
-     * 
+     *
      * {@inheritdoc}
      * @see \Drupal\formatage_models\Plugin\Layout\FormatageModels:build()
      */
 
-    public function build(array $regions) 
+    public function build(array $regions)
     {
 
         // TODO Auto-generated method stub
@@ -144,6 +150,18 @@ class VesperrContactSection extends FormatageModelsSection
                         'text_html' => [
                             'label' => 'lien',
                             'value' => 'Send Message'
+                        ]
+                    ],
+                    'social' => [
+                        'text_html' => [
+                            'label' => 'Social links',
+                            'value' => ''
+                        ]
+                    ],
+                    'form' => [
+                        'text_html' => [
+                            'label' => 'form',
+                            'value' => ''
                         ]
                     ],
                 ]
