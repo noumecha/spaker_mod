@@ -48,8 +48,8 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
  *     "social" = {
  *       "label" = @Translation("social"),
  *     },
- *     "form" = {
- *       "label" = @Translation("form"),
+ *     "contact_form" = {
+ *       "label" = @Translation("contact_form"),
  *     },
  *  }
  * )
@@ -158,9 +158,9 @@ class VesperrContactSection extends FormatageModelsSection
                             'value' => ''
                         ]
                     ],
-                    'form' => [
+                    'contact_form' => [
                         'text_html' => [
-                            'label' => 'form',
+                            'label' => 'Contact Form',
                             'value' => ''
                         ]
                     ],
