@@ -32,11 +32,15 @@
 								{% endif %}
 
 							</div>
-							{% if content.contenu %}
-								{% for i in content.contenu|array_elements(region_attributes.contenu.addClass('')) %}
-									{{ i }}
-								{% endfor %}
-							{% endif %}
+							<div class="container">
+								<div class="row">
+									{% if content.contenu %}
+										{% for i in content.contenu|array_elements(region_attributes.contenu.addClass('')) %}
+											{{ i }}
+										{% endfor %}
+									{% endif %}
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
