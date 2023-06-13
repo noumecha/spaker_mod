@@ -1,10 +1,11 @@
 {% if content %}
-	<section {{ attributes.addClass('vesperr-pricing') }}>
+	<section {{ attributes.addClass(['vesperr-pricing']) }}>
 		<div class="container">
 			<div class="section-vs-title ">
 				{% if content.title %}
-					<h2>
-						{{ content.title|layout_value }}</h2>
+					<h2 {{ region_attributes.title.addClass([''])}}>
+						{{ content.title|layout_value }}
+					</h2>
 				{% endif %}
 				{% if content.desc %}
 					<div {{region_attributes.desc.addClass('desc')}}>
@@ -12,11 +13,13 @@
 					</div>
 				{% endif %}
 			</div>
-
-			{% if content.contenu %}
-				{{ content.contenu }}
-			{% endif %}
-
-		</section>
-		<!-- End Pricing Section -->
-	{% endif %}
+			<div class="row">
+				{% if content.contenu %}
+					{% for item in content.contenu|array_elements(region_attributes.contenu.addClass('')) %}
+						{{ item }}
+					{% endfor %}
+				{% endif %}
+			</div>
+		</div>
+	</section>
+{% endif %}
