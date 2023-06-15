@@ -73,22 +73,24 @@
 				{% if content.form %}
 				<div {{ region_attributes.form.addClass('form') }}>
 					{{content.form}}
-					<input type="emaeil" placeholder="Ton email" class="form-control">
+					{#
+						<input type="emaeil" placeholder="Ton email" class="form-control">
                                 <div class="fac-btn">
                                     <a href="#">Inscription</a>
                                 </div>
+                    #}
 				</div>
 				{% endif %}
 			</div>
 			<div class="last-content">
 				<div class="row align-items-center justify-content-between">
 					{% if content.copyright %}
-    					<div {{ region_attributes.copyright.addClass(['col-md-4','copyright']) }}>						
+    					<div {{ region_attributes.copyright.addClass(['copyright']) }}>						
     						{{content.copyright}}						
     					</div>
 					{% endif %}
 					{% if content.list_menu %}
-    					<div {{ region_attributes.list_menu.addClass(['col-md-8']) }}>						
+    					<div {{ region_attributes.list_menu.addClass(['list_menu']) }}>						
     						{{content.list_menu}}						
     					</div>
 					{% endif %}

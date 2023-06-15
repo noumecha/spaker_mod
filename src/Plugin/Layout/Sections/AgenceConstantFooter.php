@@ -61,7 +61,7 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
  *
  */
 class AgenceConstantFooter extends FormatageModelsSection {
-
+  
   /**
    *
    * {@inheritdoc}
@@ -72,24 +72,25 @@ class AgenceConstantFooter extends FormatageModelsSection {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $styles_group_manager);
     $this->pluginDefinition->set('icon', drupal_get_path('module', 'spaker_mod') . "/icons/agence_constant_footer_map.jpg");
   }
-
+  
   /**
    *
    * {@inheritdoc}
    * @see \Drupal\formatage_models\Plugin\Layout\FormatageModels:build()
    */
   public function build(array $regions) {
-
+    
     // TODO Auto-generated method stub
     $build = parent::build($regions);
     FormatageModelsThemes::formatSettingValues($build);
-
+    
     return $build;
   }
-
+  
   public function defaultConfiguration() {
-    return parent::defaultConfiguration() + [
-
+    return [
+      'copyright' => 'col-md-4',
+      'list_menu' => 'col-md-8',
       'tmc' => [
         'builder-form' => true,
         'info' => [
@@ -270,7 +271,7 @@ class AgenceConstantFooter extends FormatageModelsSection {
           ]
         ]
       ]
-    ];
+    ] + parent::defaultConfiguration();
   }
-
+  
 }
