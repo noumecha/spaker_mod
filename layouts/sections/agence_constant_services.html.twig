@@ -3,7 +3,7 @@
 
 		<div class="container-fluid p-0">
 			<div class="row no-gutters">
-				<div class="col-0 col-md-4 d-none d-lg-block">
+				<div class="col-0 col-md-4 {{settings.show_image_class}} d-lg-block">
 					{% if content.image %}
 						<div {{ region_attributes.image.addClass('ac-column-image')}} >
 							{{content.image|layout_value}}
@@ -16,9 +16,9 @@
 						<div class="ac-content">
 							<div class="ac-left-header">
 								{% if content.sub_title %}
-									<div {{ region_attributes.sub_title.addClass('ac-first-title')}} >
+									<{{settings.region_tag_sub_title}} {{ region_attributes.sub_title.addClass('ac-first-title')}} >
 										{{content.sub_title}}
-									</div>
+									</{{settings.region_tag_sub_title}}>
 								{% endif %}
 								{% if content.title %}
 									<h2 {{ region_attributes.title.addClass(['ac-head-title','h2'])}} >
@@ -32,12 +32,15 @@
 								{% endif %}
 
 							</div>
-							{% if content.contenu %}
-								{% for i in content.contenu|array_elements(region_attributes.contenu.addClass('')) %}
-									{{ i }}
-								{% endfor %}
-								{#{content.contenu}#}
-							{% endif %}
+							<div class="container">
+								<div class="row">
+									{% if content.contenu %}
+										{% for i in content.contenu|array_elements(region_attributes.contenu.addClass('')) %}
+											{{ i }}
+										{% endfor %}
+									{% endif %}
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

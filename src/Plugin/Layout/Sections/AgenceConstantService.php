@@ -3,6 +3,7 @@
 namespace Drupal\spaker_mod\Plugin\Layout\Sections;
 
 use Drupal\bootstrap_styles\StylesGroup\StylesGroupManager;
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\formatage_models\FormatageModelsThemes;
 use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
 /**
@@ -54,6 +55,32 @@ class AgenceConstantService extends FormatageModelsSection
   }
 
     /**
+     * {@inheritdoc}
+     */
+
+    public function buildConfigurationForm(array $form, FormStateInterface $form_state)
+    {
+        $config = $this->getConfiguration();
+        $form = parent::buildConfigurationForm($form, $form_state);
+        $form['show_image_class'] = [
+          '#type' => 'textfield',
+          '#title' => 'ajouter ou retirer d-none pour ne pas afficher l\'image',
+          '#default_value' => isset($config['show_image_class']) ? $config['show_image_class'] : '',
+        ];
+        return $form;
+    }
+
+    /**
+     *
+     * {@inheritdoc}
+     */
+    public function submitConfigurationForm(array &$form, FormStateInterface $form_state) {
+        parent::submitConfigurationForm($form, $form_state);
+
+        $this->configuration['show_image_class'] = $form_state->getValue('show_image_class');
+    }
+
+    /**
      *
      * {@inheritdoc}
      * @see \Drupal\formatage_models\Plugin\Layout\FormatageModels:build()
@@ -72,8 +99,9 @@ class AgenceConstantService extends FormatageModelsSection
 
     public function defaultConfiguration()
     {
-        return parent::defaultConfiguration() + [
-
+        return [
+            'show_image_class' => 'd-none',
+            'region_tag_sub_title' => 'h4',
             'tmc' => [
                 'builder-form' => true,
                 'region_css_title' => 'h2',
@@ -296,6 +324,6 @@ class AgenceConstantService extends FormatageModelsSection
                 ]
             ]
 
-        ];
+        ] + parent::defaultConfiguration();
     }
 }
