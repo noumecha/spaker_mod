@@ -10,7 +10,6 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
  * Agence constant footer section by TMC
  *
  * @Layout (
- *
  *  id = "agence_constant_footer_section",
  *  label = @Translation("Agence Constant Footer Section"),
  *  category = @Translation("spaker_mod"),
